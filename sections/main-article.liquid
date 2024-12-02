@@ -1,8 +1,4 @@
 {%- comment -%}
-This file has been modified by the Yoast SEO for Shopify app.
-You can learn more about this (and learn how to cleanly revert these changes) at https://yoa.st/removing-theme-changes.
-{%- endcomment -%}
-{%- comment -%}
   This file has been modified by the Yoast SEO for Shopify app.
   You can learn more about this (and learn how to cleanly revert these changes) at https://yoa.st/removing-theme-changes.
 {%- endcomment -%}
@@ -10,12 +6,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 {% render 'breadcrumbs' %}
 <article
   class="article-template page-width"
-  
-    {% if disabled_by_yoast_seo %}itemscope{% endif %}
-  
-  
-    {% if disabled_by_yoast_seo %}itemtype="http://schema.org/BlogPosting"{% endif %}
-  
+  {% if disabled_by_yoast_seo %}
+    itemscope
+  {% endif %}
+  {% if disabled_by_yoast_seo %}
+    itemtype="http://schema.org/BlogPosting"
+  {% endif %}
 >
   {%- for block in section.blocks -%}
     {%- case block.type -%}
@@ -31,9 +27,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           >
             <div
               class="article-template__hero-{{ block.settings.image_height }} media"
-              
-                {% if disabled_by_yoast_seo %}itemprop="image"{% endif %}
-              
+              {% if disabled_by_yoast_seo %}
+                itemprop="image"
+              {% endif %}
               {% if block.settings.image_height == 'adapt' and article.image %}
                 style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
               {% endif %}
@@ -67,29 +63,29 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         >
           <h1
             class="font-size-43px text-align-center letter-spacing-0px color-dark-black font-weight-200 font-family-Neuzeit article-template__title"
-            
-              {% if disabled_by_yoast_seo %}itemprop="headline"{% endif %}
-            
+            {% if disabled_by_yoast_seo %}
+              itemprop="headline"
+            {% endif %}
           >
             {{ article.title | escape }}
           </h1>
           {%- if block.settings.blog_show_author -%}
             <span
               class="caption-with-letter-spacing"
-              
-                {% if disabled_by_yoast_seo %}itemprop="author"{% endif %}
-              
-              
-                {% if disabled_by_yoast_seo %}itemscope{% endif %}
-              
-              
-                {% if disabled_by_yoast_seo %}itemtype="http://schema.org/Person"{% endif %}
-              
+              {% if disabled_by_yoast_seo %}
+                itemprop="author"
+              {% endif %}
+              {% if disabled_by_yoast_seo %}
+                itemscope
+              {% endif %}
+              {% if disabled_by_yoast_seo %}
+                itemtype="http://schema.org/Person"
+              {% endif %}
             >
               <span
-                
-                  {% if disabled_by_yoast_seo %}itemprop="name"{% endif %}
-                
+                {% if disabled_by_yoast_seo %}
+                  itemprop="name"
+                {% endif %}
                 class="font-size-16px line-height-1-4-px blog_author text-transform-lowercase"
               >
                 <span>
@@ -106,9 +102,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           {%- if block.settings.blog_show_date -%}
             <span
               class="circle-divider caption-with-letter-spacing font-size-16px line-height-1-4-px text-transform-capitalize"
-              
-                {% if disabled_by_yoast_seo %}itemprop="dateCreated pubdate datePublished"{% endif %}
-              
+              {% if disabled_by_yoast_seo %}
+                itemprop="dateCreated pubdate datePublished"
+              {% endif %}
             >
               {{- article.published_at | time_tag: format: 'date' -}}
             </span>
@@ -118,9 +114,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       {%- when 'content' -%}
         <div
           class="article-template__content rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          
-            {% if disabled_by_yoast_seo %}itemprop="articleBody"{% endif %}
-          
+          {% if disabled_by_yoast_seo %}
+            itemprop="articleBody"
+          {% endif %}
           {{ block.shopify_attributes }}
         >
           {{ article.content }}

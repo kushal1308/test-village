@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_naPrj4": {
@@ -24,7 +33,7 @@
       ],
       "settings": {
         "unique_class": "",
-        "image": "shopify:\/\/shop_images\/wholesale.png",
+        "image": "shopify://shop_images/wholesale.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -50,9 +59,9 @@
         "column_bryKf4": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/wholesale_1.png",
+            "image": "shopify://shop_images/wholesale_1.png",
             "title": "Select the product",
-            "text": "<p>In the Shop WholeSale Candle Supplies section below, review the products we offer wholesale discount.<\/p>",
+            "text": "<p>In the Shop WholeSale Candle Supplies section below, review the products we offer wholesale discount.</p>",
             "link_label": "",
             "link": ""
           }
@@ -60,9 +69,9 @@
         "column_6hURc8": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/wholesale_2.png",
+            "image": "shopify://shop_images/wholesale_2.png",
             "title": "Order Here",
-            "text": "<p>Contact our support team specifying the products you want to order.<\/p>",
+            "text": "<p>Contact our support team specifying the products you want to order.</p>",
             "link_label": "",
             "link": ""
           }
@@ -70,9 +79,9 @@
         "column_WFVaL6": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/wholesale_3.png",
+            "image": "shopify://shop_images/wholesale_3.png",
             "title": "Get Invoice via Email",
-            "text": "<p>Receive an invoice via email with all the details to finalize your purchase.<\/p>",
+            "text": "<p>Receive an invoice via email with all the details to finalize your purchase.</p>",
             "link_label": "",
             "link": ""
           }
@@ -87,7 +96,7 @@
         "customclass": "",
         "title": "How It Works",
         "heading_size": "h1",
-        "content": "<p>Take these three simple steps to make your Wholesale order!<\/p>",
+        "content": "<p>Take these three simple steps to make your Wholesale order!</p>",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -109,21 +118,21 @@
           "type": "button",
           "settings": {
             "heading_demo": "Can I pay my Wholesale order in instalments?",
-            "description_demo": "<p>Yes you can. Village Craft and Candle is pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding.<\/p>\n<p>This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.\n<\/p>"
+            "description_demo": "<p>Yes you can. Village Craft and Candle is pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding.</p>\n<p>This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.\n</p>"
           }
         },
         "button_QJK3pC": {
           "type": "button",
           "settings": {
             "heading_demo": "How do I calculate the shipping cost?",
-            "description_demo": "<p>Our dedicated customer service team will work with a variety of-carriers to obtain the best pricing as well as the most suitable timeframe for your desires.<\/p>"
+            "description_demo": "<p>Our dedicated customer service team will work with a variety of-carriers to obtain the best pricing as well as the most suitable timeframe for your desires.</p>"
           }
         },
         "button_FWNLDD": {
           "type": "button",
           "settings": {
             "heading_demo": "What is the estimated time for delivery?",
-            "description_demo": "<p>We are proud to provide fast and reliable shipping across Canada and the United States. Our order processing time is 2-3 business days. Once your order is processed, the delivery time will be dependent on your location and the shipping service you selected.<\/p>"
+            "description_demo": "<p>We are proud to provide fast and reliable shipping across Canada and the United States. Our order processing time is 2-3 business days. Once your order is processed, the delivery time will be dependent on your location and the shipping service you selected.</p>"
           }
         }
       },

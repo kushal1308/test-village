@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -56,7 +65,7 @@
           "type": "text",
           "settings": {
             "heading": "Reach Out",
-            "subtext": "<p><a href=\"tel:+1-888-292-8871\" title=\"tel:+1-888-292-8871\">+1-888-292-8871<\/a><br\/><a href=\"\/pages\/contact-us\" title=\"Contact\">Contact Us<\/a><\/p>"
+            "subtext": "<p><a href=\"tel:+1-888-292-8871\" title=\"tel:+1-888-292-8871\">+1-888-292-8871</a><br/><a href=\"/pages/contact-us\" title=\"Contact\">Contact Us</a></p>"
           }
         },
         "payament_icon_kwqhjA": {

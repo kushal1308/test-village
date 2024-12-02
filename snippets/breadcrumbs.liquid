@@ -26,7 +26,6 @@
       >
     {% endif %}
     <span class="nav_val"> </span>
-
     {% if template contains 'page' %}
       <span
         aria-hidden="true"
@@ -36,64 +35,17 @@
       <span class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit">
         {{- page.title -}}
       </span>
-
     {% elsif template contains 'product' %}
-      {% comment %}
-        {% assign default_collection = product.collections.first %}
-        {% if collection.url %}
-          <span
-            aria-hidden="true"
-            class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit"
-            >/</span
-          >
-          <span class="collection_wrapper_page font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit">
-            {{- collection.title | link_to: collection.url -}}
-          </span>
-        {% elsif default_collection %}
-          <span
-            aria-hidden="true"
-            class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit"
-            >/</span
-          >
-          <span class="collection_wrapper_page font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit">
-            {{- default_collection.title | link_to: default_collection.url -}}
-          </span>
-        {% endif %}
-      {% endcomment %}
-      {% assign default_collection = product.collections.first %}
-      {% assign specific_collections = 'containers,aromatics,scents,wax,wicks,jars,lids,liquid-candle-colour,diamond-dye-candle-colour,metal-candle-molds,molds-accessories'
-        | split: ','
-      %}
-      {% assign found_collection = false %}
-
-      {% for specific_collection_handle in specific_collections %}
-        {% for collection in product.collections %}
-          {% if collection.handle == specific_collection_handle %}
-            {% assign found_collection = collection %}
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-
-      {% if found_collection %}
+      {% if collection.url %}
         <span
           aria-hidden="true"
           class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit"
           >/</span
         >
         <span class="collection_wrapper_page font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit">
-          {{ found_collection.title | link_to: found_collection.url }}
-        </span>
-      {% elsif default_collection %}
-        <span
-          aria-hidden="true"
-          class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit"
-          >/</span
-        >
-        <span class="collection_wrapper_page font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit">
-          {{ default_collection.title | link_to: default_collection.url }}
+          {{- collection.title | link_to: collection.url -}}
         </span>
       {% endif %}
-
       <span
         aria-hidden="true"
         class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit"
@@ -102,7 +54,6 @@
       <span class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit">
         {{- product.title -}}
       </span>
-
     {% elsif template contains 'collection' and collection.handle %}
       <span class="font-family-Neuzeit line-height-23-4px font-size-18px font-weight-700 color-white" aria-hidden="true"
         >/</span
@@ -117,7 +68,6 @@
           {{ collection.title }}
         </span>
       {% endif %}
-
     {% elsif template == 'blog' %}
       <span
         aria-hidden="true"
@@ -125,9 +75,10 @@
         >/</span
       >
       {% if current_tags %}
+        {% comment %} {{ blog.title | link_to: blog.url }} {% endcomment %}
         <a
           class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit"
-          href="{{ blog.url }}"
+          href="{{blog.url}}"
         >
           {{- blog.title -}}
         </a>
@@ -144,7 +95,6 @@
           {{- blog.title -}}
         </span>
       {% endif %}
-
     {% elsif template == 'article' %}
       <span
         aria-hidden="true"
@@ -153,7 +103,7 @@
       >
       <a
         class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit"
-        href="{{ blog.url }}"
+        href="{{blog.url}}"
       >
         {{- blog.title -}}
       </a>
@@ -165,7 +115,6 @@
       <span class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit">
         {{- article.title -}}
       </span>
-
     {% else %}
       <span
         class="font-size-18px text-decoration-none color-dark-black line-height-1-4-px font-weight-700 font-family-Neuzeit"

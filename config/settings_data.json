@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/NEW-VCC-LOGO_1_1_1.png",
+    "logo": "shopify://shop_images/NEW-VCC-LOGO_1_1_1.png",
     "logo_width": 170,
-    "favicon": "shopify:\/\/shop_images\/1087959807834_VCC-LOGO_copy.png",
+    "favicon": "shopify://shop_images/1087959807834_VCC-LOGO_copy.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -99,19 +108,19 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/www.facebook.com\/villagecraftandcandle",
-    "social_instagram_link": "https:\/\/www.instagram.com\/villagecraftcandle\/",
-    "social_youtube_link": "https:\/\/www.youtube.com\/user\/vccandlechix",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@villagecraftandcandle",
+    "social_facebook_link": "https://www.facebook.com/villagecraftandcandle",
+    "social_instagram_link": "https://www.instagram.com/villagecraftcandle/",
+    "social_youtube_link": "https://www.youtube.com/user/vccandlechix",
+    "social_tiktok_link": "https://www.tiktok.com/@villagecraftandcandle",
     "social_twitter_link": "",
     "social_snapchat_link": "",
-    "social_pinterest_link": "https:\/\/www.pinterest.com\/vccandlechix\/",
+    "social_pinterest_link": "https://www.pinterest.com/vccandlechix/",
     "social_tumblr_link": "",
     "social_vimeo_link": "",
-    "social_whatsapp_link": "https:\/\/whatsapp.com\/channel\/0029VaGFwZgFy72Ex7xJb523",
-    "social_linkdin_link": "https:\/\/ca.linkedin.com\/company\/village-craft-candle",
+    "social_whatsapp_link": "https://whatsapp.com/channel/0029VaGFwZgFy72Ex7xJb523",
+    "social_linkdin_link": "https://ca.linkedin.com/company/village-craft-candle",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
@@ -138,17 +147,22 @@
     "content_for_index": [],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
       },
       "5946647744298494267": {
-        "type": "shopify:\/\/apps\/wishlist-plus\/blocks\/wishlist-app-embed\/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "type": "shopify://apps/wishlist-plus/blocks/wishlist-app-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "disabled": false,
+        "settings": {}
+      },
+      "10641372206048101839": {
+        "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
         "disabled": false,
         "settings": {}
       },
       "11468047240823483236": {
-        "type": "shopify:\/\/apps\/sezzle-widget\/blocks\/checkout-embed\/f3a53793-e118-4764-a86b-a79bfedb0d5f",
+        "type": "shopify://apps/sezzle-widget/blocks/checkout-embed/f3a53793-e118-4764-a86b-a79bfedb0d5f",
         "disabled": false,
         "settings": {
           "heading": "Sezzle Checkout Button",
@@ -163,7 +177,7 @@
         }
       },
       "12608439564960700138": {
-        "type": "shopify:\/\/apps\/sezzle-widget\/blocks\/widget-embed\/f3a53793-e118-4764-a86b-a79bfedb0d5f",
+        "type": "shopify://apps/sezzle-widget/blocks/widget-embed/f3a53793-e118-4764-a86b-a79bfedb0d5f",
         "disabled": false,
         "settings": {
           "heading": "Sezzle Widget",
@@ -172,12 +186,12 @@
         }
       },
       "14327677521557774844": {
-        "type": "shopify:\/\/apps\/simprosys-google-shopping-feed\/blocks\/core_settings_block\/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
+        "type": "shopify://apps/simprosys-google-shopping-feed/blocks/core_settings_block/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
         "disabled": false,
         "settings": {}
       },
       "14818028230436078177": {
-        "type": "shopify:\/\/apps\/langify\/blocks\/langify\/b50c2edb-8c63-4e36-9e7c-a7fdd62ddb8f",
+        "type": "shopify://apps/langify/blocks/langify/b50c2edb-8c63-4e36-9e7c-a7fdd62ddb8f",
         "disabled": false,
         "settings": {
           "theme_id": "123543060577",
@@ -187,51 +201,24 @@
         }
       },
       "5149645339031002760": {
-        "type": "shopify:\/\/apps\/order-limits-minmaxify\/blocks\/app-embed-block\/3acfba32-89f3-4377-ae20-cbb9abc48475",
+        "type": "shopify://apps/order-limits-minmaxify/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475",
         "disabled": false,
         "settings": {
           "async": false
         }
       },
       "3052371864424226796": {
-        "type": "shopify:\/\/apps\/navidium-returns-exchanges\/blocks\/return-portal\/12bff649-d15c-4112-a6da-025a718a2b6d",
+        "type": "shopify://apps/navidium-returns-exchanges/blocks/return-portal/12bff649-d15c-4112-a6da-025a718a2b6d",
         "disabled": false,
         "settings": {}
       },
       "15796953133730294439": {
-        "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.embed.socialshopwave-helper\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
+        "type": "shopify://apps/growave-loyalty-wishlist/blocks/block.embed.socialshopwave-helper/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
         "disabled": false,
         "settings": {}
-      },
-      "10641372206048101839": {
-        "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-global-embed\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-        "disabled": true,
-        "settings": {}
-      },
-      "2027901639039225189": {
-        "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics-app\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
-        "disabled": false,
-        "settings": {}
-      },
-      "6258010234218468052": {
-        "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics-cart\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
-        "disabled": false,
-        "settings": {
-          "dynamaticTriggerBtn": "[href=\"\/cart\"], [href=\"\/cart\"] *",
-          "cartCountClass": "",
-          "cartCountText": "",
-          "cartDisbledPages": "",
-          "cartObserverNeeded": true,
-          "useShopMoneyFormat": false
-        }
       },
       "yoast-seo-metatags": {
-        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
-        "disabled": false,
-        "settings": {}
-      },
-      "5439026248262864547": {
-        "type": "shopify:\/\/apps\/preorder-globo\/blocks\/app-embed\/e547a0ad-8212-4bcc-b02f-761faa9b8af2",
+        "type": "shopify://apps/yoast-seo-seo-for-everyone/blocks/metatags/7c777011-bc88-4743-a24e-64336e1e5b46",
         "disabled": false,
         "settings": {}
       }
@@ -450,7 +437,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -12,10 +21,10 @@
       "type": "custom_image_with_text_klaviyo",
       "settings": {
         "custom_sub_caption": "Coming Soon!",
-        "custom_heading": "<h2>Diffusers & Sprays<\/h2>",
+        "custom_heading": "<h2>Diffusers & Sprays</h2>",
         "custom_sub_heading": "Expand your product line and watch your profits skyrocket!",
-        "custom_bg_image": "shopify:\/\/shop_images\/DIFFUSERS_SPRAYS_2_1.png",
-        "custom_bg_image_mobile": "shopify:\/\/shop_images\/DIFFUSERS_SPRAYS_2_1_1_1.png"
+        "custom_bg_image": "shopify://shop_images/DIFFUSERS_SPRAYS_2_1.png",
+        "custom_bg_image_mobile": "shopify://shop_images/DIFFUSERS_SPRAYS_2_1_1_1.png"
       }
     }
   },

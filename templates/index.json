@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow_TwAY6n": {
@@ -6,18 +15,18 @@
         "slide_Vt8R8y": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Pre_Black_Friday.zip_-_EN_-_Black_Friday_Sale_Desktop.webp",
-            "mobile_image": "shopify:\/\/shop_images\/Pre_Black_Friday_749_x_499_px_-_EN_-_Black_Friday_Sale_Desktop.webp",
-            "desktop_image_fr": "shopify:\/\/shop_images\/Pre_Black_Friday.zip_-_FR_-_Black_Friday_Sale_Desktop.webp",
-            "mobile_image_fr": "shopify:\/\/shop_images\/Pre_Black_Friday_749_x_499_px_-_FR_-_Black_Friday_Sale_Desktop.webp",
-            "banner_link_en": "shopify:\/\/collections\/black-friday",
-            "banner_link_fr": "shopify:\/\/collections\/black-friday",
-            "image_b2b": "shopify:\/\/shop_images\/EN_Wholesale_Homepage_Banner_1.png",
-            "mobile_image_b2b": "shopify:\/\/shop_images\/EN_Wholesale_Homepage_Banner_2.png",
-            "desktop_image_fr_b2b": "shopify:\/\/shop_images\/FR_Wholesale_Homepage_Banner.png",
-            "mobile_image_fr_b2b": "shopify:\/\/shop_images\/FR_Wholesale_Homepage_Banner_1.png",
-            "banner_link_en_b2b": "shopify:\/\/collections\/all",
-            "banner_link_fr_b2b": "shopify:\/\/collections\/all",
+            "image": "shopify://shop_images/Pre_Black_Friday.zip_-_EN_-_Black_Friday_Sale_Desktop.webp",
+            "mobile_image": "shopify://shop_images/Pre_Black_Friday_749_x_499_px_-_EN_-_Black_Friday_Sale_Desktop.webp",
+            "desktop_image_fr": "shopify://shop_images/Pre_Black_Friday.zip_-_FR_-_Black_Friday_Sale_Desktop.webp",
+            "mobile_image_fr": "shopify://shop_images/Pre_Black_Friday_749_x_499_px_-_FR_-_Black_Friday_Sale_Desktop.webp",
+            "banner_link_en": "shopify://collections/black-friday",
+            "banner_link_fr": "shopify://collections/black-friday",
+            "image_b2b": "shopify://shop_images/EN_Wholesale_Homepage_Banner_1.png",
+            "mobile_image_b2b": "shopify://shop_images/EN_Wholesale_Homepage_Banner_2.png",
+            "desktop_image_fr_b2b": "shopify://shop_images/FR_Wholesale_Homepage_Banner.png",
+            "mobile_image_fr_b2b": "shopify://shop_images/FR_Wholesale_Homepage_Banner_1.png",
+            "banner_link_en_b2b": "shopify://collections/all",
+            "banner_link_fr_b2b": "shopify://collections/all",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -55,42 +64,42 @@
           "type": "featured_collection",
           "settings": {
             "collection": "aromatics",
-            "secondimage": "shopify:\/\/shop_images\/WhiteAromatics.webp"
+            "secondimage": "shopify://shop_images/WhiteAromatics.webp"
           }
         },
         "featured_collection_Ktkkrj": {
           "type": "featured_collection",
           "settings": {
             "collection": "scents",
-            "secondimage": "shopify:\/\/shop_images\/1222.webp"
+            "secondimage": "shopify://shop_images/1222.webp"
           }
         },
         "featured_collection_6DNb6n": {
           "type": "featured_collection",
           "settings": {
             "collection": "wax",
-            "secondimage": "shopify:\/\/shop_images\/Untitled_design_4.webp"
+            "secondimage": "shopify://shop_images/Untitled_design_4.webp"
           }
         },
         "featured_collection_q9GxqB": {
           "type": "featured_collection",
           "settings": {
             "collection": "wicks",
-            "secondimage": "shopify:\/\/shop_images\/Candle_Wick_c07d50a4-2200-45fe-ac19-cc34e39915f7.webp"
+            "secondimage": "shopify://shop_images/Candle_Wick_c07d50a4-2200-45fe-ac19-cc34e39915f7.webp"
           }
         },
         "featured_collection_BMX6AE": {
           "type": "featured_collection",
           "settings": {
             "collection": "jars",
-            "secondimage": "shopify:\/\/shop_images\/Shop_Categories_15.webp"
+            "secondimage": "shopify://shop_images/Shop_Categories_15.webp"
           }
         },
         "featured_collection_eiiYBQ": {
           "type": "featured_collection",
           "settings": {
             "collection": "supplies",
-            "secondimage": "shopify:\/\/shop_images\/Supplies.webp"
+            "secondimage": "shopify://shop_images/Supplies.webp"
           }
         }
       },
@@ -122,7 +131,7 @@
       "settings": {
         "title": "best sellers",
         "button_text": "View all",
-        "button_url": "https:\/\/villagecraftandcandle.com\/collections\/best-selling-test"
+        "button_url": "https://villagecraftandcandle.com/collections/best-selling-test"
       }
     },
     "access_quiz_emMjCA": {
@@ -131,52 +140,33 @@
         "back_color": "#f6f3ee",
         "title": "Get Access to the Latest Products",
         "button_text": "Create an account",
-        "button_url": "https:\/\/villagecraftandcandle.com\/account\/register",
+        "button_url": "https://villagecraftandcandle.com/account/register",
         "withouto_back_color": "#f6f3ee",
         "withouto_title": "Want to start earning V Points for your purchases?",
         "withouto_button_text": "Learn more",
-        "withouto_button_url": "https:\/\/village-craft-candle.myshopify.com\/pages\/reward",
+        "withouto_button_url": "https://village-craft-candle.myshopify.com/pages/reward",
         "quiz_back_color": "",
-        "Background_Image": "shopify:\/\/shop_images\/2_e043678a-7415-47b2-8f55-b552d1434499.png",
+        "Background_Image": "shopify://shop_images/2_e043678a-7415-47b2-8f55-b552d1434499.png",
         "quiz_title": "Unlock exclusive benefits and rewards with every purchase",
         "quiz_button_text": "Join MyVillage",
-        "quiz_button_url": "shopify:\/\/pages\/reward"
+        "quiz_button_url": "shopify://pages/reward"
       }
     },
     "17137652949c9ba977": {
       "type": "apps",
       "blocks": {
-        "dynamatic_personalized_upsells_dynamatics_JcT3KM": {
-          "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
+        "rebuy_personalization_engine_rebuy_widget_UzpfWp": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
-            "zone_id": "ZID0325-VIL80591731404333-WEBPAGE",
-            "custom_css": "",
-            "event_triggerer": ""
+            "enabled": true,
+            "id": "76969",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
           }
         }
       },
       "block_order": [
-        "dynamatic_personalized_upsells_dynamatics_JcT3KM"
-      ],
-      "settings": {
-        "include_margins": true,
-        "include_B2B": false
-      }
-    },
-    "1732527474543823b8": {
-      "type": "apps",
-      "blocks": {
-        "dynamatic_personalized_upsells_dynamatics_b7wdxp": {
-          "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
-          "settings": {
-            "zone_id": "ZID0325-VIL95251730444233-WEBPAGE",
-            "custom_css": "",
-            "event_triggerer": ""
-          }
-        }
-      },
-      "block_order": [
-        "dynamatic_personalized_upsells_dynamatics_b7wdxp"
+        "rebuy_personalization_engine_rebuy_widget_UzpfWp"
       ],
       "settings": {
         "include_margins": true,
@@ -190,7 +180,7 @@
           "type": "button",
           "settings": {
             "button_label": "View all",
-            "button_link": "shopify:\/\/collections\/new-arrival-custom-section",
+            "button_link": "shopify://collections/new-arrival-custom-section",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -224,7 +214,7 @@
         "text_mghwFi": {
           "type": "text",
           "settings": {
-            "text": "<p>Now offering coupon codes for bulk orders of soy wax & Exclusive Fragrances. Pail pricing on Exclusive Fragrances too! (Must be preordered).<\/p>",
+            "text": "<p>Now offering coupon codes for bulk orders of soy wax & Exclusive Fragrances. Pail pricing on Exclusive Fragrances too! (Must be preordered).</p>",
             "text_style": "body"
           }
         },
@@ -232,7 +222,7 @@
           "type": "button",
           "settings": {
             "button_label": "Click here for details",
-            "button_link": "shopify:\/\/pages\/wholesale-new",
+            "button_link": "shopify://pages/wholesale-new",
             "button_style_secondary": false
           }
         }
@@ -244,7 +234,7 @@
       ],
       "settings": {
         "customclass": "wholesale_price",
-        "image": "shopify:\/\/shop_images\/Wholesale_Bulk_720x_png_720x_9cff7fba-e888-4a3c-97c0-69ac952b6e6d_1.webp",
+        "image": "shopify://shop_images/Wholesale_Bulk_720x_png_720x_9cff7fba-e888-4a3c-97c0-69ac952b6e6d_1.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -266,7 +256,6 @@
     "popular_product_NgAyqE",
     "access_quiz_emMjCA",
     "17137652949c9ba977",
-    "1732527474543823b8",
     "rich_text_GFLTp6",
     "image_with_text_Xj6Kpf"
   ]

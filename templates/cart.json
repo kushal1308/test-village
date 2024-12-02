@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cart-items": {
@@ -26,15 +35,15 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "reward_link": "shopify:\/\/pages\/reward",
+        "reward_link": "shopify://pages/reward",
         "reward_text": "Redeem V Points",
         "padding_top": 0,
         "padding_bottom": 0,
-        "home_icon_with_text_icon_1": "shopify:\/\/shop_images\/Quality_Products.jpg",
+        "home_icon_with_text_icon_1": "shopify://shop_images/Quality_Products.jpg",
         "icon_with_text_icon_heading_1": "Quality Products",
-        "home_icon_with_text_icon_2": "shopify:\/\/shop_images\/Fast_Shipping.jpg",
+        "home_icon_with_text_icon_2": "shopify://shop_images/Fast_Shipping.jpg",
         "icon_with_text_icon_heading_2": "Fast Shipping",
-        "home_icon_with_text_icon_3": "shopify:\/\/shop_images\/Satisfaction_Guaranteed.jpg",
+        "home_icon_with_text_icon_3": "shopify://shop_images/Satisfaction_Guaranteed.jpg",
         "icon_with_text_icon_heading_3": "Satisfaction Guaranteed"
       }
     }

@@ -363,54 +363,16 @@ $(document).ready(function () {
     .parents("details.facets__disclosure-vertical")
     .find(".button-show-more")
     .hide();
-
-  updateStickyPrice();
-  $(".option_blocks input").click(function () {
-    updateStickyPrice();
-
-    $(".product-detail-page variant-selects .product-form__input").css(
-      "pointer-events",
-      "none"
-    );
-
-    setTimeout(function () {
-      $(".product-detail-page variant-selects .product-form__input").css(
-        "pointer-events",
-        "auto"
-      );
-    }, 500);
-  });
-  $(".select_option_product_detail").on("change", function () {
-    updateStickyPrice();
-  });
-  if ($(".product-form__submit").is('[disabled="disabled"]')) {
-    $(".sticky_add").attr("disabled", "disabled");
-  } else {
-    $(".sticky_add").removeAttr("disabled");
-  }
 });
 
-function updateStickyPrice() {
-  $(".product-detail-page variant-selects .product-form__input").css(
-    "pointer-events",
-    "none"
-  );
-  setTimeout(function () {
+$(document).ready(function () {
+  $(".option_blocks input").click(function () {
     $(".product_bootom_sticky .product__price").empty();
-    var firstDivHtml = $(".price_product_detail .price.price--large").html();
-    $(".product_bootom_sticky").find(".product__price").append(firstDivHtml);
-    $(".product_bootom_sticky .product-form__buttons button").load(
-      location.href + " .product_bootom_sticky .product-form__buttons button>*",
-      ""
-    );
-    if ($(".product-form__submit").is('[disabled="disabled"]')) {
-      $(".sticky_add").attr("disabled", "disabled");
-    } else {
-      $(".sticky_add").removeAttr("disabled");
-    }
-    $(".product-detail-page variant-selects .product-form__input").css(
-      "pointer-events",
-      "auto"
-    );
-  }, 1200);
-}
+
+    // Add a delay using setTimeout
+    setTimeout(function () {
+      var firstDivHtml = $(".price_product_detail .price.price--large").html();
+      $(".product_bootom_sticky").find(".product__price").append(firstDivHtml);
+    }, 1000);
+  });
+});

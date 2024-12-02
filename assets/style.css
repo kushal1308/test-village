@@ -100,5 +100,7 @@ span.drawer_close{position: absolute;right: 16px;}
 @media(max-width:480px){
 .page_village-candle-making-resources-2 .banner__media{height: 110px;}
 }
+
+
 .product_bootom_sticky .price__badge-sale{display:none;}
 .product_bootom_sticky .price__badge-sold-out{display:none;}

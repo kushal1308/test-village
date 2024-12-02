@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -44,7 +53,7 @@
       ],
       "settings": {
         "unique_class": "",
-        "image": "shopify:\/\/shop_images\/wholesale.png",
+        "image": "shopify://shop_images/wholesale.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -64,15 +73,15 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "jars",
-            "image_Dropdown": "shopify:\/\/shop_images\/Jars_1.svg",
+            "image_Dropdown": "shopify://shop_images/Jars_1.svg",
             "img_tex": "PALLET PRICING JARS",
             "text_cont": "",
             "textarea": "",
-            "richtext_1": "<p>ELEMENT STRAIGHT SIDE AMBER JAR - 80Z # ELEMENT STRAIGHT SIDE FLINT JAR - 80Z # LIBRARY JAR - 106ml # LIBRARY JAR - 212ML # LIBRARY JAR - 314ML # LUX JAR - 90Z - BLACK # LUX JAR - 90Z - AMBER # LUX JAR - 90Z - CLEAR # LUX JAR - 90Z - FROSTED WHITE # LUX JAR - 150Z - BLACK # LUX JAR - 15OZ - AMBER # LUX JAR - 150Z - CLEAR # LUX JAR - 150Z - FROSTED WHITE # MADISON JAR - 80Z # MASON JAR - 60Z # MASON JAR - 120Z # TERRA GLASS JAR - 10OZ - GLOSSY BLACK # TERRA GLASS JAR - 10OZ - GLOSSY WHITE # TERRA GLASS JAR - 10OZ - MATTE WHITE # TRADITIONAL JAR - 10 OZ<\/p>",
-            "richtext_2": "<p>168 # 168 # 272# 221# 170 # 140 # 140 # 140 # 140 # 84 # 84 # 84  # 84 # 143 # 154 # 100 # 99 # 99 # 99 # 88<\/p>",
-            "richtext_3": "<p>$2,672.73 # $2,672.73 # $2,884.85 # $2,678.79 # $2,318.18 # $4,030.30 # $4,030.30 # $3,181.82 # $4,030.30 # $2,672.73 # $2,672.73 # $2,036.36 # $2,672.73 # $2,708.33 # $1,750.00 # $1,287.88 # $2,925.00 # $2,925.00 # $2,925.00  # $1,533.33<\/p>",
-            "richtext_4": "<p>10%# 10%# 20%# 20%# 20% # 15%  # 15% # 15% # 15% # 15% # 15% # 15% # 15% #15%  # 10% # 10% # 10% # 10% # 10% # 10%<\/p>",
-            "richtext_5": "<p>$2,405.45 # $2,405.45 # $2,307.88 # $2,143.03 # $1,854.55 # $3,425.76 # <br\/>$3,425.76 # $2,704.55 # $3,425.76 # $2,271.82 #$2,271.82  # $1,730.91 # $2,271.82 # $2,302.08 # $1,575.00 # $1,159.09 # $2,632.50 # $2,632.50 # $2,632.50 # $1,380.00<\/p>",
+            "richtext_1": "<p>ELEMENT STRAIGHT SIDE AMBER JAR - 80Z # ELEMENT STRAIGHT SIDE FLINT JAR - 80Z # LIBRARY JAR - 106ml # LIBRARY JAR - 212ML # LIBRARY JAR - 314ML # LUX JAR - 90Z - BLACK # LUX JAR - 90Z - AMBER # LUX JAR - 90Z - CLEAR # LUX JAR - 90Z - FROSTED WHITE # LUX JAR - 150Z - BLACK # LUX JAR - 15OZ - AMBER # LUX JAR - 150Z - CLEAR # LUX JAR - 150Z - FROSTED WHITE # MADISON JAR - 80Z # MASON JAR - 60Z # MASON JAR - 120Z # TERRA GLASS JAR - 10OZ - GLOSSY BLACK # TERRA GLASS JAR - 10OZ - GLOSSY WHITE # TERRA GLASS JAR - 10OZ - MATTE WHITE # TRADITIONAL JAR - 10 OZ</p>",
+            "richtext_2": "<p>168 # 168 # 272# 221# 170 # 140 # 140 # 140 # 140 # 84 # 84 # 84  # 84 # 143 # 154 # 100 # 99 # 99 # 99 # 88</p>",
+            "richtext_3": "<p>$2,672.73 # $2,672.73 # $2,884.85 # $2,678.79 # $2,318.18 # $4,030.30 # $4,030.30 # $3,181.82 # $4,030.30 # $2,672.73 # $2,672.73 # $2,036.36 # $2,672.73 # $2,708.33 # $1,750.00 # $1,287.88 # $2,925.00 # $2,925.00 # $2,925.00  # $1,533.33</p>",
+            "richtext_4": "<p>10%# 10%# 20%# 20%# 20% # 15%  # 15% # 15% # 15% # 15% # 15% # 15% # 15% #15%  # 10% # 10% # 10% # 10% # 10% # 10%</p>",
+            "richtext_5": "<p>$2,405.45 # $2,405.45 # $2,307.88 # $2,143.03 # $1,854.55 # $3,425.76 # <br/>$3,425.76 # $2,704.55 # $3,425.76 # $2,271.82 #$2,271.82  # $1,730.91 # $2,271.82 # $2,302.08 # $1,575.00 # $1,159.09 # $2,632.50 # $2,632.50 # $2,632.50 # $1,380.00</p>",
             "collection": "",
             "text_1": "",
             "collection_1": "",
@@ -88,15 +97,15 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "wax",
-            "image_Dropdown": "shopify:\/\/shop_images\/Wax_2.svg",
+            "image_Dropdown": "shopify://shop_images/Wax_2.svg",
             "img_tex": "PALLET PRICING WAX",
             "text_cont": "",
             "textarea": "",
-            "richtext_1": "<p>6006 SOY PARAFFIN  WAX BLEND PALLET # COCONUT SOY WAX PALLET # COCONUT WAX BLEND PALLET # CONTAINER SOY WAX PALLET # Virgin Coconut Soy Wax Pallet  # Freedom Pillar Soy Wax # Freedom Soy Wax  # GOLDEN BRANDSR 464 WAX PALLET # GOLDEN BRANDS® 494 WAX PALLET # MILLENNIUM SOY WAX PALLET # NATUREWAX® C-3 PALLET #Pro-Flex Soy Wax<\/p>",
-            "richtext_2": "<p>37 # 60 # 35 # 60 # 48 # 60 #  60 # 36 # 36 # 60 # 33 #60 <\/p>",
-            "richtext_3": "<p>$3,223.48 # $3,863.64 # $5,965.91 # $3,227.27 # $10,545.1 # $4,227.27 # $3,065.91 # $4,425.00 # $4,390.91 #   $3,227.27 # $4,475.00 # $3,295<\/p>",
-            "richtext_4": "<p>5% # 10% # 3% # 5% # 15% # 3% # 5% # 3% # 3% # 5% # 15%#5% <\/p>",
-            "richtext_5": "<p>$3,062.12 # $3,477.27 # $5,786.93 # $3,065.91 # $8,963.4 #$4,100.45 # $3,227.27 # $4,292.20 # $4,171.21 # $3,065.91 # $3,803.75#$3,130.30<\/p>",
+            "richtext_1": "<p>6006 SOY PARAFFIN  WAX BLEND PALLET # COCONUT SOY WAX PALLET # COCONUT WAX BLEND PALLET # CONTAINER SOY WAX PALLET # Virgin Coconut Soy Wax Pallet  # Freedom Pillar Soy Wax # Freedom Soy Wax  # GOLDEN BRANDSR 464 WAX PALLET # GOLDEN BRANDS® 494 WAX PALLET # MILLENNIUM SOY WAX PALLET # NATUREWAX® C-3 PALLET #Pro-Flex Soy Wax</p>",
+            "richtext_2": "<p>37 # 60 # 35 # 60 # 48 # 60 #  60 # 36 # 36 # 60 # 33 #60 </p>",
+            "richtext_3": "<p>$3,223.48 # $3,863.64 # $5,965.91 # $3,227.27 # $10,545.1 # $4,227.27 # $3,065.91 # $4,425.00 # $4,390.91 #   $3,227.27 # $4,475.00 # $3,295</p>",
+            "richtext_4": "<p>5% # 10% # 3% # 5% # 15% # 3% # 5% # 3% # 3% # 5% # 15%#5% </p>",
+            "richtext_5": "<p>$3,062.12 # $3,477.27 # $5,786.93 # $3,065.91 # $8,963.4 #$4,100.45 # $3,227.27 # $4,292.20 # $4,171.21 # $3,065.91 # $3,803.75#$3,130.30</p>",
             "collection": "",
             "text_1": "",
             "collection_1": "",
@@ -112,15 +121,15 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "lids",
-            "image_Dropdown": "shopify:\/\/shop_images\/lid.svg",
+            "image_Dropdown": "shopify://shop_images/lid.svg",
             "img_tex": "case pricing lids",
             "text_cont": "",
             "textarea": "",
-            "richtext_1": "<p>3\" LUX WOOD LID - ACACIA # 3\" LUX WOOD LID - WHITE PINE # 4\" LUX WOOD LID - ACACIA # 4\" LUX WOOD LID - WHITE PINE # 3\" TERRA METAL - BRONZE # 3\" TERRA METAL - GOLD # COUNTRY LID - BLACK SATIN # COUNTRY LID - COPPER # COUNTRY LID - ZINC # DISTRESSED LID - BRONZE # DISTRESSED LID - GOLD # DISTRESSED LID - PEWTER # ELEMENT METAL LID - BLACK # ELEMENT METAL LID - BRONZE # ELEMENT METAL LID - GOLD # ELEMENT METAL LID - GREY # ELEMENT METAL LID -  MATTE BLACK # ELEMENT PLASTIC LID - BLACK  # ELEMENT PLASTIC LID - BROWN # Element Wood Lid - Dark # LIBRARY LID - BLACK # LIBRARY LID - COPPER # LIBRARY LID - SILVER # MASSILLY LID - BLACK # MASSILLY LID - SILVER # MASSILLY LID - WHITE <\/p>",
-            "richtext_2": "<p>216 # 216 # 144 # 144 # 216 # 216 # 300 # 300 # 600 # 1000 # 1000 # 1000  # 216 # 216 # 216 # 216 # 216 # 216 # 216 #216 # 550 # 550 # 550 # 750 # 750 # 750 <\/p>",
-            "richtext_3": "<p>$422.73 # $422.73 # $309.09 # $309.09 # $477.27 # $477.27 # $329.55 # $329.55 # $659.09 # $439.39 # $439.39 # $439.39 # $122.59  # $122.59 # $122.59 # $122.59 # $122.59 # $122.59 # $122.59 #$381.68 # $275.00 # $275.00 # $275.00 # $329.55 # $329.55 # $329.55 <\/p>",
-            "richtext_4": "<p>15% # 15% # 15% # 15% # 10% # 10% # 10% # 10% # 5% # 10% # 10% # 10%  # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10%#10%<\/p>",
-            "richtext_5": "<p>$359.32 # $359.32 # $262.73 # $262.73 # $429.55 # $429.55 # $296.59 # $296.59 # $626.14 # $395.45 # $395.45 # $395.45 # $110.33 # $110.33 # $110.33 # $110.33  # $110.33 # $110.33 # $110.33 #$343.55 # $247.50 # $247.50 # $247.50 # $296.59 # $296.59 # $296.59 <\/p>",
+            "richtext_1": "<p>3\" LUX WOOD LID - ACACIA # 3\" LUX WOOD LID - WHITE PINE # 4\" LUX WOOD LID - ACACIA # 4\" LUX WOOD LID - WHITE PINE # 3\" TERRA METAL - BRONZE # 3\" TERRA METAL - GOLD # COUNTRY LID - BLACK SATIN # COUNTRY LID - COPPER # COUNTRY LID - ZINC # DISTRESSED LID - BRONZE # DISTRESSED LID - GOLD # DISTRESSED LID - PEWTER # ELEMENT METAL LID - BLACK # ELEMENT METAL LID - BRONZE # ELEMENT METAL LID - GOLD # ELEMENT METAL LID - GREY # ELEMENT METAL LID -  MATTE BLACK # ELEMENT PLASTIC LID - BLACK  # ELEMENT PLASTIC LID - BROWN # Element Wood Lid - Dark # LIBRARY LID - BLACK # LIBRARY LID - COPPER # LIBRARY LID - SILVER # MASSILLY LID - BLACK # MASSILLY LID - SILVER # MASSILLY LID - WHITE </p>",
+            "richtext_2": "<p>216 # 216 # 144 # 144 # 216 # 216 # 300 # 300 # 600 # 1000 # 1000 # 1000  # 216 # 216 # 216 # 216 # 216 # 216 # 216 #216 # 550 # 550 # 550 # 750 # 750 # 750 </p>",
+            "richtext_3": "<p>$422.73 # $422.73 # $309.09 # $309.09 # $477.27 # $477.27 # $329.55 # $329.55 # $659.09 # $439.39 # $439.39 # $439.39 # $122.59  # $122.59 # $122.59 # $122.59 # $122.59 # $122.59 # $122.59 #$381.68 # $275.00 # $275.00 # $275.00 # $329.55 # $329.55 # $329.55 </p>",
+            "richtext_4": "<p>15% # 15% # 15% # 15% # 10% # 10% # 10% # 10% # 5% # 10% # 10% # 10%  # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10%#10%</p>",
+            "richtext_5": "<p>$359.32 # $359.32 # $262.73 # $262.73 # $429.55 # $429.55 # $296.59 # $296.59 # $626.14 # $395.45 # $395.45 # $395.45 # $110.33 # $110.33 # $110.33 # $110.33  # $110.33 # $110.33 # $110.33 #$343.55 # $247.50 # $247.50 # $247.50 # $296.59 # $296.59 # $296.59 </p>",
             "collection": "",
             "text_1": "",
             "collection_1": "",
@@ -136,15 +145,15 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "wicks",
-            "image_Dropdown": "shopify:\/\/shop_images\/wicks.svg",
+            "image_Dropdown": "shopify://shop_images/wicks.svg",
             "img_tex": "case pricing wicks",
             "text_cont": "",
             "textarea": "",
-            "richtext_1": "<p>HTP93 (2\"-2.5\" DIAMETER)  SOY CANDLE WICK # HTP105 (2.5\"-3\" DIAMETER) SOY CANDLE WICK # HTP1212 (2\"-3\" DIAMETER) SOY CANDLE WICK # HTP1312 (3\"-4\" DIAMETER) SOY CANDLE WICK # PREMIER COTTON SMALL WICK # PREMIER COTTON MEDIUM WICK # PREMIER COTTON LARGE WICK # TEALIGHT FOR SOY WAX #Stabilo 8 (1.75\"-2.25\" Diameter) Soy MNW Wick# STABILO 12 (1.5\"-2\" Diameter) Soy HMW Wick # STABILO 16 (2\"-2.5\" Diameter) Soy HMW Wick # STABILO 20 (2.5\"-3\" Diameter) Soy HMW Wick #Stabilo 22 (2.5\"-3\" Diameter) Soy MNW Wick<\/p>",
-            "richtext_2": "<p>5000 # 5000 # 5000 # 5000 # 5000 # 5000 # 5000 # 2000 # 5000 # 5000 # 5000 # 5000# 5000<\/p>",
-            "richtext_3": "<p>$409.09 # $409.09 # $409.09 # $409.09 # $409.09 # $409.09 # $409.09 # $1,363.64 # $507.58 # $507.58 # $507.58 #$518.90#$518.90<\/p>",
-            "richtext_4": "<p>10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10%# 10%# 10%<\/p>",
-            "richtext_5": "<p>$368.18 # $368.18 # $368.18 # $368.18 # $368.18 #  $368.18 # $368.18 # $1,022.73 # $456.82 # $456.82 # $456.82#$467.04#$467.04<\/p>",
+            "richtext_1": "<p>HTP93 (2\"-2.5\" DIAMETER)  SOY CANDLE WICK # HTP105 (2.5\"-3\" DIAMETER) SOY CANDLE WICK # HTP1212 (2\"-3\" DIAMETER) SOY CANDLE WICK # HTP1312 (3\"-4\" DIAMETER) SOY CANDLE WICK # PREMIER COTTON SMALL WICK # PREMIER COTTON MEDIUM WICK # PREMIER COTTON LARGE WICK # TEALIGHT FOR SOY WAX #Stabilo 8 (1.75\"-2.25\" Diameter) Soy MNW Wick# STABILO 12 (1.5\"-2\" Diameter) Soy HMW Wick # STABILO 16 (2\"-2.5\" Diameter) Soy HMW Wick # STABILO 20 (2.5\"-3\" Diameter) Soy HMW Wick #Stabilo 22 (2.5\"-3\" Diameter) Soy MNW Wick</p>",
+            "richtext_2": "<p>5000 # 5000 # 5000 # 5000 # 5000 # 5000 # 5000 # 2000 # 5000 # 5000 # 5000 # 5000# 5000</p>",
+            "richtext_3": "<p>$409.09 # $409.09 # $409.09 # $409.09 # $409.09 # $409.09 # $409.09 # $1,363.64 # $507.58 # $507.58 # $507.58 #$518.90#$518.90</p>",
+            "richtext_4": "<p>10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10%# 10%# 10%</p>",
+            "richtext_5": "<p>$368.18 # $368.18 # $368.18 # $368.18 # $368.18 #  $368.18 # $368.18 # $1,022.73 # $456.82 # $456.82 # $456.82#$467.04#$467.04</p>",
             "collection": "",
             "text_1": "",
             "collection_1": "",
@@ -160,10 +169,10 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "scents",
-            "image_Dropdown": "shopify:\/\/shop_images\/scents.svg",
+            "image_Dropdown": "shopify://shop_images/scents.svg",
             "img_tex": "Drum Pricing fragrance",
-            "image_english": "shopify:\/\/shop_images\/USD.png",
-            "image_french": "shopify:\/\/shop_images\/USD.png",
+            "image_english": "shopify://shop_images/USD.png",
+            "image_french": "shopify://shop_images/USD.png",
             "text_cont": "",
             "textarea": "",
             "richtext_1": "",
@@ -176,9 +185,9 @@
             "collection_1": "spring-fragrances",
             "text_2": "summer",
             "collection_2": "summer",
-            "text_3": "winter\/Holiday",
+            "text_3": "winter/Holiday",
             "collection_3": "winter-and-holiday-fragrances",
-            "text_4": "Autumn\/Fall",
+            "text_4": "Autumn/Fall",
             "collection_4": "autumn-and-fall-fragrances"
           }
         }
@@ -197,9 +206,9 @@
       "type": "Buy_Bulk",
       "settings": {
         "text": "BUY IN BULK WITH VILLAGE CRAFT & CANDLE",
-        "Image": "shopify:\/\/shop_images\/Guy_with_boxes.png",
+        "Image": "shopify://shop_images/Guy_with_boxes.png",
         "textarea": "",
-        "detaiuls_data": "<p>From your first candle sale to your first wholesale order and beyond, Village Craft and Candle is here to help you build your candle-making business every step of the way. With a huge and reliable selection of wholesale wax, jars, fragrance oils and wicks all at a competitive price, Village is sure to be the only wholesale candle making supplier you’ll need.<br\/><br\/>Combining smaller orders together into one bulk order, will allow you to not only take advantage of quantity discounts, but will also save you a significant amount on shipping. We offer economical freight shipping rates on bulk orders being delivered throughout Canada and the United States.<br\/><br\/>There’s no need to sign up for a special wholesale account. At Village, every customer has access to our wholesale pricing. On top of the incredible savings you’ll get, you’ll also receive additional savings for future orders through our MyVillage loyalty program.<\/p><p>The large inventory Village is able to stock, allows us to meet all your candle making supply needs faster than our competitors. Our bulk pricing as well as our freight shipping options will provide savings that are sure to help your business reach a whole new level of success.<br\/><br\/>Here are some of the benefits of wholesale:<\/p><ul><li>Quantity discounts that increase your profits by lowering your costs<\/li><li>Reduced shipping charges<\/li><li>Supplies on hand when you need them<\/li><li>No longer worry about supply chain issues or shipping delays putting you behind<\/li><\/ul><p><\/p><p>In order to help all of our customers take advantage of our wholesale pricing, we are pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding. This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.<br\/><\/p>"
+        "detaiuls_data": "<p>From your first candle sale to your first wholesale order and beyond, Village Craft and Candle is here to help you build your candle-making business every step of the way. With a huge and reliable selection of wholesale wax, jars, fragrance oils and wicks all at a competitive price, Village is sure to be the only wholesale candle making supplier you’ll need.<br/><br/>Combining smaller orders together into one bulk order, will allow you to not only take advantage of quantity discounts, but will also save you a significant amount on shipping. We offer economical freight shipping rates on bulk orders being delivered throughout Canada and the United States.<br/><br/>There’s no need to sign up for a special wholesale account. At Village, every customer has access to our wholesale pricing. On top of the incredible savings you’ll get, you’ll also receive additional savings for future orders through our MyVillage loyalty program.</p><p>The large inventory Village is able to stock, allows us to meet all your candle making supply needs faster than our competitors. Our bulk pricing as well as our freight shipping options will provide savings that are sure to help your business reach a whole new level of success.<br/><br/>Here are some of the benefits of wholesale:</p><ul><li>Quantity discounts that increase your profits by lowering your costs</li><li>Reduced shipping charges</li><li>Supplies on hand when you need them</li><li>No longer worry about supply chain issues or shipping delays putting you behind</li></ul><p></p><p>In order to help all of our customers take advantage of our wholesale pricing, we are pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding. This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.<br/></p>"
       }
     },
     "works_new_339BhB": {
@@ -209,7 +218,7 @@
           "type": "work_new",
           "settings": {
             "text_name": "select the product",
-            "details": "<p>Shop our store for the products you are looking to buy in bulk.<\/p>",
+            "details": "<p>Shop our store for the products you are looking to buy in bulk.</p>",
             "bg_color": "#7fa9a4"
           }
         },
@@ -217,7 +226,7 @@
           "type": "work_new",
           "settings": {
             "text_name": "Order Here",
-            "details": "<p>Contact our support team specifying the products you want to order.<\/p>",
+            "details": "<p>Contact our support team specifying the products you want to order.</p>",
             "bg_color": "#7fa9a4"
           }
         },
@@ -225,7 +234,7 @@
           "type": "work_new",
           "settings": {
             "text_name": "Get Invoice via Email",
-            "details": "<p>Receive an invoice via email with all the details to finalize your purchase.<\/p>",
+            "details": "<p>Receive an invoice via email with all the details to finalize your purchase.</p>",
             "bg_color": "#7fa9a4"
           }
         }
@@ -238,7 +247,7 @@
       "settings": {
         "text": "HOW IT WORKS",
         "textarea": "Take these three simple steps to make your bulk order!",
-        "image": "shopify:\/\/shop_images\/Guy_with_laptop.png",
+        "image": "shopify://shop_images/Guy_with_laptop.png",
         "button_text": "",
         "button_url": "#contactus_wrapper"
       }
@@ -246,7 +255,7 @@
     "contact_us_app_BeQrdh": {
       "type": "contact_us_app",
       "settings": {
-        "custom_html": "<div data-gorgias-contact-form-uid=\"equ1i5og\"><\/div>"
+        "custom_html": "<div data-gorgias-contact-form-uid=\"equ1i5og\"></div>"
       }
     },
     "faq_66zJ9D": {
@@ -256,21 +265,21 @@
           "type": "button",
           "settings": {
             "heading_demo": "Can I pay my bulk order in instalments?",
-            "description_demo": "<p>Yes you can. Village Craft and Candle is pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding.<\/p>\n<p>This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.\n<\/p>"
+            "description_demo": "<p>Yes you can. Village Craft and Candle is pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding.</p>\n<p>This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.\n</p>"
           }
         },
         "button_dTNDVT": {
           "type": "button",
           "settings": {
             "heading_demo": "How do I calculate the shipping cost?",
-            "description_demo": "<p>Our dedicated customer service team will work with a variety of-carriers to obtain the best pricing as well as the most suitable timeframe for your desires.<\/p>"
+            "description_demo": "<p>Our dedicated customer service team will work with a variety of-carriers to obtain the best pricing as well as the most suitable timeframe for your desires.</p>"
           }
         },
         "button_i93PdC": {
           "type": "button",
           "settings": {
             "heading_demo": "What is the estimated time for delivery?",
-            "description_demo": "<p>We are proud to provide fast and reliable shipping across Canada and the United States. Our order processing time is 2-3 business days. Once your order is processed, the delivery time will be dependent on your location and the shipping service you selected.<\/p>"
+            "description_demo": "<p>We are proud to provide fast and reliable shipping across Canada and the United States. Our order processing time is 2-3 business days. Once your order is processed, the delivery time will be dependent on your location and the shipping service you selected.</p>"
           }
         }
       },
@@ -302,12 +311,12 @@
       "type": "demo_schedule",
       "disabled": true,
       "settings": {
-        "bg_image": "shopify:\/\/shop_images\/BG_1.svg",
+        "bg_image": "shopify://shop_images/BG_1.svg",
         "text": "Schedule a Demo Call with Our Product Specialists",
-        "Image": "shopify:\/\/shop_images\/Group_36179.png",
-        "textarea": "<p>Our team of experts is available to answer your questions, provide guidance, and help you find the solutions you need.<\/p>",
+        "Image": "shopify://shop_images/Group_36179.png",
+        "textarea": "<p>Our team of experts is available to answer your questions, provide guidance, and help you find the solutions you need.</p>",
         "schedula_text": "schedule a call",
-        "schedula_url": "https:\/\/calendly.com\/roxanne-87",
+        "schedula_url": "https://calendly.com/roxanne-87",
         "text_dis": "",
         "discun_code": "",
         "product_1": "",

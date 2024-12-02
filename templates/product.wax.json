@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -12,7 +21,7 @@
           "settings": {}
         },
         "sezzle_widget_widget_block_NaYkiF": {
-          "type": "shopify:\/\/apps\/sezzle-widget\/blocks\/widget-block\/f3a53793-e118-4764-a86b-a79bfedb0d5f",
+          "type": "shopify://apps/sezzle-widget/blocks/widget-block/f3a53793-e118-4764-a86b-a79bfedb0d5f",
           "settings": {
             "heading": "Sezzle Widget",
             "font_size": 15,
@@ -20,7 +29,7 @@
           }
         },
         "growave_loyalty_wishlist_block_product_review_avg_profile_cFxaTe": {
-          "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.product.reviewAvgProfile\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
+          "type": "shopify://apps/growave-loyalty-wishlist/blocks/block.product.reviewAvgProfile/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
           "settings": {}
         },
         "variant_picker": {
@@ -33,14 +42,6 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
-        },
-        "dynamatic_personalized_upsells_dynamatics_E4dYtW": {
-          "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
-          "settings": {
-            "zone_id": "ZID0325-VIL32681731922567-PRODUCTPAGE",
-            "custom_css": "",
-            "event_triggerer": ""
-          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -112,7 +113,6 @@
         },
         "collapsible_tab_cWkajL": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "FREQUENTLY BOUGHT TOGETHER",
             "fr_heading": "PRODUITS FRÉQUEMMENT ACHETÉS ENSEMBLE",
@@ -129,14 +129,6 @@
             "link_documentation_fr_IFRA": "",
             "page": ""
           }
-        },
-        "dynamatic_personalized_upsells_dynamatics_9jj8gf": {
-          "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
-          "settings": {
-            "zone_id": "ZID0325-VIL47601731424282-WEBPAGE",
-            "custom_css": "",
-            "event_triggerer": ""
-          }
         }
       },
       "block_order": [
@@ -146,14 +138,12 @@
         "growave_loyalty_wishlist_block_product_review_avg_profile_cFxaTe",
         "variant_picker",
         "quantity_selector",
-        "dynamatic_personalized_upsells_dynamatics_E4dYtW",
         "buy_buttons",
         "description_Ln7JaL",
         "collapsible_tab_dUhc8e",
         "collapsible_tab_Mgn6rU",
         "collapsible_tab_tVcpVg",
-        "collapsible_tab_cWkajL",
-        "dynamatic_personalized_upsells_dynamatics_9jj8gf"
+        "collapsible_tab_cWkajL"
       ],
       "settings": {
         "enable_sticky_info": false,
@@ -175,7 +165,7 @@
       "type": "apps",
       "blocks": {
         "growave_loyalty_wishlist_block_product_review_widget_9H7xGk": {
-          "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.product.reviewWidget\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
+          "type": "shopify://apps/growave-loyalty-wishlist/blocks/block.product.reviewWidget/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
           "settings": {}
         }
       },
@@ -190,17 +180,18 @@
     "1713765496c69fea83": {
       "type": "apps",
       "blocks": {
-        "dynamatic_personalized_upsells_dynamatics_3Le3W3": {
-          "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
+        "rebuy_personalization_engine_rebuy_widget_ynVh8Q": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
-            "zone_id": "ZID0325-VIL25121731415847-WEBPAGE",
-            "custom_css": "",
-            "event_triggerer": ""
+            "enabled": true,
+            "id": "76964",
+            "product_id_enabled": true,
+            "collection_id_enabled": true
           }
         }
       },
       "block_order": [
-        "dynamatic_personalized_upsells_dynamatics_3Le3W3"
+        "rebuy_personalization_engine_rebuy_widget_ynVh8Q"
       ],
       "settings": {
         "include_margins": true,

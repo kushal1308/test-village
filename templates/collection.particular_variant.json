@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -16,7 +25,7 @@
         "menu_collection": "categories",
         "collection_head": "CATEGORIES",
         "price_option": "0.00-10.00--UNDER  $10                                               ||10.00-20.00--$10 - $20       ||20.00-30.00--$20 - $30    ||30.00-50.00--$30 - $50",
-        "notes_option": "Fruit,Floral,Gourmand,Woody,Herbal,Fresh\/Green,Spicy,Musk",
+        "notes_option": "Fruit,Floral,Gourmand,Woody,Herbal,Fresh/Green,Spicy,Musk",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",

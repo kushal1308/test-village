@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -23,7 +32,7 @@
       ],
       "settings": {
         "unique_class": "",
-        "image": "shopify:\/\/shop_images\/Copy_of_Mobile_Website_Banner_-_MyVillage_1_cedacb15-0f02-4a9f-85fb-f0f955bad66d.png",
+        "image": "shopify://shop_images/Copy_of_Mobile_Website_Banner_-_MyVillage_1_cedacb15-0f02-4a9f-85fb-f0f955bad66d.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -23,7 +32,7 @@
       ],
       "settings": {
         "unique_class": "candle_resources",
-        "image": "shopify:\/\/shop_images\/1223623393456_2_RESOURCE_f350341b-2e88-4f36-9b59-36abeb86f20d.png",
+        "image": "shopify://shop_images/1223623393456_2_RESOURCE_f350341b-2e88-4f36-9b59-36abeb86f20d.png",
         "image_overlay_opacity": 20,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -45,7 +54,7 @@
     "faq_app_rX4KWe": {
       "type": "faq_app",
       "settings": {
-        "faq_app": "<div data-gorgias-help-center-uid=\"ryioyybe\"><\/div>"
+        "faq_app": "<div data-gorgias-help-center-uid=\"ryioyybe\"></div>"
       }
     },
     "recent_blogs_AKNAtH": {
@@ -65,91 +74,91 @@
         "column_G4r9hH": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/788539262927_CANDLE_WICKS_medium_bd571a76-9eb5-4b1e-8e42-111ec4f3b565.png",
+            "image": "shopify://shop_images/788539262927_CANDLE_WICKS_medium_bd571a76-9eb5-4b1e-8e42-111ec4f3b565.png",
             "title": "",
             "text": "",
             "link_label": "CANDLE WICKS",
-            "link": "https:\/\/villagecraftandcandle.com\/blogs\/news\/tagged\/candle_wicks"
+            "link": "https://villagecraftandcandle.com/blogs/news/tagged/candle_wicks"
           }
         },
         "column_P8wXgX": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/472169093650_CANDLE_DYE_medium_20d85ff2-3d14-484d-b274-865dc9a60819.png",
+            "image": "shopify://shop_images/472169093650_CANDLE_DYE_medium_20d85ff2-3d14-484d-b274-865dc9a60819.png",
             "title": "",
             "text": "",
             "link_label": "CANDLE DYE",
-            "link": "https:\/\/villagecraftandcandle.com\/blogs\/news\/tagged\/candle_dye"
+            "link": "https://villagecraftandcandle.com/blogs/news/tagged/candle_dye"
           }
         },
         "column_VDzgwg": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1633127858969_CANDLE_SCENTS_medium_1c1109f4-159f-4b84-8021-26359fad92fb.png",
+            "image": "shopify://shop_images/1633127858969_CANDLE_SCENTS_medium_1c1109f4-159f-4b84-8021-26359fad92fb.png",
             "title": "",
             "text": "",
             "link_label": "CANDLE SCENTS",
-            "link": "https:\/\/villagecraftandcandle.com\/blogs\/news\/tagged\/candle_scents"
+            "link": "https://villagecraftandcandle.com/blogs/news/tagged/candle_scents"
           }
         },
         "column_9RbKaq": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/614460728960_CANDLE_WAX_medium_1edec1a7-065e-438a-94a7-de32b63e2572.png",
+            "image": "shopify://shop_images/614460728960_CANDLE_WAX_medium_1edec1a7-065e-438a-94a7-de32b63e2572.png",
             "title": "",
             "text": "",
             "link_label": "CANDLE WAX",
-            "link": "https:\/\/villagecraftandcandle.com\/blogs\/news\/tagged\/candle_wax"
+            "link": "https://villagecraftandcandle.com/blogs/news/tagged/candle_wax"
           }
         },
         "column_P8wDxg": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/547828568858_CANDLE_MOLDS_medium_2fbf9826-d527-4dda-92dd-92830ee46a78.png",
+            "image": "shopify://shop_images/547828568858_CANDLE_MOLDS_medium_2fbf9826-d527-4dda-92dd-92830ee46a78.png",
             "title": "",
             "text": "",
             "link_label": "CANDLE MOLDS",
-            "link": "https:\/\/villagecraftandcandle.com\/blogs\/news\/tagged\/candle_molds"
+            "link": "https://villagecraftandcandle.com/blogs/news/tagged/candle_molds"
           }
         },
         "column_F4LjV6": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/721239970724_JARS_LIDS_medium_48c07181-4885-408b-8c10-9a1548b51029.png",
+            "image": "shopify://shop_images/721239970724_JARS_LIDS_medium_48c07181-4885-408b-8c10-9a1548b51029.png",
             "title": "",
             "text": "",
             "link_label": "JARS & LIDS",
-            "link": "https:\/\/villagecraftandcandle.com\/blogs\/news\/tagged\/candle_jars-and-leads"
+            "link": "https://villagecraftandcandle.com/blogs/news/tagged/candle_jars-and-leads"
           }
         },
         "column_iLjpiM": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1309645344720_CANDLE_ACCESSORIES_medium_14831fb7-61a6-4fb2-b651-6251cbcdbb7d.png",
+            "image": "shopify://shop_images/1309645344720_CANDLE_ACCESSORIES_medium_14831fb7-61a6-4fb2-b651-6251cbcdbb7d.png",
             "title": "",
             "text": "",
             "link_label": "ACCESSORIES",
-            "link": "https:\/\/villagecraftandcandle.com\/blogs\/news\/tagged\/candle_accessories"
+            "link": "https://villagecraftandcandle.com/blogs/news/tagged/candle_accessories"
           }
         },
         "column_RwDTbY": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/package_medium_b560e5ff-798c-4ce9-a7f2-7cc9bebcd532.png",
+            "image": "shopify://shop_images/package_medium_b560e5ff-798c-4ce9-a7f2-7cc9bebcd532.png",
             "title": "",
             "text": "",
             "link_label": "PACKAGING & LABELS",
-            "link": "https:\/\/villagecraftandcandle.com\/blogs\/news\/tagged\/candle_packaging-and-labels"
+            "link": "https://villagecraftandcandle.com/blogs/news/tagged/candle_packaging-and-labels"
           }
         },
         "column_Qz9tpY": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/564420570712_CANDLE_MAKING_CLASSES_medium_7372bde4-c8cc-4ad3-901c-cbf3d8f30836.png",
+            "image": "shopify://shop_images/564420570712_CANDLE_MAKING_CLASSES_medium_7372bde4-c8cc-4ad3-901c-cbf3d8f30836.png",
             "title": "",
             "text": "",
             "link_label": "Candle Making Classes",
-            "link": "https:\/\/villagecraftandcandle.com\/pages\/classes"
+            "link": "https://villagecraftandcandle.com/pages/classes"
           }
         }
       },
@@ -190,21 +199,21 @@
           "type": "button",
           "settings": {
             "title": "Glossary",
-            "url": "shopify:\/\/pages\/glossary"
+            "url": "shopify://pages/glossary"
           }
         },
         "button_tbAfTY": {
           "type": "button",
           "settings": {
             "title": "Reviews",
-            "url": "shopify:\/\/pages\/reviews"
+            "url": "shopify://pages/reviews"
           }
         },
         "button_VRR47w": {
           "type": "button",
           "settings": {
             "title": "Contact",
-            "url": "shopify:\/\/pages\/contact-us"
+            "url": "shopify://pages/contact-us"
           }
         }
       },

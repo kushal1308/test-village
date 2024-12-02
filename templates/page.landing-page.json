@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -23,7 +32,7 @@
       ],
       "settings": {
         "unique_class": "order_wrapper",
-        "image": "shopify:\/\/shop_images\/Banner_10.png",
+        "image": "shopify://shop_images/Banner_10.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -49,7 +58,7 @@
         "text_LrBYA3": {
           "type": "text",
           "settings": {
-            "text": "<p>Making candles on your own can be an exciting yet complicated task. When it comes to DIY-ing candles, you'll likely get caught up in the endless variety of scents, vibrant colors, and types of candles.<\/p>",
+            "text": "<p>Making candles on your own can be an exciting yet complicated task. When it comes to DIY-ing candles, you'll likely get caught up in the endless variety of scents, vibrant colors, and types of candles.</p>",
             "text_style": "body"
           }
         },
@@ -57,7 +66,7 @@
           "type": "button",
           "settings": {
             "button_label": "Read more",
-            "button_link": "shopify:\/\/pages\/village-candle-making-resources",
+            "button_link": "shopify://pages/village-candle-making-resources",
             "button_style_secondary": false
           }
         }
@@ -69,7 +78,7 @@
       ],
       "settings": {
         "customclass": "",
-        "image": "shopify:\/\/shop_images\/Image_53.png",
+        "image": "shopify://shop_images/Image_53.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -90,17 +99,17 @@
         "youtube_nN4MJB": {
           "type": "youtube",
           "settings": {
-            "youtube_video": "https:\/\/youtu.be\/ombOSRogBas?si=1zPCBkpwKlD27LfF",
-            "image": "shopify:\/\/shop_images\/maxresdefault_1.png",
-            "image_icon": "shopify:\/\/shop_images\/image_4.png"
+            "youtube_video": "https://youtu.be/ombOSRogBas?si=1zPCBkpwKlD27LfF",
+            "image": "shopify://shop_images/maxresdefault_1.png",
+            "image_icon": "shopify://shop_images/image_4.png"
           }
         },
         "youtube_mtGwMe": {
           "type": "youtube",
           "settings": {
-            "youtube_video": "https:\/\/youtu.be\/YWqm1DOBGRg?si=g5J18eGb9hRs_SdW",
-            "image": "shopify:\/\/shop_images\/maxresdefault_1_1.png",
-            "image_icon": "shopify:\/\/shop_images\/image_4.png"
+            "youtube_video": "https://youtu.be/YWqm1DOBGRg?si=g5J18eGb9hRs_SdW",
+            "image": "shopify://shop_images/maxresdefault_1_1.png",
+            "image_icon": "shopify://shop_images/image_4.png"
           }
         }
       },
@@ -131,7 +140,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Join now",
-            "button_link_1": "\/",
+            "button_link_1": "/",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -146,7 +155,7 @@
       ],
       "settings": {
         "unique_class": "",
-        "image": "shopify:\/\/shop_images\/Mask_group_20.png",
+        "image": "shopify://shop_images/Mask_group_20.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -172,7 +181,7 @@
         "text_kW7bLg": {
           "type": "text",
           "settings": {
-            "text": "<h3>MyVillage Rewards Program<\/h3><p>Earn V Points for your purchases and grow your candle-making community!<\/p>",
+            "text": "<h3>MyVillage Rewards Program</h3><p>Earn V Points for your purchases and grow your candle-making community!</p>",
             "text_style": "body"
           }
         },
@@ -180,7 +189,7 @@
           "type": "button",
           "settings": {
             "button_label": "Join Now & Collect Points",
-            "button_link": "shopify:\/\/pages\/reward",
+            "button_link": "shopify://pages/reward",
             "button_style_secondary": false
           }
         }
@@ -192,7 +201,7 @@
       ],
       "settings": {
         "customclass": "loyalty_program",
-        "image": "shopify:\/\/shop_images\/Special_Deal_for_You_Girl.png",
+        "image": "shopify://shop_images/Special_Deal_for_You_Girl.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",

@@ -1,6 +1,6 @@
 {%- comment -%}
-  This file has been modified by the Yoast SEO for Shopify app.
-  You can learn more about this (and learn how to cleanly revert these changes) at https://yoa.st/removing-theme-changes.
+This file has been modified by the Yoast SEO for Shopify app.
+You can learn more about this (and learn how to cleanly revert these changes) at https://yoa.st/removing-theme-changes.
 {%- endcomment -%}
 <script>
   $(document).ready(function () {
@@ -23,7 +23,7 @@
   <div class="page-width d-flex align-items-center">
     <div class="pro_boot_v">
       <div class="image_pro_va">
-        <img src="{{ product.featured_image | img_url: 'master' }}" class="Product_image" height="" width="" alt="img">
+        <img src="{{ product.featured_image | img_url: 'master' }}" class="Product_image" height="" width="" alt="img" >
       </div>
       <h1 class="product-single__title font-weight-700 text-transform-uppercase color-gray font-family-Neuzeit font-size-16px line-height-21px">
         {{ product.title }}
@@ -190,7 +190,6 @@
                 >
                   {{- block.settings.text -}}
                 </p>
-
               {%- when 'title' -%}
                 {% if product.metafields.custom.top_product_type != blank %}
                   <p
@@ -198,25 +197,13 @@
                     {{ block.shopify_attributes }}
                   >
                     {% comment %} {{ product.title | escape | split:'-' | last }} {% endcomment %}
-                    <a href="https://villagecraftandcandle.com/collections/scents">
-                      {{- product.metafields.custom.top_product_type -}}
-                    </a>
+                    <a href="https://villagecraftandcandle.com/collections/scents">{{ product.metafields.custom.top_product_type }}</a>
                   </p>
                 {% endif %}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  {% comment %}<h1 class="h1 text-align">{{ product.title | downcase | replace: '- fragrance oil', '' }}</h1> {% endcomment %}
-                  {% if product.metafields.custom.product_fragrance != blank %}
-                    <h1 class="h1 text-align">
-                      {% if request.locale.iso_code == 'fr' %}
-                        {{ product.metafields.custom.product_fragrance_french | metafield_tag }}
-                      {% else %}
-                        {{ product.metafields.custom.product_fragrance | metafield_tag }}
-                      {% endif %}
-                    </h1>
-                  {% else %}
-                    <h1 class="h1 text-align">{{ product.title | downcase | replace: '- fragrance oil', '' }}</h1>
-                  {% endif %}
-
+                   {% comment %}<h1 class="h1 text-align">{{ product.title | downcase | replace: '- fragrance oil', '' }}</h1> {% endcomment %}
+                   <h1 class="h1 text-align">{% if request.locale.iso_code == 'fr' %} {{ product.metafields.custom.product_fragrance_french | metafield_tag }}  {% else %} {{ product.metafields.custom.product_fragrance | metafield_tag }} {% endif %}</h1>
+               
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
@@ -323,22 +310,12 @@
 
                 <div class="accordionItem open">
                   {%- if product.description != blank -%}
-                    <h3 class="accordionItemHeading d-flex align-items-center m-0px accordion__title inline-richtext line-height-32px color-black font-family-Neuzeit Grotesk font-weight-500 font-size-20px text-transform-uppercase letter-spacing-0px">
-                      Description
-                    </h3>
+                    <h3 class="accordionItemHeading d-flex align-items-center m-0px accordion__title inline-richtext line-height-32px color-black font-family-Neuzeit Grotesk font-weight-500 font-size-20px text-transform-uppercase letter-spacing-0px">Description</h3>
                     <div class="accordionItemContent">
                       {% if request.locale.iso_code == 'fr' %}
-                        {% if product.metafields.custom.unique_text_top_french != blank %}
-                          <p style="color:#7FA9A4;font-weight:700;text-transform:uppercase;">
-                            {{ product.metafields.custom.unique_text_top_french }}
-                          </p>
-                        {% endif %}
+                      {% if product.metafields.custom.unique_text_top_french != blank %}<p style="color:#7FA9A4;font-weight:700;text-transform:uppercase;"> {{ product.metafields.custom.unique_text_top_french }}</p> {% endif %}
                       {% else %}
-                        {% if product.metafields.custom.unique_text_top != blank %}
-                          <p style="color:#7FA9A4;font-weight:700;text-transform:uppercase;">
-                            {{ product.metafields.custom.unique_text_top }}
-                          </p>
-                        {% endif %}
+                       {% if product.metafields.custom.unique_text_top != blank %}<p style="color:#7FA9A4;font-weight:700;text-transform:uppercase;"> {{ product.metafields.custom.unique_text_top }}</p> {% endif %}
                       {% endif %}
                       {%- if product.description != blank -%}
                         <div class="product__description rte">{{ product.description }}</div>
@@ -361,244 +338,214 @@
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
                 {% if customer.b2b? == true %}
-                  {% if block.settings.content != blank or product.metafields.custom.safety_information_sds_ != blank %}
-                    <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                      <details id="Details-{{ block.id }}-{{ section.id }}">
-                        <summary>
-                          <div class="summary__title">
-                            {% render 'icon-accordion', icon: block.settings.icon %}
-                            <h2 class="h4 accordion__title_heading m-0px accordion__title inline-richtext line-height-32px color-black font-family-Neuzeit Grotesk font-weight-500 font-size-20px text-transform-uppercase letter-spacing-0px">
-                              {% if request.locale.iso_code == 'fr' %}
-                                {{ block.settings.frheading | escape -}}
-                              {%- else -%}
-                                {{- block.settings.heading | default: block.settings.page.title | escape -}}
-                              {%- endif %}
-                            </h2>
-                          </div>
-                          {% comment %} {% render 'icon-caret' %} {% endcomment %}
-                          {% comment %}
-                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                             width="16.000000pt" height="10.000000pt" viewBox="0 0 16.000000 10.000000"
-                             preserveAspectRatio="xMidYMid meet">
+                 {% if block.settings.content != blank or product.metafields.custom.safety_information_sds_ != blank  %}
+                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                  <details id="Details-{{ block.id }}-{{ section.id }}">
+                    <summary>
+                      <div class="summary__title">
+                        {% render 'icon-accordion', icon: block.settings.icon %}
+                        <h2 class="h4 accordion__title_heading m-0px accordion__title inline-richtext line-height-32px color-black font-family-Neuzeit Grotesk font-weight-500 font-size-20px text-transform-uppercase letter-spacing-0px">
+                         {% if request.locale.iso_code == 'fr' %} {{ block.settings.frheading | escape }}{% else %}{{ block.settings.heading | default: block.settings.page.title | escape }}{% endif %}
+                        </h2>
+                      </div>
+                      {% comment %} {% render 'icon-caret' %} {% endcomment %}
+                      {% comment %} <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                        width="16.000000pt" height="10.000000pt" viewBox="0 0 16.000000 10.000000"
+                        preserveAspectRatio="xMidYMid meet">
+                       
+                       <g transform="translate(0.000000,10.000000) scale(0.100000,-0.100000)"
+                       fill="#000000" stroke="none">
+                       <path d="M36 45 l-37 -45 81 0 81 0 -37 45 c-20 25 -40 45 -44 45 -4 0 -24
+                       -20 -44 -45z"/>
+                       </g>
+                       </svg> {% endcomment %}
+                    </summary>
 
-                            <g transform="translate(0.000000,10.000000) scale(0.100000,-0.100000)"
-                            fill="#000000" stroke="none">
-                            <path d="M36 45 l-37 -45 81 0 81 0 -37 45 c-20 25 -40 45 -44 45 -4 0 -24
-                            -20 -44 -45z"/>
-                            </g>
-                            </svg>
-                          {% endcomment %}
-                        </summary>
+                    {% if request.locale.iso_code == 'fr' %}
+                     
+                        <div class="accordion__content rte d-flex flex-wrap-wrap documentation" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                          {% if block.settings.content_fr != blank %} {{ block.settings.content_fr }} {% endif %}
+                          {% if block.settings.link_documentation_fr != blank or block.settings.link_documentation != blank %}
+                            <div class="link_documentation">
+                              <a href="{% if block.settings.link_documentation_fr == blank %}{{ block.settings.link_documentation }}{% else %}{{ block.settings.link_documentation_fr }}{% endif %}">
+                                <img
+                                  src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
+                                  class="width-50px"
+                                  height=""
+                                  width=""
+                                  alt="img"
+                              ></a>
+                              <p class="text-align-center">{{ block.settings.link_documentation_name_sds }}</p>
+                            </div>
+                          {% endif %}
 
-                        {% if request.locale.iso_code == 'fr' %}
-                          <div
-                            class="accordion__content rte d-flex flex-wrap-wrap documentation"
-                            id="ProductAccordion-{{ block.id }}-{{ section.id }}"
-                          >
-                            {% if block.settings.content_fr != blank %} {{ block.settings.content_fr }} {% endif %}
-                            {% if block.settings.link_documentation_fr != blank
-                              or block.settings.link_documentation != blank
-                            %}
-                              <div class="link_documentation">
-                                <a href="{% if block.settings.link_documentation_fr == blank %}{{ block.settings.link_documentation }}{% else %}{{ block.settings.link_documentation_fr }}{% endif %}">
-                                  <img
-                                    src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
-                                    class="width-50px"
-                                    height=""
-                                    width=""
-                                    alt="img"
-                                ></a>
-                                <p class="text-align-center">{{ block.settings.link_documentation_name_sds }}</p>
-                              </div>
-                            {% endif %}
-
-                            {% if block.settings.link_documentation_fr_IFRA != blank
-                              or block.settings.link_documentation_IFRA != blank
-                            %}
-                              <div class="link_documentation">
-                                <a href="{% if block.settings.link_documentation_fr_IFRA == blank %}{{ block.settings.link_documentation_IFRA }}{% else %}{{ block.settings.link_documentation_fr_IFRA }}{% endif %}">
-                                  <img
-                                    src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
-                                    class="width-50px"
-                                    height=""
-                                    width=""
-                                    alt="img"
-                                ></a>
-                                <p class="text-align-center">{{ block.settings.link_documentation_name_ifra }}</p>
-                              </div>
-                            {% endif %}
-                          </div>
-
-                        {% else %}
-                          <div
-                            class="accordion__content rte d-flex flex-wrap-wrap documentation"
-                            id="ProductAccordion-{{ block.id }}-{{ section.id }}"
-                          >
-                            {% if block.settings.content != blank %} {{ block.settings.content }} {% endif %}
-
-                            {% if block.settings.link_documentation != blank %}
-                              <div class="link_documentation">
-                                <a href="{{ block.settings.link_documentation }}">
-                                  <img
-                                    src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
-                                    class="width-50px"
-                                    height=""
-                                    width=""
-                                    alt="img"
-                                ></a>
-                                <p class="text-align-center">{{ block.settings.link_documentation_name_sds }}</p>
-                              </div>
-                            {% endif %}
-
-                            {% if block.settings.link_documentation_IFRA != blank %}
-                              <div class="link_documentation">
-                                <a href="{{ block.settings.link_documentation_IFRA }}">
-                                  <img
-                                    src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
-                                    class="width-50px"
-                                    height=""
-                                    width=""
-                                    alt="img"
-                                ></a>
-                                <p class="text-align-center">{{ block.settings.link_documentation_name_ifra }}</p>
-                              </div>
-                            {% endif %}
-                            {{ block.settings.page.content }}
-                          </div>
-                        {% endif %}
-                      </details>
-                    </div>
-                  {% endif %}
-
-                {% elsif block.settings.content != blank
-                  or product.metafields.custom.safety_information_sds_ != blank
-                  or block.settings.heading == 'FREQUENTLY BOUGHT TOGETHER'
-                %}
-                  <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                    <details id="Details-{{ block.id }}-{{ section.id }}">
-                      <summary>
-                        <div class="summary__title">
-                          {% render 'icon-accordion', icon: block.settings.icon %}
-                          <h2 class="h4 accordion__title_heading m-0px accordion__title inline-richtext line-height-32px color-black font-family-Neuzeit Grotesk font-weight-500 font-size-20px text-transform-uppercase letter-spacing-0px">
-                            {% if request.locale.iso_code == 'fr' %}
-                              {{ block.settings.frheading | escape -}}
-                            {%- else -%}
-                              {{- block.settings.heading | default: block.settings.page.title | escape -}}
-                            {%- endif %}
-                          </h2>
+                          {% if block.settings.link_documentation_fr_IFRA != blank or block.settings.link_documentation_IFRA != blank %}
+                            <div class="link_documentation">
+                              <a href="{% if block.settings.link_documentation_fr_IFRA == blank %}{{ block.settings.link_documentation_IFRA }}{% else %}{{ block.settings.link_documentation_fr_IFRA }}{% endif %}">
+                                <img
+                                  src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
+                                  class="width-50px"
+                                  height=""
+                                  width=""
+                                  alt="img"
+                              ></a>
+                              <p class="text-align-center">{{ block.settings.link_documentation_name_ifra }}</p>
+                            </div>
+                          {% endif %}
                         </div>
-                        {% comment %} {% render 'icon-caret' %} {% endcomment %}
-                        {% comment %}
-                          <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                           width="16.000000pt" height="10.000000pt" viewBox="0 0 16.000000 10.000000"
-                           preserveAspectRatio="xMidYMid meet">
+                     
+                    {% else %}
+                     
+                        <div class="accordion__content rte d-flex flex-wrap-wrap documentation" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                          {% if block.settings.content != blank %} {{ block.settings.content }} {% endif %}
 
-                          <g transform="translate(0.000000,10.000000) scale(0.100000,-0.100000)"
-                          fill="#000000" stroke="none">
-                          <path d="M36 45 l-37 -45 81 0 81 0 -37 45 c-20 25 -40 45 -44 45 -4 0 -24
-                          -20 -44 -45z"/>
-                          </g>
-                          </svg>
-                        {% endcomment %}
-                      </summary>
+                          {% if block.settings.link_documentation != blank %}
+                            <div class="link_documentation">
+                              <a href="{{ block.settings.link_documentation }}">
+                                <img
+                                  src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
+                                  class="width-50px"
+                                  height=""
+                                  width=""
+                                  alt="img"
+                              ></a>
+                              <p class="text-align-center">{{ block.settings.link_documentation_name_sds }}</p>
+                            </div>
+                          {% endif %}
 
-                      {% if request.locale.iso_code == 'fr' %}
-                        {% if block.settings.heading == 'FREQUENTLY BOUGHT TOGETHER' %}
-                          <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                            {% unless customer.b2b? == false %}
-                              <div data-rebuy-id="150998" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
-                              <div data-rebuy-id="82934" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
-                            {% endunless %}
-                          </div>
-                        {% else %}
-                          <div
-                            class="accordion__content rte d-flex flex-wrap-wrap documentation"
-                            id="ProductAccordion-{{ block.id }}-{{ section.id }}"
-                          >
-                            {% if block.settings.content_fr != blank %} {{ block.settings.content_fr }} {% endif %}
-                            {% if block.settings.link_documentation_fr != blank
-                              or block.settings.link_documentation != blank
-                            %}
-                              <div class="link_documentation">
-                                <a href="{% if block.settings.link_documentation_fr == blank %}{{ block.settings.link_documentation }}{% else %}{{ block.settings.link_documentation_fr }}{% endif %}">
-                                  <img
-                                    src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
-                                    class="width-50px"
-                                    height=""
-                                    width=""
-                                    alt="img"
-                                ></a>
-                                <p class="text-align-center">{{ block.settings.link_documentation_name_sds }}</p>
-                              </div>
-                            {% endif %}
+                          {% if block.settings.link_documentation_IFRA != blank %}
+                            <div class="link_documentation">
+                              <a href="{{ block.settings.link_documentation_IFRA }}">
+                                <img
+                                  src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
+                                  class="width-50px"
+                                  height=""
+                                  width=""
+                                  alt="img"
+                              ></a>
+                              <p class="text-align-center">{{ block.settings.link_documentation_name_ifra }}</p>
+                            </div>
+                          {% endif %}
+                          {{ block.settings.page.content }}
+                        </div>
+                    {% endif %}
+                  </details>
+                </div>
+                {%endif %}
 
-                            {% if block.settings.link_documentation_fr_IFRA != blank
-                              or block.settings.link_documentation_IFRA != blank
-                            %}
-                              <div class="link_documentation">
-                                <a href="{% if block.settings.link_documentation_fr_IFRA == blank %}{{ block.settings.link_documentation_IFRA }}{% else %}{{ block.settings.link_documentation_fr_IFRA }}{% endif %}">
-                                  <img
-                                    src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
-                                    class="width-50px"
-                                    height=""
-                                    width=""
-                                    alt="img"
-                                ></a>
-                                <p class="text-align-center">{{ block.settings.link_documentation_name_ifra }}</p>
-                              </div>
-                            {% endif %}
-                          </div>
-                        {% endif %}
+                {% elsif  block.settings.content != blank or product.metafields.custom.safety_information_sds_ != blank or block.settings.heading == 'FREQUENTLY BOUGHT TOGETHER'  %}
+
+
+                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                  <details id="Details-{{ block.id }}-{{ section.id }}">
+                    <summary>
+                      <div class="summary__title">
+                        {% render 'icon-accordion', icon: block.settings.icon %}
+                        <h2 class="h4 accordion__title_heading m-0px accordion__title inline-richtext line-height-32px color-black font-family-Neuzeit Grotesk font-weight-500 font-size-20px text-transform-uppercase letter-spacing-0px">
+                         {% if request.locale.iso_code == 'fr' %} {{ block.settings.frheading | escape }}{% else %}{{ block.settings.heading | default: block.settings.page.title | escape }}{% endif %}
+                        </h2>
+                      </div>
+                      {% comment %} {% render 'icon-caret' %} {% endcomment %}
+                      {% comment %} <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                        width="16.000000pt" height="10.000000pt" viewBox="0 0 16.000000 10.000000"
+                        preserveAspectRatio="xMidYMid meet">
+                       
+                       <g transform="translate(0.000000,10.000000) scale(0.100000,-0.100000)"
+                       fill="#000000" stroke="none">
+                       <path d="M36 45 l-37 -45 81 0 81 0 -37 45 c-20 25 -40 45 -44 45 -4 0 -24
+                       -20 -44 -45z"/>
+                       </g>
+                       </svg> {% endcomment %}
+                    </summary>
+
+                    {% if request.locale.iso_code == 'fr' %}
+                      {% if block.settings.heading == 'FREQUENTLY BOUGHT TOGETHER' %}
+                        <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                          {% unless customer.b2b? == false %}
+                            <div data-rebuy-id="150998" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+                            <div data-rebuy-id="82934" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+                          {% endunless %}
+                        </div>
                       {% else %}
-                        {% if block.settings.heading == 'FREQUENTLY BOUGHT TOGETHER' %}
-                          <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                            {% unless customer.b2b? == false %}
-                              <div data-rebuy-id="150998" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
-                              <div data-rebuy-id="82934" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
-                            {% endunless %}
-                          </div>
-                        {% else %}
-                          <div
-                            class="accordion__content rte d-flex flex-wrap-wrap documentation"
-                            id="ProductAccordion-{{ block.id }}-{{ section.id }}"
-                          >
-                            {% if block.settings.content != blank %} {{ block.settings.content }} {% endif %}
+                        <div class="accordion__content rte d-flex flex-wrap-wrap documentation" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                          {% if block.settings.content_fr != blank %} {{ block.settings.content_fr }} {% endif %}
+                          {% if block.settings.link_documentation_fr != blank or block.settings.link_documentation != blank %}
+                            <div class="link_documentation">
+                              <a href="{% if block.settings.link_documentation_fr == blank %}{{ block.settings.link_documentation }}{% else %}{{ block.settings.link_documentation_fr }}{% endif %}">
+                                <img
+                                  src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
+                                  class="width-50px"
+                                  height=""
+                                  width=""
+                                  alt="img"
+                              ></a>
+                              <p class="text-align-center">{{ block.settings.link_documentation_name_sds }}</p>
+                            </div>
+                          {% endif %}
 
-                            {% if block.settings.link_documentation != blank %}
-                              <div class="link_documentation">
-                                <a href="{{ block.settings.link_documentation }}">
-                                  <img
-                                    src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
-                                    class="width-50px"
-                                    height=""
-                                    width=""
-                                    alt="img"
-                                ></a>
-                                <p class="text-align-center">{{ block.settings.link_documentation_name_sds }}</p>
-                              </div>
-                            {% endif %}
-
-                            {% if block.settings.link_documentation_IFRA != blank %}
-                              <div class="link_documentation">
-                                <a href="{{ block.settings.link_documentation_IFRA }}">
-                                  <img
-                                    src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
-                                    class="width-50px"
-                                    height=""
-                                    width=""
-                                    alt="img"
-                                ></a>
-                                <p class="text-align-center">{{ block.settings.link_documentation_name_ifra }}</p>
-                              </div>
-                            {% endif %}
-
-                            {{ block.settings.page.content }}
-                          </div>
-                        {% endif %}
+                          {% if block.settings.link_documentation_fr_IFRA != blank or block.settings.link_documentation_IFRA != blank %}
+                            <div class="link_documentation">
+                              <a href="{% if block.settings.link_documentation_fr_IFRA == blank %}{{ block.settings.link_documentation_IFRA }}{% else %}{{ block.settings.link_documentation_fr_IFRA }}{% endif %}">
+                                <img
+                                  src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
+                                  class="width-50px"
+                                  height=""
+                                  width=""
+                                  alt="img"
+                              ></a>
+                              <p class="text-align-center">{{ block.settings.link_documentation_name_ifra }}</p>
+                            </div>
+                          {% endif %}
+                        </div>
                       {% endif %}
-                    </details>
-                  </div>
-                {% endif %}
+                    {% else %}
+                      {% if block.settings.heading == 'FREQUENTLY BOUGHT TOGETHER' %}
+                        <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                          {% unless customer.b2b? == false %}
+                            <div data-rebuy-id="150998" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+                            <div data-rebuy-id="82934" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+                          {% endunless %}
+                        </div>
+                      {% else %}
+                        <div class="accordion__content rte d-flex flex-wrap-wrap documentation" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                          {% if block.settings.content != blank %} {{ block.settings.content }} {% endif %}
+
+                          {% if block.settings.link_documentation != blank %}
+                            <div class="link_documentation">
+                              <a href="{{ block.settings.link_documentation }}">
+                                <img
+                                  src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
+                                  class="width-50px"
+                                  height=""
+                                  width=""
+                                  alt="img"
+                              ></a>
+                              <p class="text-align-center">{{ block.settings.link_documentation_name_sds }}</p>
+                            </div>
+                          {% endif %}
+
+                          {% if block.settings.link_documentation_IFRA != blank %}
+                            <div class="link_documentation">
+                              <a href="{{ block.settings.link_documentation_IFRA }}">
+                                <img
+                                  src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/PDF_file_icon_svg.png?v=1700467092"
+                                  class="width-50px"
+                                  height=""
+                                  width=""
+                                  alt="img"
+                              ></a>
+                              <p class="text-align-center">{{ block.settings.link_documentation_name_ifra }}</p>
+                            </div>
+                          {% endif %}
+
+                          {{ block.settings.page.content }}
+                        </div>
+                      {% endif %}
+                    {% endif %}
+                  </details>
+                </div>
+
+              {% endif %}
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener no-js-hidden quick-add-hidden"
@@ -629,18 +576,18 @@
                     product_form_id: product_form_id
                   %}
                   {% if product.metafields.custom.wholesale_req_pdp.value == true %}
-                    <div class="mwholesalediv d-flex align-items-center text-align-center {% unless product.selected_or_first_available_variant.metafields.custom.button_hide %} hide-wholesale{% endunless %} ">
-                      <a
-                        href="/pages/wholesale-new#contact_us_app_wholesale"
-                        class="whole-sale-product-detail d-flex align-items-center flex-grow-1 text-decoration-none justify-content-center text-transform-inherit letter-spacing-0px border-radius-37px border-1px border-light-black-000 font-size-18px font-weight-700 font-family-Neuzeit bg-color-white color-black-000 line-height-1-4-px min-height-48px"
-                      >
-                        <span>Wholesale Request</span>
-                      </a>
-                    </div>
-                  {% endif %}
+                  <div class="mwholesalediv d-flex align-items-center text-align-center {% unless product.selected_or_first_available_variant.metafields.custom.button_hide %} hide-wholesale{% endunless %} ">
+                    <a
+                      href="/pages/wholesale-new#contact_us_app_wholesale"
+                      class="whole-sale-product-detail d-flex align-items-center flex-grow-1 text-decoration-none justify-content-center text-transform-inherit letter-spacing-0px border-radius-37px border-1px border-light-black-000 font-size-18px font-weight-700 font-family-Neuzeit bg-color-white color-black-000 line-height-1-4-px min-height-48px"
+                    >
+                      <span>Wholesale Request</span>
+                    </a>
+                  </div>
+                {% endif %}
                 </div>
               {%- when 'buy_buttons' -%}
-                <div class="quantity-buy-btn  {% if product.selected_or_first_available_variant.metafields.custom.button_hide %}remove_wishlist{% endif %}">
+                 <div class="quantity-buy-btn  {% if product.selected_or_first_available_variant.metafields.custom.button_hide %}remove_wishlist{% endif %}">
                   {%- render 'buy-buttons',
                     block: block,
                     product: product,
@@ -827,12 +774,12 @@
             {%- endcase -%}
           {%- endfor -%}
           {% unless customer.b2b? == true %}
-            {% render 'social-sharing',
-              share_title: product.title,
-              share_permalink: product.url,
-              share_image: product.featured_media
-            %}
-          {% endunless %}
+          {% render 'social-sharing',
+            share_title: product.title,
+            share_permalink: product.url,
+            share_image: product.featured_media
+          %}
+          {%endunless %}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
             {% render 'icon-arrow' %}
@@ -921,59 +868,54 @@
     -%}
 
     {%- comment -%}Yoast SEO schema control block: start.{%- endcomment -%}
-    {%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value
-      | default: shop.metafields.yoast_seo.settings
-    -%}
-    {%- if disabled_by_yoast_seo
-      or yoast_seo_settings.schema.useTheme.schema
-      or yoast_seo_settings.schema.useTheme.product
-    -%}
-      <script type="application/ld+json">
-          {
-            "@context": "http://schema.org/",
-            "@type": "Product",
-            "name": {{ product.title | json }},
-            "url": {{ request.origin | append: product.url | json }},
-            {% if seo_media -%}
-              "image": [
-                {{ seo_media | image_url: width: 1920 | prepend: "https:" | json }}
-              ],
-            {%- endif %}
-            "description": {{ product.description | strip_html | json }},
-            {% if product.selected_or_first_available_variant.sku != blank -%}
-              "sku": {{ product.selected_or_first_available_variant.sku | json }},
-            {%- endif %}
-            "brand": {
-              "@type": "Brand",
-              "name": {{ product.vendor | json }}
-            },
-            "offers": [
-              {%- for variant in product.variants -%}
-                {
-                  "@type" : "Offer",
-                  {%- if variant.sku != blank -%}
-                    "sku": {{ variant.sku | json }},
-                  {%- endif -%}
-                  {%- if variant.barcode.size == 12 -%}
-                    "gtin12": {{ variant.barcode }},
-                  {%- endif -%}
-                  {%- if variant.barcode.size == 13 -%}
-                    "gtin13": {{ variant.barcode }},
-                  {%- endif -%}
-                  {%- if variant.barcode.size == 14 -%}
-                    "gtin14": {{ variant.barcode }},
-                  {%- endif -%}
-                  "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-                  "price" : {{ variant.price | divided_by: 100.00 | json }},
-                  "priceCurrency" : {{ cart.currency.iso_code | json }},
-                  "url" : {{ request.origin | append: variant.url | json }}
-                }{% unless forloop.last %},{% endunless %}
-              {%- endfor -%}
-            ]
-          }
-        {%- comment -%}Yoast SEO schema control block: end.{%- endcomment -%}
-      </script>
-    {%- endif -%}
+{%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
+{%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.product -%}
+<script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Product",
+        "name": {{ product.title | json }},
+        "url": {{ request.origin | append: product.url | json }},
+        {% if seo_media -%}
+          "image": [
+            {{ seo_media | image_url: width: 1920 | prepend: "https:" | json }}
+          ],
+        {%- endif %}
+        "description": {{ product.description | strip_html | json }},
+        {% if product.selected_or_first_available_variant.sku != blank -%}
+          "sku": {{ product.selected_or_first_available_variant.sku | json }},
+        {%- endif %}
+        "brand": {
+          "@type": "Brand",
+          "name": {{ product.vendor | json }}
+        },
+        "offers": [
+          {%- for variant in product.variants -%}
+            {
+              "@type" : "Offer",
+              {%- if variant.sku != blank -%}
+                "sku": {{ variant.sku | json }},
+              {%- endif -%}
+              {%- if variant.barcode.size == 12 -%}
+                "gtin12": {{ variant.barcode }},
+              {%- endif -%}
+              {%- if variant.barcode.size == 13 -%}
+                "gtin13": {{ variant.barcode }},
+              {%- endif -%}
+              {%- if variant.barcode.size == 14 -%}
+                "gtin14": {{ variant.barcode }},
+              {%- endif -%}
+              "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+              "price" : {{ variant.price | divided_by: 100.00 | json }},
+              "priceCurrency" : {{ cart.currency.iso_code | json }},
+              "url" : {{ request.origin | append: variant.url | json }}
+            }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ]
+      }
+    {%- comment -%}Yoast SEO schema control block: end.{%- endcomment -%}
+</script>
+{%- endif -%}
   </div>
 </section>
 <script>
@@ -2664,19 +2606,19 @@
 }
 {% endschema %}
 
-<script>
-  $(document).ready(function() {
-  $('.product__accordion summary').on('click', function() {
+                            <script>
+$(document).ready(function() {
+$('.product__accordion summary').on('click', function() {
 
-  if($('div[data-rebuy-id="150998"]').find('.is-hidden').length != 0){
-     $('div[data-rebuy-id="82934"]').show();
-          $('div[data-rebuy-id="150998"]').hide();
-  }else{
-     $('div[data-rebuy-id="82934"]').hide();
-          $('div[data-rebuy-id="150998"]').show();
-  }
+if($('div[data-rebuy-id="150998"]').find('.is-hidden').length != 0){
+   $('div[data-rebuy-id="82934"]').show();
+        $('div[data-rebuy-id="150998"]').hide();
+}else{
+   $('div[data-rebuy-id="82934"]').hide();
+        $('div[data-rebuy-id="150998"]').show();
+}
+  
+});
 
-  });
-
-  });
+});
 </script>

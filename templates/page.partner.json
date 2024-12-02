@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -31,7 +40,7 @@
       ],
       "settings": {
         "unique_class": "",
-        "image": "shopify:\/\/shop_images\/Untitled_design_d531806a-7ff6-43fd-9cb1-cf66a5578f6e.png",
+        "image": "shopify://shop_images/Untitled_design_d531806a-7ff6-43fd-9cb1-cf66a5578f6e.png",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -50,61 +59,61 @@
         "column_TXBGjp": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Zensurance.png",
+            "image": "shopify://shop_images/Zensurance.png",
             "title": "",
-            "text": "<p>\"Commercial insurance broker\". Save up to 35% on your business insurance policy.<\/p>",
+            "text": "<p>\"Commercial insurance broker\". Save up to 35% on your business insurance policy.</p>",
             "link_label": "Zensurance",
-            "link": "https:\/\/www.zensurance.com\/villagecraftandcandle"
+            "link": "https://www.zensurance.com/villagecraftandcandle"
           }
         },
         "column_tphEPc": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/qb_thumb_e4fe5b84-98bc-4664-a184-94e6bd01d578.png",
+            "image": "shopify://shop_images/qb_thumb_e4fe5b84-98bc-4664-a184-94e6bd01d578.png",
             "title": "",
-            "text": "<p>\"Accounting software\". Save 75% for 3 months on Quickbook services.<\/p>",
+            "text": "<p>\"Accounting software\". Save 75% for 3 months on Quickbook services.</p>",
             "link_label": "Quickbooks",
-            "link": "https:\/\/quickbooks.intuit.com\/ca\/partner\/offer\/?CID=par_qbpprsca_fgjd2nqxin1462_CA&gspk=ZmdqZDJucXhpbjE0NjI&gsxid=nvOrRMfyCuZr"
+            "link": "https://quickbooks.intuit.com/ca/partner/offer/?CID=par_qbpprsca_fgjd2nqxin1462_CA&gspk=ZmdqZDJucXhpbjE0NjI&gsxid=nvOrRMfyCuZr"
           }
         },
         "column_h8QJTH": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Shopify-Symbol.png",
+            "image": "shopify://shop_images/Shopify-Symbol.png",
             "title": "",
-            "text": "<p>\"E-commerce software\". Discover the power of unifying in-store and online sales. Start your free trial today.<\/p>",
+            "text": "<p>\"E-commerce software\". Discover the power of unifying in-store and online sales. Start your free trial today.</p>",
             "link_label": "Shopify",
-            "link": "https:\/\/www.shopify.com\/pos\/free-trial\/unify?irclickid=QJ8yVx0G2xyNUr-wIeURt2waUkDQ35WVbSEBXI0&irgwc=1&partner=3594967&affpt="
+            "link": "https://www.shopify.com/pos/free-trial/unify?irclickid=QJ8yVx0G2xyNUr-wIeURt2waUkDQ35WVbSEBXI0&irgwc=1&partner=3594967&affpt="
           }
         },
         "column_C8UNAF": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Sezzle-logo_1.jpg",
+            "image": "shopify://shop_images/Sezzle-logo_1.jpg",
             "title": "",
-            "text": "<p>\"Buy Now, Pay Later solution\". Allow your shoppers to split their payments into interest-free installments.<\/p>",
+            "text": "<p>\"Buy Now, Pay Later solution\". Allow your shoppers to split their payments into interest-free installments.</p>",
             "link_label": "Sezzle",
-            "link": "https:\/\/dashboard.sezzle.com\/merchant\/signup?referral-code=SZLAQEPY"
+            "link": "https://dashboard.sezzle.com/merchant/signup?referral-code=SZLAQEPY"
           }
         },
         "column_dRJfrT": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1623691224414.jpg",
+            "image": "shopify://shop_images/1623691224414.jpg",
             "title": "",
-            "text": "<p>\"Business registration solution\". Register your business with Ownr today and receive 20% off.<\/p>",
+            "text": "<p>\"Business registration solution\". Register your business with Ownr today and receive 20% off.</p>",
             "link_label": "Ownr",
-            "link": "https:\/\/www.ownr.co\/partners\/vcc?gspk=fgjd2nqxin1462"
+            "link": "https://www.ownr.co/partners/vcc?gspk=fgjd2nqxin1462"
           }
         },
         "column_qxELbQ": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SHC_just_SHC.jpg",
+            "image": "shopify://shop_images/SHC_just_SHC.jpg",
             "title": "",
-            "text": "<p>\"Candle-Making classes and consulting\". 25% off on the “Consulting Sessions Specific to Candle Makers” using  the promo code CONSULT25.<\/p>",
+            "text": "<p>\"Candle-Making classes and consulting\". 25% off on the “Consulting Sessions Specific to Candle Makers” using  the promo code CONSULT25.</p>",
             "link_label": "SHC",
-            "link": "https:\/\/stonehomecreatives.ca\/collections\/candle-making-training"
+            "link": "https://stonehomecreatives.ca/collections/candle-making-training"
           }
         }
       },
@@ -120,7 +129,7 @@
         "customclass": "",
         "title": "VILLAGE PARTNERS",
         "heading_size": "h1",
-        "content": "<p>Take advantage of these exclusive offers available to the Village Craft & Candle community.<\/p>",
+        "content": "<p>Take advantage of these exclusive offers available to the Village Craft & Candle community.</p>",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -148,7 +157,7 @@
         "text_9f4L36": {
           "type": "text",
           "settings": {
-            "text": "<p>Contact our team and schedule a call with us so we can learn more about your business.<\/p>"
+            "text": "<p>Contact our team and schedule a call with us so we can learn more about your business.</p>"
           }
         },
         "button_EqN9fL": {

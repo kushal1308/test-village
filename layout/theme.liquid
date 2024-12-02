@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>{% render 'yoast-seo' %}
-    
+  <head>
+    {% render 'yoast-seo' %}
 
     {% render 'thunder-injects' %}
     <!-- Google Tag Manager -->
@@ -446,15 +446,6 @@
     <!-- Hotjar Tracking Code for https://villagecraftandcandle.com  end -->
 
     <!-- Reddit Pixel -->
-    <!--
-      <script>
-        !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_fyozuz69e7gy');rdt('track', 'PageVisit');
-      </script>
-    -->
-    <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
-    <!-- End Reddit Pixel -->
-
-    <!-- Reddit Pixel -->
     <script>
       !function(w,d){
           if(!w.rdt){
@@ -469,7 +460,7 @@
               s.parentNode.insertBefore(t, s);
           }
       }(window, document);
-      rdt('init', 'a2_fyozuz69e7gy');
+      rdt('init', '{{a2_fyozuz69e7gy}}');
       rdt('track', 'PageVisit');
     </script>
     <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
@@ -557,16 +548,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-    <!-- added By Joy for disabling Rebuy on this theme only -->
-    <script>
-            document.addEventListener("rebuy:smartcart.ready", () => {
-      Rebuy.SmartCart.destroy();
-      });
-    </script>
-    <!-- added By Joy for disabling Rebuy on this theme only -->
-
     {{ 'slick.css' | asset_url | stylesheet_tag }}
+
+    {% render 'rebuy-extensions' %}
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>

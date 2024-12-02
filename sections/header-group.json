@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -10,34 +19,24 @@
           "disabled": true,
           "settings": {
             "text": "Free Shipping on domestic orders* over $599. Click here to learn more.",
-            "link": "https:\/\/village-support.gorgias.help\/en-US\/articles\/vship-program-76511",
+            "link": "https://village-support.gorgias.help/en-US/articles/vship-program-76511",
             "text_fr": "Livraison gratuite sur les commandes nationales* de plus de 599 $. Cliquez ici pour en savoir plus.",
-            "link_fr": "https:\/\/village-support.gorgias.help\/en-US\/articles\/vship-program-76511"
+            "link_fr": "https://village-support.gorgias.help/en-US/articles/vship-program-76511"
           }
         },
         "announcement_PW7zBD": {
           "type": "announcement",
           "settings": {
             "text": "Ongoing Labour Disputes affecting product restock and fulfillment, see here >>",
-            "link": "https:\/\/village-support.gorgias.help\/en-US\/canada-post-labour-disruption---november-2024-955072",
+            "link": "https://village-support.gorgias.help/en-US/canada-post-labour-disruption---november-2024-955072",
             "text_fr": "Conflits de travail en cours affectant le réapprovisionnement et l'exécution des commandes, voir ici >>",
-            "link_fr": "https:\/\/village-support.gorgias.help\/en-US\/canada-post-labour-disruption---november-2024-955072"
-          }
-        },
-        "announcement_7RQLQU": {
-          "type": "announcement",
-          "settings": {
-            "text": "Black Friday Sale! 🖤 Up to 60% OFF on Select Items >>",
-            "link": "https:\/\/villagecraftandcandle.com\/collections\/black-friday",
-            "text_fr": "Vente du Vendredi Fou ! 🖤 Jusqu'à 60 % de rabais sur une sélection d'articles >>",
-            "link_fr": "https:\/\/villagecraftandcandle.com\/fr\/collections\/black-friday"
+            "link_fr": "https://village-support.gorgias.help/en-US/canada-post-labour-disruption---november-2024-955072"
           }
         }
       },
       "block_order": [
         "announcement-bar-0",
-        "announcement_PW7zBD",
-        "announcement_7RQLQU"
+        "announcement_PW7zBD"
       ],
       "settings": {
         "color_scheme": "scheme-1",

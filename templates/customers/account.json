@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -11,8 +20,7 @@
       "type": "apps",
       "blocks": {
         "rebuy_personalization_engine_rebuy_widget_cbpXkK": {
-          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-          "disabled": true,
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
             "enabled": true,
             "id": "123721",
@@ -25,16 +33,14 @@
         "rebuy_personalization_engine_rebuy_widget_cbpXkK"
       ],
       "settings": {
-        "include_margins": true,
-        "include_B2B": false
+        "include_margins": true
       }
     },
     "17140358051f170149": {
       "type": "apps",
       "blocks": {
         "rebuy_personalization_engine_rebuy_widget_QnWPb8": {
-          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-          "disabled": true,
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
             "enabled": true,
             "id": "123719",
@@ -47,8 +53,7 @@
         "rebuy_personalization_engine_rebuy_widget_QnWPb8"
       ],
       "settings": {
-        "include_margins": true,
-        "include_B2B": false
+        "include_margins": true
       }
     }
   },

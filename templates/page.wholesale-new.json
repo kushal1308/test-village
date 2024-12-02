@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -44,7 +53,7 @@
       ],
       "settings": {
         "unique_class": "",
-        "image": "shopify:\/\/shop_images\/wholesale.png",
+        "image": "shopify://shop_images/wholesale.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -64,15 +73,15 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "jars",
-            "image_Dropdown": "shopify:\/\/shop_images\/Jars_1.svg",
+            "image_Dropdown": "shopify://shop_images/Jars_1.svg",
             "img_tex": "PALLET PRICING JARS",
             "text_cont": "",
             "textarea": "",
-            "richtext_1": "<p><a href=\"\/products\/jar-element-straight-side-8oz-12s\" target=\"_blank\" title=\"Jar - Element Straight Side - 8oz\">ELEMENT STRAIGHT SIDE AMBER JAR - 80Z<\/a> # <a href=\"\/products\/jar-element-straight-side-8oz-12s\" target=\"_blank\" title=\"Jar - Element Straight Side - 8oz\">ELEMENT STRAIGHT SIDE FLINT JAR - 80Z<\/a> # <a href=\"\/products\/jar-library-100ml\" target=\"_blank\" title=\"Jar - Library - 106ml\">LIBRARY JAR - 106ml<\/a> # <a href=\"\/products\/jar-library-200ml\" target=\"_blank\" title=\"Jar - Library - 212ml\">LIBRARY JAR - 212ML<\/a> # <a href=\"\/products\/jar-library-314ml\" target=\"_blank\" title=\"Jar - Library - 314ml\">LIBRARY JAR - 314ML<\/a> # <a href=\"\/products\/jar-lux-9oz\" target=\"_blank\" title=\"Jar - LUX - 9oz\">LUX JAR - 90Z - MATTE BLACK<\/a> # <a href=\"\/products\/jar-lux-9oz?_pos=1&_sid=34f110972&_ss=r&variant=40965071601761\" target=\"_blank\" title=\"\/products\/jar-lux-9oz?_pos=1&_sid=34f110972&_ss=r&variant=40965071601761\">LUX JAR - 90Z - AMBER<\/a> # <a href=\"\/products\/jar-lux-9oz?variant=39808854524001\" target=\"_blank\" title=\"\/products\/jar-lux-9oz?variant=39808854524001\">LUX JAR - 90Z - CLEAR<\/a> # <a href=\"\/products\/jar-lux-9oz?variant=39541343223905\" target=\"_blank\" title=\"\/products\/jar-lux-9oz?variant=39541343223905\">LUX JAR - 90Z - FROSTED WHITE<\/a> # <a href=\"\/products\/jar-lux-15oz?_pos=1&_sid=2fe3fd2fa&_ss=r&variant=39541343256673\" target=\"_blank\" title=\"\/products\/jar-lux-15oz?_pos=1&_sid=2fe3fd2fa&_ss=r&variant=39541343256673\">LUX JAR - 150Z - MATTE BLACK<\/a> # <a href=\"\/products\/jar-lux-15oz?variant=40965130322017\" target=\"_blank\" title=\"\/products\/jar-lux-15oz?variant=40965130322017\">LUX JAR - 15OZ - AMBER<\/a> # <a href=\"\/products\/jar-lux-15oz?variant=39808866091105\" target=\"_blank\" title=\"\/products\/jar-lux-15oz?variant=39808866091105\">LUX JAR - 150Z - CLEAR<\/a> # <a href=\"\/products\/jar-lux-15oz?variant=39541343289441\" target=\"_blank\" title=\"\/products\/jar-lux-15oz?variant=39541343289441\">LUX JAR - 150Z - FROSTED WHITE<\/a> # <a href=\"\/products\/jar-madison-8oz\" target=\"_blank\" title=\"Jar - Madison - 8oz\">MADISON JAR - 80Z<\/a> # <a href=\"\/products\/jar-mason-6oz\" target=\"_blank\" title=\"Jar - Mason - 6oz\">MASON JAR - 60Z<\/a> # <a href=\"\/products\/jar-mason-round-12oz\" target=\"_blank\" title=\"Jar - Mason Round - 12oz\">MASON JAR - 120Z<\/a> # <a href=\"\/products\/jar-terra-10oz?_pos=1&_psq=TERRA%20GLASS%20JAR%20-%2010OZ%20-%20GLOSSY%20BLACK&_ss=e&_v=1.0&variant=40368966467681\" target=\"_blank\" title=\"\/products\/jar-terra-10oz?_pos=1&_psq=TERRA%20GLASS%20JAR%20-%2010OZ%20-%20GLOSSY%20BLACK&_ss=e&_v=1.0&variant=40368966467681\">TERRA GLASS JAR - 10OZ - GLOSSY BLACK<\/a> # <a href=\"\/products\/jar-terra-10oz?variant=40368966434913\" target=\"_blank\" title=\"\/products\/jar-terra-10oz?variant=40368966434913\">TERRA GLASS JAR - 10OZ - GLOSSY WHITE<\/a> # <a href=\"\/products\/jar-terra-10oz?variant=40368966402145\" target=\"_blank\" title=\"\/products\/jar-terra-10oz?variant=40368966402145\">TERRA GLASS JAR - 10OZ - MATTE WHITE <\/a># <a href=\"\/products\/jar-traditional-10oz\" target=\"_blank\" title=\"Jar - Traditional - 10oz\">TRADITIONAL JAR - 10OZ<\/a><\/p>",
-            "richtext_2": "<p>168# 168# 272# 221# 170 # 140 # 140 # 140 # 140 # 84 # 84 # 84 # 84 # 143 # 154 # 100 # 99 # 99 # 99 # 88<\/p>",
-            "richtext_3": "<p>$3,610.32 # $3,610.32 # $3,941.28 # $3,644.29 # $3,143.30 # $5,458.60 # $5,458.60 # $4,305.00 # $5,458.60 # $3,611.16 # $3,611.16 # $2,751.00 # $3,611.16 # $3,645.07 # $2,385.46 # $1,849.00 # $3,959.01 # $3,959.01 # $3,959.01 # $2,067.12<\/p>",
-            "richtext_4": "<p>10%# 10%# 20%# 20%# 20% # 15% #15% # 15% # 15% # 15% # 15% # 15% # 15% # 15% # 10% # 10% # 10% # 10% # 10% # 10%<\/p>",
-            "richtext_5": "<p>$3,249.25 #$3,249.25 # $3,153.00 # $2,915.49 # $2,514.75 # $4,639.75 # $4,639.75 # $3,659.25 # $4,639.75 # $3,069.49 # $3,069.49 # $2,338.49 # $3,069.49 # $3,098.50 # $2,146.99 # $1,664.00 # $3,563.25 # $3,563.25 # $3,563.25 # $1,860.49<\/p>",
+            "richtext_1": "<p><a href=\"/products/jar-element-straight-side-8oz-12s\" target=\"_blank\" title=\"Jar - Element Straight Side - 8oz\">ELEMENT STRAIGHT SIDE AMBER JAR - 80Z</a> # <a href=\"/products/jar-element-straight-side-8oz-12s\" target=\"_blank\" title=\"Jar - Element Straight Side - 8oz\">ELEMENT STRAIGHT SIDE FLINT JAR - 80Z</a> # <a href=\"/products/jar-library-100ml\" target=\"_blank\" title=\"Jar - Library - 106ml\">LIBRARY JAR - 106ml</a> # <a href=\"/products/jar-library-200ml\" target=\"_blank\" title=\"Jar - Library - 212ml\">LIBRARY JAR - 212ML</a> # <a href=\"/products/jar-library-314ml\" target=\"_blank\" title=\"Jar - Library - 314ml\">LIBRARY JAR - 314ML</a> # <a href=\"/products/jar-lux-9oz\" target=\"_blank\" title=\"Jar - LUX - 9oz\">LUX JAR - 90Z - MATTE BLACK</a> # <a href=\"/products/jar-lux-9oz?_pos=1&_sid=34f110972&_ss=r&variant=40965071601761\" target=\"_blank\" title=\"/products/jar-lux-9oz?_pos=1&_sid=34f110972&_ss=r&variant=40965071601761\">LUX JAR - 90Z - AMBER</a> # <a href=\"/products/jar-lux-9oz?variant=39808854524001\" target=\"_blank\" title=\"/products/jar-lux-9oz?variant=39808854524001\">LUX JAR - 90Z - CLEAR</a> # <a href=\"/products/jar-lux-9oz?variant=39541343223905\" target=\"_blank\" title=\"/products/jar-lux-9oz?variant=39541343223905\">LUX JAR - 90Z - FROSTED WHITE</a> # <a href=\"/products/jar-lux-15oz?_pos=1&_sid=2fe3fd2fa&_ss=r&variant=39541343256673\" target=\"_blank\" title=\"/products/jar-lux-15oz?_pos=1&_sid=2fe3fd2fa&_ss=r&variant=39541343256673\">LUX JAR - 150Z - MATTE BLACK</a> # <a href=\"/products/jar-lux-15oz?variant=40965130322017\" target=\"_blank\" title=\"/products/jar-lux-15oz?variant=40965130322017\">LUX JAR - 15OZ - AMBER</a> # <a href=\"/products/jar-lux-15oz?variant=39808866091105\" target=\"_blank\" title=\"/products/jar-lux-15oz?variant=39808866091105\">LUX JAR - 150Z - CLEAR</a> # <a href=\"/products/jar-lux-15oz?variant=39541343289441\" target=\"_blank\" title=\"/products/jar-lux-15oz?variant=39541343289441\">LUX JAR - 150Z - FROSTED WHITE</a> # <a href=\"/products/jar-madison-8oz\" target=\"_blank\" title=\"Jar - Madison - 8oz\">MADISON JAR - 80Z</a> # <a href=\"/products/jar-mason-6oz\" target=\"_blank\" title=\"Jar - Mason - 6oz\">MASON JAR - 60Z</a> # <a href=\"/products/jar-mason-round-12oz\" target=\"_blank\" title=\"Jar - Mason Round - 12oz\">MASON JAR - 120Z</a> # <a href=\"/products/jar-terra-10oz?_pos=1&_psq=TERRA%20GLASS%20JAR%20-%2010OZ%20-%20GLOSSY%20BLACK&_ss=e&_v=1.0&variant=40368966467681\" target=\"_blank\" title=\"/products/jar-terra-10oz?_pos=1&_psq=TERRA%20GLASS%20JAR%20-%2010OZ%20-%20GLOSSY%20BLACK&_ss=e&_v=1.0&variant=40368966467681\">TERRA GLASS JAR - 10OZ - GLOSSY BLACK</a> # <a href=\"/products/jar-terra-10oz?variant=40368966434913\" target=\"_blank\" title=\"/products/jar-terra-10oz?variant=40368966434913\">TERRA GLASS JAR - 10OZ - GLOSSY WHITE</a> # <a href=\"/products/jar-terra-10oz?variant=40368966402145\" target=\"_blank\" title=\"/products/jar-terra-10oz?variant=40368966402145\">TERRA GLASS JAR - 10OZ - MATTE WHITE </a># <a href=\"/products/jar-traditional-10oz\" target=\"_blank\" title=\"Jar - Traditional - 10oz\">TRADITIONAL JAR - 10OZ</a></p>",
+            "richtext_2": "<p>168# 168# 272# 221# 170 # 140 # 140 # 140 # 140 # 84 # 84 # 84 # 84 # 143 # 154 # 100 # 99 # 99 # 99 # 88</p>",
+            "richtext_3": "<p>$3,610.32 # $3,610.32 # $3,941.28 # $3,644.29 # $3,143.30 # $5,458.60 # $5,458.60 # $4,305.00 # $5,458.60 # $3,611.16 # $3,611.16 # $2,751.00 # $3,611.16 # $3,645.07 # $2,385.46 # $1,849.00 # $3,959.01 # $3,959.01 # $3,959.01 # $2,067.12</p>",
+            "richtext_4": "<p>10%# 10%# 20%# 20%# 20% # 15% #15% # 15% # 15% # 15% # 15% # 15% # 15% # 15% # 10% # 10% # 10% # 10% # 10% # 10%</p>",
+            "richtext_5": "<p>$3,249.25 #$3,249.25 # $3,153.00 # $2,915.49 # $2,514.75 # $4,639.75 # $4,639.75 # $3,659.25 # $4,639.75 # $3,069.49 # $3,069.49 # $2,338.49 # $3,069.49 # $3,098.50 # $2,146.99 # $1,664.00 # $3,563.25 # $3,563.25 # $3,563.25 # $1,860.49</p>",
             "collection": "",
             "text_1": "",
             "collection_1": "",
@@ -88,15 +97,15 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "wax",
-            "image_Dropdown": "shopify:\/\/shop_images\/Wax_2.svg",
+            "image_Dropdown": "shopify://shop_images/Wax_2.svg",
             "img_tex": "PALLET PRICING WAX",
             "text_cont": "",
             "textarea": "",
-            "richtext_1": "<p><a href=\"\/products\/igi-6006-soy-paraffin-blendfor-containers-133mp-10-pounds\" target=\"_blank\" title=\"IGI 6006 Soy Paraffin Blend (for containers) - 133MP\">6006 SOY PARAFFIN  WAX BLEND PALLET<\/a> # <a href=\"\/products\/coconut-soy-wax\" target=\"_blank\" title=\"Coconut Soy Wax\">COCONUT SOY WAX PALLET<\/a> # <a href=\"\/products\/coconut-wax-premium-container-blend-apx-60lb-case\" target=\"_blank\" title=\"Coconut Wax Blend\">COCONUT WAX BLEND PALLET<\/a> # <a href=\"\/products\/container-soy-wax-1lb\" target=\"_blank\" title=\"Container Soy Wax\">CONTAINER SOY WAX PALLET<\/a> #<a href=\"https:\/\/villagecraftandcandle.com\/products\/virgin-coconut-soy-wax\" target=\"_blank\" title=\"https:\/\/villagecraftandcandle.com\/products\/virgin-coconut-soy-wax\"> Virgin Coconut Soy Wax Pallet<\/a> # <a href=\"\/products\/freedom-pillar-soy-wax\" target=\"_blank\" title=\"Freedom Pillar Soy Wax\">Freedom Pillar Soy Wax <\/a><a href=\"\/products\/container-soy-wax-1lb\" target=\"_blank\" title=\"Container Soy Wax\">PALLET<\/a> # <a href=\"\/products\/freedom-1lb\" target=\"_blank\" title=\"Freedom Soy Wax\">Freedom Soy Wax <\/a><a href=\"\/products\/container-soy-wax-1lb\" target=\"_blank\" title=\"Container Soy Wax\">PALLET<\/a> # <a href=\"\/products\/golden-brands-464-soy-wax\" target=\"_blank\" title=\"Golden Brands 464 Soy Wax\">GOLDEN BRANDS® 464 WAX PALLET<\/a> # <a href=\"\/products\/golden-brands-494-soy-wax\" target=\"_blank\" title=\"Golden Brands 494 Soy Wax\">GOLDEN BRANDS® 494 WAX PALLET<\/a> # <a href=\"\/products\/millennium-soy-wax-1lb\" target=\"_blank\" title=\"Millennium Soy Wax\">MILLENNIUM SOY WAX PALLET<\/a> # <a href=\"\/products\/nature-wax\" target=\"_blank\" title=\"NatureWax® C-3 Soy Flakes\">NATUREWAX® C-3 PALLET <\/a>#Pro-Flex Soy Wax<\/p>",
-            "richtext_2": "<p>37 # 60 # 35 # 60 # 48 # 60 # 60 # 36 # 36 # 60 # 33 #60 <\/p>",
-            "richtext_3": "<p>$4,347.13 # $5,205.00 # $8,032.15 # $4,349.40 # $13,919.52 # $5,699.40 # $4,349.40 # $5,841.00 # $5,913.00 # $4,349.40 # $6,030.75 #$4,349.40 <\/p>",
-            "richtext_4": "<p>5% # 10% # 3% # 5% # 15% # 3% # 5% # 3% # 5% # 5% # 15%#5% <\/p>",
-            "richtext_5": "<p>$4,129.75 # $4,684.49 # $7,791.25 # $4,131.99 # $11,831.75 # $5,528.49 # $4,132.00 # $5,665.75 # $5,617.25 # $4,132.00 # $5,126.25#$4,132.00<\/p>",
+            "richtext_1": "<p><a href=\"/products/igi-6006-soy-paraffin-blendfor-containers-133mp-10-pounds\" target=\"_blank\" title=\"IGI 6006 Soy Paraffin Blend (for containers) - 133MP\">6006 SOY PARAFFIN  WAX BLEND PALLET</a> # <a href=\"/products/coconut-soy-wax\" target=\"_blank\" title=\"Coconut Soy Wax\">COCONUT SOY WAX PALLET</a> # <a href=\"/products/coconut-wax-premium-container-blend-apx-60lb-case\" target=\"_blank\" title=\"Coconut Wax Blend\">COCONUT WAX BLEND PALLET</a> # <a href=\"/products/container-soy-wax-1lb\" target=\"_blank\" title=\"Container Soy Wax\">CONTAINER SOY WAX PALLET</a> #<a href=\"https://villagecraftandcandle.com/products/virgin-coconut-soy-wax\" target=\"_blank\" title=\"https://villagecraftandcandle.com/products/virgin-coconut-soy-wax\"> Virgin Coconut Soy Wax Pallet</a> # <a href=\"/products/freedom-pillar-soy-wax\" target=\"_blank\" title=\"Freedom Pillar Soy Wax\">Freedom Pillar Soy Wax </a><a href=\"/products/container-soy-wax-1lb\" target=\"_blank\" title=\"Container Soy Wax\">PALLET</a> # <a href=\"/products/freedom-1lb\" target=\"_blank\" title=\"Freedom Soy Wax\">Freedom Soy Wax </a><a href=\"/products/container-soy-wax-1lb\" target=\"_blank\" title=\"Container Soy Wax\">PALLET</a> # <a href=\"/products/golden-brands-464-soy-wax\" target=\"_blank\" title=\"Golden Brands 464 Soy Wax\">GOLDEN BRANDS® 464 WAX PALLET</a> # <a href=\"/products/golden-brands-494-soy-wax\" target=\"_blank\" title=\"Golden Brands 494 Soy Wax\">GOLDEN BRANDS® 494 WAX PALLET</a> # <a href=\"/products/millennium-soy-wax-1lb\" target=\"_blank\" title=\"Millennium Soy Wax\">MILLENNIUM SOY WAX PALLET</a> # <a href=\"/products/nature-wax\" target=\"_blank\" title=\"NatureWax® C-3 Soy Flakes\">NATUREWAX® C-3 PALLET </a>#Pro-Flex Soy Wax</p>",
+            "richtext_2": "<p>37 # 60 # 35 # 60 # 48 # 60 # 60 # 36 # 36 # 60 # 33 #60 </p>",
+            "richtext_3": "<p>$4,347.13 # $5,205.00 # $8,032.15 # $4,349.40 # $13,919.52 # $5,699.40 # $4,349.40 # $5,841.00 # $5,913.00 # $4,349.40 # $6,030.75 #$4,349.40 </p>",
+            "richtext_4": "<p>5% # 10% # 3% # 5% # 15% # 3% # 5% # 3% # 5% # 5% # 15%#5% </p>",
+            "richtext_5": "<p>$4,129.75 # $4,684.49 # $7,791.25 # $4,131.99 # $11,831.75 # $5,528.49 # $4,132.00 # $5,665.75 # $5,617.25 # $4,132.00 # $5,126.25#$4,132.00</p>",
             "collection": "",
             "text_1": "",
             "collection_1": "",
@@ -112,15 +121,15 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "lids",
-            "image_Dropdown": "shopify:\/\/shop_images\/lid.svg",
+            "image_Dropdown": "shopify://shop_images/lid.svg",
             "img_tex": "case pricing lids",
             "text_cont": "",
             "textarea": "",
-            "richtext_1": "<p><a href=\"\/products\/lid-village3inch-wood?_pos=1&_sid=8dcc0d22f&_ss=r&variant=39541344010337\" target=\"_blank\" title=\"\/products\/lid-village3inch-wood?_pos=1&_sid=8dcc0d22f&_ss=r&variant=39541344010337\">3\" LUX WOOD LID - ACACIA<\/a> # <a href=\"\/products\/lid-village3inch-wood?variant=39541344043105\" target=\"_blank\" title=\"\/products\/lid-village3inch-wood?variant=39541344043105\">3\" LUX WOOD LID - WHITE PINE<\/a> # <a href=\"\/products\/lid-village4inch-wood?_pos=1&_psq=4&quot;%20LUX%20WOOD%20LID%20-%20ACACIA&_ss=e&_v=1.0&variant=39541343649889\" target=\"_blank\" title=\"\/products\/lid-village4inch-wood?_pos=1&_psq=4&quot;%20LUX%20WOOD%20LID%20-%20ACACIA&_ss=e&_v=1.0&variant=39541343649889\">4\" LUX WOOD LID - ACACIA<\/a> # <a href=\"\/products\/lid-village4inch-wood?variant=39541343682657\" target=\"_blank\" title=\"\/products\/lid-village4inch-wood?variant=39541343682657\">4\" LUX WOOD LID - WHITE PINE<\/a> # <a href=\"\/products\/lid-3-terra-metal-12pk?_pos=1&_psq=3&quot;%20TERRA%20METAL%20-%20BRONZE&_ss=e&_v=1.0&variant=40369074864225\" target=\"_blank\" title=\"\/products\/lid-3-terra-metal-12pk?_pos=1&_psq=3&quot;%20TERRA%20METAL%20-%20BRONZE&_ss=e&_v=1.0&variant=40369074864225\">3\" TERRA METAL - BRONZE<\/a> # <a href=\"\/products\/lid-3-terra-metal-12pk?variant=40369074831457\" target=\"_blank\" title=\"\/products\/lid-3-terra-metal-12pk?variant=40369074831457\">3\" TERRA METAL - GOLD<\/a> # <a href=\"\/products\/lid-country\" target=\"_blank\" title=\"Lid - Country - 12pk\">COUNTRY LID - BLACK SATIN<\/a> # <a href=\"\/products\/lid-country?variant=32443714699361\" target=\"_blank\" title=\"\/products\/lid-country?variant=32443714699361\">COUNTRY LID - COPPER<\/a> # <a href=\"\/products\/lid-country?variant=32443714633825\" target=\"_blank\" title=\"\/products\/lid-country?variant=32443714633825\">COUNTRY LID - ZINC<\/a> # <a href=\"\/products\/lid-distressed?_pos=1&_psq=DISTRESSED%20LID%20-%20BRONZE&_ss=e&_v=1.0&variant=39580687499361\" target=\"_blank\" title=\"\/products\/lid-distressed?_pos=1&_psq=DISTRESSED%20LID%20-%20BRONZE&_ss=e&_v=1.0&variant=39580687499361\">DISTRESSED LID - BRONZE<\/a> # <a href=\"\/products\/lid-distressed?variant=39583212077153\" target=\"_blank\" title=\"\/products\/lid-distressed?variant=39583212077153\">DISTRESSED LID - GOLD<\/a> # <a href=\"\/products\/lid-distressed?variant=39583218401377\" target=\"_blank\" title=\"\/products\/lid-distressed?variant=39583218401377\">DISTRESSED LID - PEWTER<\/a> # <a href=\"\/products\/lid-element-metal-12pk?variant=40564257849441\" target=\"_blank\" title=\"\/products\/lid-element-metal-12pk?variant=40564257849441\">ELEMENT METAL LID - BLACK<\/a> # <a href=\"\/products\/lid-element-metal-12pk?variant=40564260110433\" target=\"_blank\" title=\"\/products\/lid-element-metal-12pk?variant=40564260110433\">ELEMENT METAL LID - BRONZE<\/a> # <a href=\"\/products\/lid-element-metal-12pk?variant=40564259291233\" target=\"_blank\" title=\"\/products\/lid-element-metal-12pk?variant=40564259291233\">ELEMENT METAL LID - GOLD<\/a> # <a href=\"\/products\/lid-element-metal-12pk?variant=40564260372577\" target=\"_blank\" title=\"\/products\/lid-element-metal-12pk?variant=40564260372577\">ELEMENT METAL LID - GREY<\/a> # <a href=\"\/products\/lid-element-metal-12pk?variant=40564253622369\" target=\"_blank\" title=\"\/products\/lid-element-metal-12pk?variant=40564253622369\">ELEMENT METAL LID -  MATTE BLACK<\/a> # <a href=\"\/products\/lid-element-plastic-12pk?_pos=1&_sid=807d92345&_ss=r&variant=39964624846945\" target=\"_blank\" title=\"\/products\/lid-element-plastic-12pk?_pos=1&_sid=807d92345&_ss=r&variant=39964624846945\">ELEMENT PLASTIC LID - BLACK<\/a>  # <a href=\"\/products\/lid-element-plastic-12pk?variant=39964624945249\" target=\"_blank\" title=\"\/products\/lid-element-plastic-12pk?variant=39964624945249\">ELEMENT PLASTIC LID - BROWN <\/a># <a href=\"\/products\/lid-element-wood-12pk\" target=\"_blank\" title=\"Lid - Element Wood - 12pk\">Element Wood Lid - Dark<\/a> # <a href=\"\/products\/library-lid?_pos=1&_psq=LIBRARY%20LID%20-%20BLACK&_ss=e&_v=1.0&variant=40985114345569\" target=\"_blank\" title=\"\/products\/library-lid?_pos=1&_psq=LIBRARY%20LID%20-%20BLACK&_ss=e&_v=1.0&variant=40985114345569\">LIBRARY LID - BLACK<\/a> # <a href=\"\/products\/library-lid?variant=39251884638305\" target=\"_blank\" title=\"\/products\/library-lid?variant=39251884638305\">LIBRARY LID - COPPER<\/a> # <a href=\"\/products\/library-lid?variant=40985114312801\" target=\"_blank\" title=\"\/products\/library-lid?variant=40985114312801\">LIBRARY LID - SILVER<\/a> #<a href=\"\/products\/massilly-lids-assorted-colours-12pk?variant=39934866423905\" target=\"_blank\" title=\"\/products\/massilly-lids-assorted-colours-12pk?variant=39934866423905\"> MASSILLY LID - BLACK<\/a> #<a href=\"\/products\/massilly-lids-assorted-colours-12pk?_pos=1&_sid=aa0d18159&_ss=r\" target=\"_blank\" title=\"\/products\/massilly-lids-assorted-colours-12pk?_pos=1&_sid=aa0d18159&_ss=r\"> MASSILLY LID - SILVER<\/a> # <a href=\"\/products\/massilly-lids-assorted-colours-12pk?variant=39934866456673\" target=\"_blank\" title=\"\/products\/massilly-lids-assorted-colours-12pk?variant=39934866456673\">MASSILLY LID - WHITE<\/a><\/p>",
-            "richtext_2": "<p>216 # 216 # 144 # 144 # 216 # 216 # 300 # 300 # 600 # 1000 # 1000 # 1000 # 216  # 216 # 216 # 216 # 216 # 216 # 216 # 216 # 550 # 550 # 550 # 750 # 750 # 750 <\/p>",
-            "richtext_3": "<p>$571.50 # $571.50 # $417.00 # $417.00 # $643.50 # $643.50 # $449.75 # $449.75 # $899.50 # $604.17 # $604.17 # $604.17 # $166.50  # $166.50 # $166.50 # $166.50 # $166.50 # $166.50 # $166.50 # $503.82 # $378.13 # $378.13 # $378.13 # $453.13 # $453.13 # $453.13 <\/p>",
-            "richtext_4": "<p>15% # 15% # 15% # 15% # 10% # 10% # 10% # 10% # 5% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% <\/p>",
-            "richtext_5": "<p>$485.75 #$485.75 # $354.49 # $354.49 # $579.25 # $579.25 # $404.75 # $404.75 # $854.49 # $543.75 # $543.75 # $543.75 # $149.99  # $149.99 # $149.99 # $149.99 # $149.99 # $149.99 # $149.99 # $453.49 # $340.25 # $340.25 # $340.25 # $407.75 # $407.75 # $407.75 <\/p>",
+            "richtext_1": "<p><a href=\"/products/lid-village3inch-wood?_pos=1&_sid=8dcc0d22f&_ss=r&variant=39541344010337\" target=\"_blank\" title=\"/products/lid-village3inch-wood?_pos=1&_sid=8dcc0d22f&_ss=r&variant=39541344010337\">3\" LUX WOOD LID - ACACIA</a> # <a href=\"/products/lid-village3inch-wood?variant=39541344043105\" target=\"_blank\" title=\"/products/lid-village3inch-wood?variant=39541344043105\">3\" LUX WOOD LID - WHITE PINE</a> # <a href=\"/products/lid-village4inch-wood?_pos=1&_psq=4&quot;%20LUX%20WOOD%20LID%20-%20ACACIA&_ss=e&_v=1.0&variant=39541343649889\" target=\"_blank\" title=\"/products/lid-village4inch-wood?_pos=1&_psq=4&quot;%20LUX%20WOOD%20LID%20-%20ACACIA&_ss=e&_v=1.0&variant=39541343649889\">4\" LUX WOOD LID - ACACIA</a> # <a href=\"/products/lid-village4inch-wood?variant=39541343682657\" target=\"_blank\" title=\"/products/lid-village4inch-wood?variant=39541343682657\">4\" LUX WOOD LID - WHITE PINE</a> # <a href=\"/products/lid-3-terra-metal-12pk?_pos=1&_psq=3&quot;%20TERRA%20METAL%20-%20BRONZE&_ss=e&_v=1.0&variant=40369074864225\" target=\"_blank\" title=\"/products/lid-3-terra-metal-12pk?_pos=1&_psq=3&quot;%20TERRA%20METAL%20-%20BRONZE&_ss=e&_v=1.0&variant=40369074864225\">3\" TERRA METAL - BRONZE</a> # <a href=\"/products/lid-3-terra-metal-12pk?variant=40369074831457\" target=\"_blank\" title=\"/products/lid-3-terra-metal-12pk?variant=40369074831457\">3\" TERRA METAL - GOLD</a> # <a href=\"/products/lid-country\" target=\"_blank\" title=\"Lid - Country - 12pk\">COUNTRY LID - BLACK SATIN</a> # <a href=\"/products/lid-country?variant=32443714699361\" target=\"_blank\" title=\"/products/lid-country?variant=32443714699361\">COUNTRY LID - COPPER</a> # <a href=\"/products/lid-country?variant=32443714633825\" target=\"_blank\" title=\"/products/lid-country?variant=32443714633825\">COUNTRY LID - ZINC</a> # <a href=\"/products/lid-distressed?_pos=1&_psq=DISTRESSED%20LID%20-%20BRONZE&_ss=e&_v=1.0&variant=39580687499361\" target=\"_blank\" title=\"/products/lid-distressed?_pos=1&_psq=DISTRESSED%20LID%20-%20BRONZE&_ss=e&_v=1.0&variant=39580687499361\">DISTRESSED LID - BRONZE</a> # <a href=\"/products/lid-distressed?variant=39583212077153\" target=\"_blank\" title=\"/products/lid-distressed?variant=39583212077153\">DISTRESSED LID - GOLD</a> # <a href=\"/products/lid-distressed?variant=39583218401377\" target=\"_blank\" title=\"/products/lid-distressed?variant=39583218401377\">DISTRESSED LID - PEWTER</a> # <a href=\"/products/lid-element-metal-12pk?variant=40564257849441\" target=\"_blank\" title=\"/products/lid-element-metal-12pk?variant=40564257849441\">ELEMENT METAL LID - BLACK</a> # <a href=\"/products/lid-element-metal-12pk?variant=40564260110433\" target=\"_blank\" title=\"/products/lid-element-metal-12pk?variant=40564260110433\">ELEMENT METAL LID - BRONZE</a> # <a href=\"/products/lid-element-metal-12pk?variant=40564259291233\" target=\"_blank\" title=\"/products/lid-element-metal-12pk?variant=40564259291233\">ELEMENT METAL LID - GOLD</a> # <a href=\"/products/lid-element-metal-12pk?variant=40564260372577\" target=\"_blank\" title=\"/products/lid-element-metal-12pk?variant=40564260372577\">ELEMENT METAL LID - GREY</a> # <a href=\"/products/lid-element-metal-12pk?variant=40564253622369\" target=\"_blank\" title=\"/products/lid-element-metal-12pk?variant=40564253622369\">ELEMENT METAL LID -  MATTE BLACK</a> # <a href=\"/products/lid-element-plastic-12pk?_pos=1&_sid=807d92345&_ss=r&variant=39964624846945\" target=\"_blank\" title=\"/products/lid-element-plastic-12pk?_pos=1&_sid=807d92345&_ss=r&variant=39964624846945\">ELEMENT PLASTIC LID - BLACK</a>  # <a href=\"/products/lid-element-plastic-12pk?variant=39964624945249\" target=\"_blank\" title=\"/products/lid-element-plastic-12pk?variant=39964624945249\">ELEMENT PLASTIC LID - BROWN </a># <a href=\"/products/lid-element-wood-12pk\" target=\"_blank\" title=\"Lid - Element Wood - 12pk\">Element Wood Lid - Dark</a> # <a href=\"/products/library-lid?_pos=1&_psq=LIBRARY%20LID%20-%20BLACK&_ss=e&_v=1.0&variant=40985114345569\" target=\"_blank\" title=\"/products/library-lid?_pos=1&_psq=LIBRARY%20LID%20-%20BLACK&_ss=e&_v=1.0&variant=40985114345569\">LIBRARY LID - BLACK</a> # <a href=\"/products/library-lid?variant=39251884638305\" target=\"_blank\" title=\"/products/library-lid?variant=39251884638305\">LIBRARY LID - COPPER</a> # <a href=\"/products/library-lid?variant=40985114312801\" target=\"_blank\" title=\"/products/library-lid?variant=40985114312801\">LIBRARY LID - SILVER</a> #<a href=\"/products/massilly-lids-assorted-colours-12pk?variant=39934866423905\" target=\"_blank\" title=\"/products/massilly-lids-assorted-colours-12pk?variant=39934866423905\"> MASSILLY LID - BLACK</a> #<a href=\"/products/massilly-lids-assorted-colours-12pk?_pos=1&_sid=aa0d18159&_ss=r\" target=\"_blank\" title=\"/products/massilly-lids-assorted-colours-12pk?_pos=1&_sid=aa0d18159&_ss=r\"> MASSILLY LID - SILVER</a> # <a href=\"/products/massilly-lids-assorted-colours-12pk?variant=39934866456673\" target=\"_blank\" title=\"/products/massilly-lids-assorted-colours-12pk?variant=39934866456673\">MASSILLY LID - WHITE</a></p>",
+            "richtext_2": "<p>216 # 216 # 144 # 144 # 216 # 216 # 300 # 300 # 600 # 1000 # 1000 # 1000 # 216  # 216 # 216 # 216 # 216 # 216 # 216 # 216 # 550 # 550 # 550 # 750 # 750 # 750 </p>",
+            "richtext_3": "<p>$571.50 # $571.50 # $417.00 # $417.00 # $643.50 # $643.50 # $449.75 # $449.75 # $899.50 # $604.17 # $604.17 # $604.17 # $166.50  # $166.50 # $166.50 # $166.50 # $166.50 # $166.50 # $166.50 # $503.82 # $378.13 # $378.13 # $378.13 # $453.13 # $453.13 # $453.13 </p>",
+            "richtext_4": "<p>15% # 15% # 15% # 15% # 10% # 10% # 10% # 10% # 5% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% # 10% </p>",
+            "richtext_5": "<p>$485.75 #$485.75 # $354.49 # $354.49 # $579.25 # $579.25 # $404.75 # $404.75 # $854.49 # $543.75 # $543.75 # $543.75 # $149.99  # $149.99 # $149.99 # $149.99 # $149.99 # $149.99 # $149.99 # $453.49 # $340.25 # $340.25 # $340.25 # $407.75 # $407.75 # $407.75 </p>",
             "collection": "",
             "text_1": "",
             "collection_1": "",
@@ -136,15 +145,15 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "wicks",
-            "image_Dropdown": "shopify:\/\/shop_images\/wicks.svg",
+            "image_Dropdown": "shopify://shop_images/wicks.svg",
             "img_tex": "case pricing wicks",
             "text_cont": "",
             "textarea": "",
-            "richtext_1": "<p><a href=\"\/products\/2-25-diam-soy-candle-wick-htp93\" target=\"_blank\" title=\"HTP93 (2&quot;-2.5&quot; Diameter) Soy Candle Wick\">HTP93 (2\"-2.5\" DIAMETER)  SOY CANDLE WICK<\/a> # <a href=\"\/products\/25-3-diam-soy-candle-wick-htp-105\" target=\"_blank\" title=\"HTP105 (2.5&quot;-3&quot; Diameter) Soy Candle Wick\">HTP105 (2.5\"-3\" DIAMETER) SOY CANDLE WICK<\/a> # <a href=\"\/products\/2-3-diam-soy-candle-wick-htp1212\" target=\"_blank\" title=\"HTP1212 (2&quot;-3&quot; Diameter) Soy Candle Wick\">HTP1212 (2\"-3\" DIAMETER) SOY CANDLE WICK<\/a> # <a href=\"\/products\/3-4-diam-soy-candle-wick-htp1312\" target=\"_blank\" title=\"HTP1312 (3&quot;-4&quot; Diameter) Soy Candle Wick\">HTP1312 (3\"-4\" DIAMETER) SOY CANDLE WICK<\/a> # <a href=\"\/products\/premier-cotton-small\" target=\"_blank\" title=\"Premier Cotton Small\">PREMIER COTTON SMALL WICK<\/a> # <a href=\"\/products\/premier-cotton-medium\" target=\"_blank\" title=\"Premier Cotton Medium\">PREMIER COTTON MEDIUM WICK<\/a> # <a href=\"\/products\/premier-cotton-large\" target=\"_blank\" title=\"Premier Cotton Large\">PREMIER COTTON LARGE WICK<\/a> # <a href=\"\/products\/tealight-wicking-for-soy-wax\" target=\"_blank\" title=\"Tealight Wicks for Soy Wax\">TEALIGHT WICKS FOR SOY WAX<\/a> # <a href=\"\/products\/stabilo-8-1-75-2-2-wick\" target=\"_blank\" title=\"Stabilo 8 (1.75&quot; - 2.25&quot; Diameter) Wick\">Stabilo 8 (1.75\"-2.25\" Diameter) Soy MNW Wick<\/a> # <a href=\"\/products\/stabilo-12-1-5-2-diameter-soy-hmw-wick\" target=\"_blank\" title=\"Stabilo 12 (1.5&quot;-2&quot; Diameter) Soy HMW Wick\">STABILO 12 (1.5\"-2\" Diameter) Soy HMW Wick<\/a> #  <a href=\"\/products\/stabilo-16-2-2-5-diameter-soy-hmw-wick\" target=\"_blank\" title=\"Stabilo 16 (2&quot;-2.5&quot; Diameter) Soy HMW Wick\">STABILO 16 (2\"-2.5\" Diameter) Soy HMW Wick<\/a> # <a href=\"\/products\/stabilo-20-2-5-3-diameter-soy-hmw-wick\" target=\"_blank\" title=\"Stabilo 20 (2.5&quot;-3&quot; Diameter) Soy HMW Wick\">Stabilo 20 (2.5\"-3\" Diameter) Soy HMW Wick <\/a><a href=\"\/products\/stabilo-8-1-75-2-2-wick\" target=\"_blank\" title=\"Stabilo 8 (1.75&quot; - 2.25&quot; Diameter) Wick\"> <\/a># <a href=\"\/products\/stabilo-22-2-5-3-wick\" target=\"_blank\" title=\"Stabilo 22 (2.5&quot; - 3&quot; Diameter) Wick\">Stabilo 22 (2.5\"-3\" Diameter) Soy MNW Wick<\/a><\/p>",
-            "richtext_2": "<p>5000 # 5000 # 5000 # 5000 # 5000 # 5000 # 5000 # 20,000 # 5000 # 5000 # 5000 # 5000 # 5000<\/p>",
-            "richtext_3": "<p>$552.50 # $552.50 # $552.50 # $552.50 # $552.50 # $552.50 # $552.50 # $1,839.60 # $684.90 # $684.90 # $684.90 # $684.90 # $684.90<\/p>",
-            "richtext_4": "<p>10% # 10% # 10% # 10% # 10% # 10% # 10% # 25% # 10% #10% #10% #10% #10%<\/p>",
-            "richtext_5": "<p>$497.25 #$497.25 # $497.25 # $497.25 # $497.25 # $497.25 # $497.25 # $1,381.00 # $616.49 # $616.49 # $616.49 # $616.49 # $616.49<\/p>",
+            "richtext_1": "<p><a href=\"/products/2-25-diam-soy-candle-wick-htp93\" target=\"_blank\" title=\"HTP93 (2&quot;-2.5&quot; Diameter) Soy Candle Wick\">HTP93 (2\"-2.5\" DIAMETER)  SOY CANDLE WICK</a> # <a href=\"/products/25-3-diam-soy-candle-wick-htp-105\" target=\"_blank\" title=\"HTP105 (2.5&quot;-3&quot; Diameter) Soy Candle Wick\">HTP105 (2.5\"-3\" DIAMETER) SOY CANDLE WICK</a> # <a href=\"/products/2-3-diam-soy-candle-wick-htp1212\" target=\"_blank\" title=\"HTP1212 (2&quot;-3&quot; Diameter) Soy Candle Wick\">HTP1212 (2\"-3\" DIAMETER) SOY CANDLE WICK</a> # <a href=\"/products/3-4-diam-soy-candle-wick-htp1312\" target=\"_blank\" title=\"HTP1312 (3&quot;-4&quot; Diameter) Soy Candle Wick\">HTP1312 (3\"-4\" DIAMETER) SOY CANDLE WICK</a> # <a href=\"/products/premier-cotton-small\" target=\"_blank\" title=\"Premier Cotton Small\">PREMIER COTTON SMALL WICK</a> # <a href=\"/products/premier-cotton-medium\" target=\"_blank\" title=\"Premier Cotton Medium\">PREMIER COTTON MEDIUM WICK</a> # <a href=\"/products/premier-cotton-large\" target=\"_blank\" title=\"Premier Cotton Large\">PREMIER COTTON LARGE WICK</a> # <a href=\"/products/tealight-wicking-for-soy-wax\" target=\"_blank\" title=\"Tealight Wicks for Soy Wax\">TEALIGHT WICKS FOR SOY WAX</a> # <a href=\"/products/stabilo-8-1-75-2-2-wick\" target=\"_blank\" title=\"Stabilo 8 (1.75&quot; - 2.25&quot; Diameter) Wick\">Stabilo 8 (1.75\"-2.25\" Diameter) Soy MNW Wick</a> # <a href=\"/products/stabilo-12-1-5-2-diameter-soy-hmw-wick\" target=\"_blank\" title=\"Stabilo 12 (1.5&quot;-2&quot; Diameter) Soy HMW Wick\">STABILO 12 (1.5\"-2\" Diameter) Soy HMW Wick</a> #  <a href=\"/products/stabilo-16-2-2-5-diameter-soy-hmw-wick\" target=\"_blank\" title=\"Stabilo 16 (2&quot;-2.5&quot; Diameter) Soy HMW Wick\">STABILO 16 (2\"-2.5\" Diameter) Soy HMW Wick</a> # <a href=\"/products/stabilo-20-2-5-3-diameter-soy-hmw-wick\" target=\"_blank\" title=\"Stabilo 20 (2.5&quot;-3&quot; Diameter) Soy HMW Wick\">Stabilo 20 (2.5\"-3\" Diameter) Soy HMW Wick </a><a href=\"/products/stabilo-8-1-75-2-2-wick\" target=\"_blank\" title=\"Stabilo 8 (1.75&quot; - 2.25&quot; Diameter) Wick\"> </a># <a href=\"/products/stabilo-22-2-5-3-wick\" target=\"_blank\" title=\"Stabilo 22 (2.5&quot; - 3&quot; Diameter) Wick\">Stabilo 22 (2.5\"-3\" Diameter) Soy MNW Wick</a></p>",
+            "richtext_2": "<p>5000 # 5000 # 5000 # 5000 # 5000 # 5000 # 5000 # 20,000 # 5000 # 5000 # 5000 # 5000 # 5000</p>",
+            "richtext_3": "<p>$552.50 # $552.50 # $552.50 # $552.50 # $552.50 # $552.50 # $552.50 # $1,839.60 # $684.90 # $684.90 # $684.90 # $684.90 # $684.90</p>",
+            "richtext_4": "<p>10% # 10% # 10% # 10% # 10% # 10% # 10% # 25% # 10% #10% #10% #10% #10%</p>",
+            "richtext_5": "<p>$497.25 #$497.25 # $497.25 # $497.25 # $497.25 # $497.25 # $497.25 # $1,381.00 # $616.49 # $616.49 # $616.49 # $616.49 # $616.49</p>",
             "collection": "",
             "text_1": "",
             "collection_1": "",
@@ -160,10 +169,10 @@
           "type": "WholeSale",
           "settings": {
             "text_name": "scents",
-            "image_Dropdown": "shopify:\/\/shop_images\/scents.svg",
+            "image_Dropdown": "shopify://shop_images/scents.svg",
             "img_tex": "Drum Pricing fragrance",
-            "image_english": "shopify:\/\/shop_images\/Screen_Shot_2023-11-07_at_12.57.51_PM_1.png",
-            "image_french": "shopify:\/\/shop_images\/Screen_Shot_2023-11-07_at_12.57.51_PM_1.png",
+            "image_english": "shopify://shop_images/Screen_Shot_2023-11-07_at_12.57.51_PM_1.png",
+            "image_french": "shopify://shop_images/Screen_Shot_2023-11-07_at_12.57.51_PM_1.png",
             "text_cont": "Fragrance Drums",
             "textarea": "25lb drum starting from $765.00 per drum",
             "richtext_1": "",
@@ -176,9 +185,9 @@
             "collection_1": "spring-fragrances",
             "text_2": "summer",
             "collection_2": "summer",
-            "text_3": "winter\/Holiday",
+            "text_3": "winter/Holiday",
             "collection_3": "winter-and-holiday-fragrances",
-            "text_4": "Autumn\/Fall",
+            "text_4": "Autumn/Fall",
             "collection_4": "autumn-and-fall-fragrances"
           }
         }
@@ -197,9 +206,9 @@
       "type": "Buy_Bulk",
       "settings": {
         "text": "BUY IN BULK WITH VILLAGE CRAFT & CANDLE",
-        "Image": "shopify:\/\/shop_images\/Untitled_design_5_9a95c059-d139-470a-95b3-30f5313bd70b.png",
+        "Image": "shopify://shop_images/Untitled_design_5_9a95c059-d139-470a-95b3-30f5313bd70b.png",
         "textarea": "",
-        "detaiuls_data": "<p>From your first candle sale to your first wholesale order and beyond, Village Craft and Candle is here to help you build your candle-making business every step of the way. With a huge and reliable selection of wholesale wax, jars, fragrance oils and wicks all at a competitive price, Village is sure to be the only wholesale candle making supplier you’ll need.<br\/><br\/>Combining smaller orders together into one bulk order, will allow you to not only take advantage of quantity discounts, but will also save you a significant amount on shipping. We offer economical freight shipping rates on bulk orders being delivered throughout Canada and the United States.<br\/><br\/>There’s no need to sign up for a special wholesale account. At Village, every customer has access to our wholesale pricing. On top of the incredible savings you’ll get, you’ll also receive additional savings for future orders through our MyVillage loyalty program.<\/p><p>The large inventory Village is able to stock, allows us to meet all your candle making supply needs faster than our competitors. Our bulk pricing as well as our freight shipping options will provide savings that are sure to help your business reach a whole new level of success.<br\/><br\/>Here are some of the benefits of wholesale:<\/p><ul><li>Quantity discounts that increase your profits by lowering your costs<\/li><li>Reduced shipping charges<\/li><li>Supplies on hand when you need them<\/li><li>No longer worry about supply chain issues or shipping delays putting you behind<\/li><\/ul><p><\/p><p>In order to help all of our customers take advantage of our wholesale pricing, we are pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding. This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.<br\/><\/p>"
+        "detaiuls_data": "<p>From your first candle sale to your first wholesale order and beyond, Village Craft and Candle is here to help you build your candle-making business every step of the way. With a huge and reliable selection of wholesale wax, jars, fragrance oils and wicks all at a competitive price, Village is sure to be the only wholesale candle making supplier you’ll need.<br/><br/>Combining smaller orders together into one bulk order, will allow you to not only take advantage of quantity discounts, but will also save you a significant amount on shipping. We offer economical freight shipping rates on bulk orders being delivered throughout Canada and the United States.<br/><br/>There’s no need to sign up for a special wholesale account. At Village, every customer has access to our wholesale pricing. On top of the incredible savings you’ll get, you’ll also receive additional savings for future orders through our MyVillage loyalty program.</p><p>The large inventory Village is able to stock, allows us to meet all your candle making supply needs faster than our competitors. Our bulk pricing as well as our freight shipping options will provide savings that are sure to help your business reach a whole new level of success.<br/><br/>Here are some of the benefits of wholesale:</p><ul><li>Quantity discounts that increase your profits by lowering your costs</li><li>Reduced shipping charges</li><li>Supplies on hand when you need them</li><li>No longer worry about supply chain issues or shipping delays putting you behind</li></ul><p></p><p>In order to help all of our customers take advantage of our wholesale pricing, we are pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding. This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.<br/></p>"
       }
     },
     "works_new_K93HQL": {
@@ -209,7 +218,7 @@
           "type": "work_new",
           "settings": {
             "text_name": "select the product",
-            "details": "<p>Shop our store for the products you are looking to buy in bulk.<\/p>",
+            "details": "<p>Shop our store for the products you are looking to buy in bulk.</p>",
             "bg_color": "#7fa9a4"
           }
         },
@@ -217,7 +226,7 @@
           "type": "work_new",
           "settings": {
             "text_name": "Order Here",
-            "details": "<p>Contact our support team specifying the products you want to order.<\/p>",
+            "details": "<p>Contact our support team specifying the products you want to order.</p>",
             "bg_color": "#7fa9a4"
           }
         },
@@ -225,7 +234,7 @@
           "type": "work_new",
           "settings": {
             "text_name": "Get Invoice via Email",
-            "details": "<p>Receive an invoice via email with all the details to finalize your purchase.<\/p>",
+            "details": "<p>Receive an invoice via email with all the details to finalize your purchase.</p>",
             "bg_color": "#7fa9a4"
           }
         }
@@ -238,7 +247,7 @@
       "settings": {
         "text": "HOW IT WORKS",
         "textarea": "Take these three simple steps to make your bulk order!",
-        "image": "shopify:\/\/shop_images\/Online.png",
+        "image": "shopify://shop_images/Online.png",
         "button_text": "",
         "button_url": "#contactus_wrapper"
       }
@@ -246,7 +255,7 @@
     "contact_us_app_YzbcBf": {
       "type": "contact_us_app",
       "settings": {
-        "custom_html": "<div data-gorgias-contact-form-uid=\"equ1i5og\"><\/div>"
+        "custom_html": "<div data-gorgias-contact-form-uid=\"equ1i5og\"></div>"
       }
     },
     "faq_3YAwAn": {
@@ -256,21 +265,21 @@
           "type": "button",
           "settings": {
             "heading_demo": "Can I pay my bulk order in instalments?",
-            "description_demo": "<p>Yes you can. Village Craft and Candle is pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding.<\/p>\n<p>This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.\n<\/p>"
+            "description_demo": "<p>Yes you can. Village Craft and Candle is pleased to provide Splitit, which allows you to pay off your balance in 3 equal payments over 3 months. Splitit guarantees your purchase, by placing a hold on your credit card, while the total amount is outstanding.</p>\n<p>This is not a payment, it’s just a pre-authorization that allows you to pay off your balance over 3 months, before accruing any interest. Just pay as you go and Splitit will re-authorize the hold and reduce the amount each month.\n</p>"
           }
         },
         "button_ziUtTm": {
           "type": "button",
           "settings": {
             "heading_demo": "How do I calculate the shipping cost?",
-            "description_demo": "<p>Our dedicated customer service team will work with a variety of-carriers to obtain the best pricing as well as the most suitable timeframe for your desires.<\/p>"
+            "description_demo": "<p>Our dedicated customer service team will work with a variety of-carriers to obtain the best pricing as well as the most suitable timeframe for your desires.</p>"
           }
         },
         "button_eNQcPh": {
           "type": "button",
           "settings": {
             "heading_demo": "What is the estimated time for delivery?",
-            "description_demo": "<p>We are proud to provide fast and reliable shipping across Canada and the United States. Our order processing time is 2-3 business days. Once your order is processed, the delivery time will be dependent on your location and the shipping service you selected.<\/p>"
+            "description_demo": "<p>We are proud to provide fast and reliable shipping across Canada and the United States. Our order processing time is 2-3 business days. Once your order is processed, the delivery time will be dependent on your location and the shipping service you selected.</p>"
           }
         }
       },
@@ -302,12 +311,12 @@
       "type": "demo_schedule",
       "disabled": true,
       "settings": {
-        "bg_image": "shopify:\/\/shop_images\/BG_1.svg",
+        "bg_image": "shopify://shop_images/BG_1.svg",
         "text": "Schedule a Demo Call with Our Product Specialists",
-        "Image": "shopify:\/\/shop_images\/Group_36179.png",
-        "textarea": "<p>Our team of experts is available to answer your questions, provide guidance, and help you find the solutions you need.<\/p>",
+        "Image": "shopify://shop_images/Group_36179.png",
+        "textarea": "<p>Our team of experts is available to answer your questions, provide guidance, and help you find the solutions you need.</p>",
         "schedula_text": "schedule a call",
-        "schedula_url": "https:\/\/calendly.com\/roxanne-87",
+        "schedula_url": "https://calendly.com/roxanne-87",
         "text_dis": "",
         "discun_code": "",
         "product_1": "",

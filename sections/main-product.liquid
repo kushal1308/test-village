@@ -102,11 +102,6 @@
             type="submit"
             name="add"
             class="sticky_add {% if product.selected_or_first_available_variant.metafields.custom.button_hide %}hide_button{% endif %} font-family-Neuzeit font-weight-700 font-size-18px line-height-21px letter-spacing-0px text-transform-inherit border-radius-37px color-black border-light-black border-1px bg-light-white btn product-form__cart-submit m-0px product-form__submit_btyn  button button--full-width button--secondary {% unless current_variant.available %}sold_out{% endunless %}"
-            {% unless current_variant.available %}
-              disabled="disabled"
-            {% else %}
-              enabled
-            {% endunless %}
           >
             <span data-ly-mutation-count="1">
               {% unless current_variant.available %}
@@ -1103,11 +1098,7 @@
   }
   }
 </style>
-                            
-<!-- added by dyn rvp storing -->
- {% render 'dyn-recently-viewed-widget' %}}
- <!-- section ends -->
-                            
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",

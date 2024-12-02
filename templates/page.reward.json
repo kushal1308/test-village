@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -29,10 +38,10 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Sign Up",
-            "button_link_1": "\/account\/register",
+            "button_link_1": "/account/register",
             "button_style_secondary_1": false,
             "button_label_2": "Sign In",
-            "button_link_2": "\/account\/login",
+            "button_link_2": "/account/login",
             "button_style_secondary_2": false
           }
         }
@@ -44,7 +53,7 @@
       ],
       "settings": {
         "unique_class": "new_rewardpage",
-        "image": "shopify:\/\/shop_images\/image_1_3057fd29-4f5b-4e6e-9b29-bae0355ab76b.png",
+        "image": "shopify://shop_images/image_1_3057fd29-4f5b-4e6e-9b29-bae0355ab76b.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -60,7 +69,7 @@
     "html_miB3zL": {
       "type": "html",
       "settings": {
-        "html_code": "<div id=\"ssw-page\" class=\"ssw-page ssw-clearfix gw-container\"><\/div>"
+        "html_code": "<div id=\"ssw-page\" class=\"ssw-page ssw-clearfix gw-container\"></div>"
       }
     },
     "reward_page_table_6CtUxT": {
@@ -69,7 +78,7 @@
         "row_mnHMeh": {
           "type": "row",
           "settings": {
-            "image_svg": "shopify:\/\/shop_images\/mdi_cart.svg",
+            "image_svg": "shopify://shop_images/mdi_cart.svg",
             "image_text": "Collect V Points",
             "middle_des": "Earn V Points for great discounts on future purchases.",
             "last_points": "1 point for every $2.00"
@@ -78,7 +87,7 @@
         "row_dfdmP4": {
           "type": "row",
           "settings": {
-            "image_svg": "shopify:\/\/shop_images\/tabler_star-filled.svg",
+            "image_svg": "shopify://shop_images/tabler_star-filled.svg",
             "image_text": "Enlighten others",
             "middle_des": "Post a review and help others know what they can expect.",
             "last_points": "25 points"
@@ -87,7 +96,7 @@
         "row_Lf397q": {
           "type": "row",
           "settings": {
-            "image_svg": "shopify:\/\/shop_images\/mingcute_mail-fill.svg",
+            "image_svg": "shopify://shop_images/mingcute_mail-fill.svg",
             "image_text": "Subscribe",
             "middle_des": "Join our email list and receive updates and deals in your inbox.",
             "last_points": "100 points"
@@ -96,7 +105,7 @@
         "row_gLdKiH": {
           "type": "row",
           "settings": {
-            "image_svg": "shopify:\/\/shop_images\/material-symbols_share.svg",
+            "image_svg": "shopify://shop_images/material-symbols_share.svg",
             "image_text": "Fan the Flame",
             "middle_des": "Spread your love for VCC on social media and get points.",
             "last_points": "100 points"
@@ -105,7 +114,7 @@
         "row_EAqceF": {
           "type": "row",
           "settings": {
-            "image_svg": "shopify:\/\/shop_images\/entypo_login.svg",
+            "image_svg": "shopify://shop_images/entypo_login.svg",
             "image_text": "Register",
             "middle_des": "Create a VCC customer account.",
             "last_points": "100 points"
@@ -137,7 +146,7 @@
         "text_aDfRtz": {
           "type": "text",
           "settings": {
-            "text": "<p>Unlock exclusive benefits and rewards with every purchase at Village Craft & Candle by joining MyVillage Rewards—where your crafting passion pays off!<\/p>",
+            "text": "<p>Unlock exclusive benefits and rewards with every purchase at Village Craft & Candle by joining MyVillage Rewards—where your crafting passion pays off!</p>",
             "text_style": "body"
           }
         },
@@ -145,7 +154,7 @@
           "type": "button",
           "settings": {
             "button_label": "Join MyVillage",
-            "button_link": "\/account\/login",
+            "button_link": "/account/login",
             "button_style_secondary": false
           }
         }
@@ -157,7 +166,7 @@
       ],
       "settings": {
         "customclass": "reward_program",
-        "image": "shopify:\/\/shop_images\/Special_Deal_for_You_Girl.png",
+        "image": "shopify://shop_images/Special_Deal_for_You_Girl.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
