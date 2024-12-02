@@ -1,0 +1,28 @@
+{% if collection %}
+    <div class="text-align-center return-link-wrapper page-width">
+      <a href="{{ collection.url }}" class="btn_collection d-inline-block text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit btn btn--secondary btn--has-icon-before return-link">
+        <svg height="9" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 20 8"><path d="M4.814 7.555C3.95 6.61 3.2 5.893 2.568 5.4 1.937 4.91 1.341 4.544.781 4.303v-.44a9.933 9.933 0 0 0 1.875-1.196c.606-.485 1.328-1.196 2.168-2.134h.752c-.612 1.309-1.253 2.315-1.924 3.018H19.23v.986H3.652c.495.632.84 1.1 1.036 1.406.195.306.485.843.869 1.612h-.743z" fill="#000" fill-rule="evenodd"/></svg>
+        {% if request.locale.iso_code == 'fr' %}
+          Retour à {{ collection.title }}
+        {% else %}  
+          Back to {{ collection.title }}
+        {% endif %}
+        
+      </a>
+    </div>
+  {% endif %}
+
+  {% schema %}
+{
+  "name": "Collection Button",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "Collection Button"
+    }
+  ]
+}
+{% endschema %}

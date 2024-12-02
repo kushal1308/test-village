@@ -1,0 +1,819 @@
+{% case section.settings.height %}
+    {% when 'small' %} {% assign mobile_height = 175 %} {% assign desktop_height = 475 %}
+    {% when 'medium' %} {% assign mobile_height = 270 %} {% assign desktop_height = 650 %}
+    {% when 'large' %} {% assign mobile_height = 375 %} {% assign desktop_height = 775 %}
+    {% endcase %}
+    {% if section.settings.image == blank %}
+    {% style %}
+    @media screen and (max-width: 749px) {
+    .video-section-wrapper--{{ section.id }} .video__image {
+    opacity: 0;
+    }
+    }
+    {% endstyle %}
+    {% endif %}
+    {% comment %} <div class="section-header text-center main_page_image"> {% if page.metafields.custom.image %}<img src="{{ page.metafields.custom.image | img_url: 'master' }}" alt="image" class="eng-lang-banner">{% endif %} <h1 class="page_title page-width"><span>{{ page.title }}</span></h1> </div> {% endcomment %}
+    {{ 'quiz-data.css' | asset_url | stylesheet_tag }}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <section class="quiz-data">
+    <div class="page-width">
+    <div class="data-main">
+    <ul id="progressbar"> {% for block in section.blocks %} <li {% if forloop.first %}class="active" {% endif %}></li> {% endfor %} </ul> 
+    <div id="option-data">
+    {% for block in section.blocks %}
+    <div class="option-data {% if forloop.first %} main-active {% endif %}">
+    {% if block.settings.question != blank %}
+    <div class="single-questions">
+    {% if block.settings.question != blank %} <h2 class="text-center">{{ block.settings.question | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</h2> <input type="hidden" class="get-value-{{forloop.index}}"> {% endif %}
+    <div class="quiz-option">
+    {% if block.settings.option1 != blank and block.settings.option2!= blank %}
+    <div class="optionA quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="A-{{forloop.index}}" value="A-{{forloop.index}}" required> <label class="quiz-label" for="A-{{forloop.index}}">{{ block.settings.option1 }}</label>  </div>
+    <div class="optionB quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="B-{{forloop.index}}" value="B-{{forloop.index}}" required > <label class="quiz-label" for="B-{{forloop.index}}">{{ block.settings.option2 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    {% endif %}
+    {% if block.settings.option3 != blank %}
+    <div class="optionC quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="C-{{forloop.index}}" value="C-{{forloop.index}}" required > <label class="quiz-label" for="C-{{forloop.index}}">{{ block.settings.option3 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    {% endif %}
+    {% if block.settings.option4 != blank %}
+    <div class="optionD quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="D-{{forloop.index}}" value="D-{{forloop.index}}" required > <label class="quiz-label" for="D-{{forloop.index}}">{{ block.settings.option4 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    {% endif %}         
+    </div>
+    </div>     
+    {% endif %}
+    {% if block.settings.que1 != blank %}
+    <div class="multiple-questions" id="multiple-questions-{{forloop.index}}">
+    <div class="data-1">
+    {% if block.settings.que1 != blank %} <h2 class="text-center">{{ block.settings.que1 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</h2> <input type="hidden" class="get-value-1-{{forloop.index}}"> {% endif %}
+    <div class="quiz-option">
+    {% if block.settings.opt1-1 != blank and block.settings.opt1-2!= blank %}
+    <div class="optionA1 quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="A-1-{{forloop.index}}" value="A-1-{{forloop.index}}"> <label class="quiz-label" for="A-1-{{forloop.index}}">{{ block.settings.opt1-1 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    <div class="optionB1 quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="B-1-{{forloop.index}}" value="B-1-{{forloop.index}}" > <label class="quiz-label" for="B-1-{{forloop.index}}">{{ block.settings.opt1-2 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    {% endif %}
+    {% if block.settings.opt1-3 != blank %}
+    <div class="optionC1 quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="C-1-{{forloop.index}}" value="C-1-{{forloop.index}}" > <label class="quiz-label" for="C-1-{{forloop.index}}">{{ block.settings.opt1-3 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    {% endif %}
+    {% if block.settings.opt1-4 != blank %}
+    <div class="optionD1 quiz_answer">
+    <input class="quiz-input" type="radio" name="quiz-data" id="D-1-{{forloop.index}}" value="D-1-{{forloop.index}}" > <label class="quiz-label" for="D-1-{{forloop.index}}">{{ block.settings.opt1-4 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    {% endif %}
+    </div>
+    <!--  <div class="nav-btns data1-buttons text-center"> <a class="button main-prev btn"  ><ly-as-587195>Previous</ly-as-587195> </a> <a class="button main-next btn"  ><ly-as-587196>Next</ly-as-587196>  </a> </div> -->
+    </div>
+    <div class="data-2">
+    {% if block.settings.que2 != blank %} <h2 class="text-center">{{ block.settings.que2 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</h2> <input type="hidden" class="get-value-2-{{forloop.index}}"> {% endif %}
+    <div class="quiz-option">
+    {% if block.settings.opt2-1 != blank and block.settings.opt2-2!= blank %}
+    <div class="optionA2 quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="A-2-{{forloop.index}}" value="A-2-{{forloop.index}}"> <label class="quiz-label" for="A-2-{{forloop.index}}">{{ block.settings.opt2-1 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    <div class="optionB2 quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="B-2-{{forloop.index}}" value="B-2-{{forloop.index}}" > <label class="quiz-label" for="B-2-{{forloop.index}}">{{ block.settings.opt2-2 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    {% endif %}
+    {% if block.settings.opt2-3 != blank %}
+    <div class="optionC2 quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="C-2-{{forloop.index}}" value="C-2-{{forloop.index}}" > <label class="quiz-label" for="C-2-{{forloop.index}}">{{ block.settings.opt2-3 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    {% endif %}
+    {% if block.settings.opt2-4 != blank %}
+    <div class="optionD2 quiz_answer"> <input class="quiz-input" type="radio" name="quiz-data" id="D-2-{{forloop.index}}" value="D-2-{{forloop.index}}" > <label class="quiz-label" for="D-2-{{forloop.index}}">{{ block.settings.opt2-4 | remove: '<p><ly-as-587194>' | remove: '</ly-as-587194></p>' }}</label>  </div>
+    {% endif %}         
+    </div>
+    </div>
+    <!--   <div class="nav-btns main-buttons text-center"> <a class="btn button prev" ><ly-as-587195>Previous</ly-as-587195></a> <a class="button next"  ><ly-as-587196>Next</ly-as-587196> </a> <a class="btn button submit" ><ly-as-587197>Submit</ly-as-587197></a> </div> -->
+    </div>       
+    {% endif %}
+    </div>
+    {% endfor %}
+    </div>
+    <div class="nav-btns main-buttons text-center"> <a href="#" class="btn button prev text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit color-light-green" id="prev" ><ly-as-587195>Previous</ly-as-587195></a> <a href="#" class="btn button next same-click text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit color-light-green" id="next" ><ly-as-587196>Next</ly-as-587196> </a> <a href="#" class="btn button submit same-click text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit color-light-green" id="submit" >
+      <ly-as-587197>
+      {% if request.locale.iso_code == 'fr' %}
+        Soumettre
+      {% else %}  
+        Submit
+      {% endif %}</ly-as-587197></a> </div>
+    </div>
+    </div>
+    <div class="quiz-popup-video" id="A-1-popup">
+    <div class="popup_content">
+    {% render 'icon-close-quiz' %}
+    <span id="frame ">
+    <div class="video-section-wrapper option-popup video-section-wrapper--{{ section.settings.height }} video-section-wrapper--min-height {% if section.settings.style == 'background' %} video-background-wrapper {% unless section.settings.show_overlay %} video-background-wrapper--no-overlay{% endunless %} {% endif %} video-section-wrapper--{{ section.id }}" data-desktop-height="360px" data-mobile-height="360px">
+    {% if section.settings.show_overlay %}<div class="video__overlay"></div>{% endif %}
+    <button type="button" class="text-link video-control__close-wrapper {% if section.settings.video_link != blank %} close_btn_video {% endif %} {% if section.settings.style == 'background' %} video-control__close-background{% endif %}" data-controls="Video-{{ section.id }}"> <span class="video-control video-control__close"> {% render 'icon-close-quiz' %} <span class="icon__fallback-text">{{ 'sections.video.close' | t: video_title: '[video_title]' }}</span></span> </button>
+    {% if section.settings.video_link != blank %}
+    <div id="Video-{{ section.id }}" class="video1 {% if section.settings.style == 'background' %} video--background{% endif %} video--{{ section.settings.style }}" data-id="{{ section.settings.video_link.id }}" data-type="{{ section.settings.style }}">
+    <iframe src="https://www.youtube.com/embed/{{ section.settings.video_link.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
+    </div>      
+    {% else %}
+    {% if section.settings.image == blank %}
+    <div class="video__image js">
+    <div class="placeholder-background"> {% capture current %}{% cycle 1, 2 %}{% endcapture %} {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
+    </div>
+    {% else %}
+    <div class="video__image box ratio-container lazyload js" data-bgset="{% render 'bgset', image: section.settings.image %}" data-sizes="auto" data-parent-fit="contain" style="background-position: {{ section.settings.image_position }}; background-image: url('{{ section.settings.image | img_url: '300x300' }}');"> </div>
+    {% endif %}
+    {% endif %}
+    <noscript>
+    <div class="video__image"{% if section.settings.image %} style="background-image: url('{{ section.settings.image | img_url: '2048x' }}'); background-position: {{ section.settings.image_position }};"{% endif %}>
+    {% if section.settings.image == blank %} <div class="placeholder-background"> {% capture current %}{% cycle 1, 2 %}{% endcapture %} {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }} </div> {% endif %}
+    </div>
+    </noscript>
+    {% if section.settings.video_link == blank %}      
+    <div class="video__text-content text-center">
+    <div class="page-width">
+    {% unless section.settings.video_title == blank %}
+    <h2 class="h1 mega-title video__title{% if section.settings.text_size == 'large' %} mega-title--large{% endif %}"> {{ section.settings.video_title | escape }} </h2>
+    {% endunless %}
+    {% unless section.settings.style == 'background' %}
+    <div class="video-control__play-wrapper{% if section.settings.video_title != blank %} video-control__play-wrapper--with-text{% endif %}">
+    {% if section.settings.video_link != blank %} <div class="video-play-loader"></div> {% endif %}
+    <button type="button" class="btn video-control video-control__play" data-controls="Video-{{ section.id }}"> {% render 'icon-play-quiz' %} <span class="icon__fallback-text">{{ 'sections.video.play' | t: video_title: '[video_title]' }}</span> </button>
+    </div>      
+    {% endunless %}
+    </div>
+    </div>      
+    <div class="video-control__play-wrapper-mobile">
+    {% if section.settings.video_link != blank %} <div class="video-play-loader"></div> {% endif %}
+    <button type="button" class="btn video-control video-control__play" data-controls="Video-{{ section.id }}"> {% render 'icon-play-quiz' %} <span class="icon__fallback-text">{{ 'sections.video.play' | t: video_title: '[video_title]' }}</span> </button>
+    </div>
+    {% endif %}    
+    <button type="button" class="video__pause{% unless section.settings.style == 'background' %} visually-hidden" tabindex="-1{% endunless %}" data-id="{{ section.id }}" aria-live="polite" aria-pressed="false" data-controls="Video-{{ section.id }}">
+    <span class="video__pause-stop"> {% render 'icon-pause-quiz' %} <span class="icon__fallback-text">{{ 'sections.video.pause' | t: video_title: '[video_title]' }}</span> </span>
+    <span class="video__pause-resume"> {% render 'icon-play-quiz' %} <span class="icon__fallback-text">{{ 'sections.video.resume' | t: video_title: '[video_title]' }}</span> </span>
+    </button>
+    </div>
+    </span>
+    </div>
+    </div>  
+    <!--  29/08/22 start -->
+    <div class="quiz_popup_sub" id="quiz_sub">
+    <div class="popup_content">
+        {% render 'icon-close-quiz' %}
+    <div class="popup_content1">
+    <p class="quiz_popup">"If you want to share your feedback with us regarding the shopping experience on our website, please click here"</p>      
+    <div class="nav-btns main-buttons text-center"> <a href="#" class="btn button yes text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit color-light-green" id="Yes" >Yes</a> <a href="#" class="btn button no text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit color-light-green" id="No" >No</a> </div>
+    </div>
+    </div>
+    </div>
+    <div class="quiz_popup_no" id="popup_no">
+    <div class="popup_content"> <p class="quiz_popup">Thank you for choosing Village Craft and Candle for your candle making supply needs</p> <div class="nav-btns main-buttons text-center"><!--   <a href="#" class="btn button close_btn" id="Close" >Close</a> --> </div> </div>
+    </div>
+    <!--  29/08/22 end -->
+    <!--  27/09/22 start  -->
+       <div class="quiz_popup_sub1" id="quiz_sub1">
+       <div class="popup_content">
+        {% render 'icon-close-quiz' %}
+           <div class="popup_content1">
+      <p class="quiz_popup1">"If you want to share your feedback with us regarding the shopping experience on our website, please click here"</p>
+          
+      <div class="nav-btns main-buttons text-center">
+            <a href="#" class="btn button yes text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit color-light-green" id="Yes" >Yes</a>
+            <a href="#" class="btn button no text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit color-light-green" id="No_pdf" >No</a>
+          </div>
+              </div>
+       </div>
+    </div>
+      
+       {% if request.locale.iso_code == 'fr'  %}
+        <a href="{{ section.settings.pdf_fr_link1 }}" target="_blank" id="A-1-4-popup"></a>
+      <a href="{{ section.settings.pdf_fr_link2 }}" target="_blank" id="B-1-4-popup"></a>
+      <a href="{{ section.settings.pdf_fr_link3 }}" target="_blank" id="C-1-4-popup"></a>
+      <a href="{{ section.settings.pdf_fr_link4 }}" target="_blank" id="A-2-4-popup"></a>
+      <a href="{{ section.settings.pdf_fr_link5 }}" target="_blank" id="B-2-4-popup"></a>
+      <a href="{{ section.settings.pdf_fr_link6 }}" target="_blank" id="C-2-4-popup"></a>
+      <a href="{{ section.settings.pdf_fr_link7 }}" target="_blank" id="D-2-4-popup"></a>
+        {% else %}
+      <a href="{{ section.settings.pdf_link1 }}" target="_blank" id="A-1-4-popup"></a>
+      <a href="{{ section.settings.pdf_link2 }}" target="_blank" id="B-1-4-popup"></a>
+      <a href="{{ section.settings.pdf_link3 }}" target="_blank" id="C-1-4-popup"></a>
+      <a href="{{ section.settings.pdf_link4 }}" target="_blank" id="A-2-4-popup"></a>
+      <a href="{{ section.settings.pdf_link5 }}" target="_blank" id="B-2-4-popup"></a>
+      <a href="{{ section.settings.pdf_link6 }}" target="_blank" id="C-2-4-popup"></a>
+      <a href="{{ section.settings.pdf_link7 }}" target="_blank" id="D-2-4-popup"></a>
+    {% endif %}
+      
+      <div class="quiz_popup_no1" id="popup_no1">
+        <div class="popup_content">
+          <div class="popup_content1">
+          <p class="quiz_popup">Thank you for choosing Village Craft and Candle for your candle making supply needs</p>
+           <div class="nav-btns main-buttons text-center">
+    {% comment %}        <a href="#" class="btn button close_btn" id="Close" >Close</a> {% endcomment %}
+           </div>
+          </div>
+        </div>
+      </div>
+    
+      
+    <!-- 27/09/22 end -->
+    
+    <!-- 04/10/22 start -->
+      <div class="quiz_popup_guided" id="quiz_guided">
+       <div class="popup_guided">
+        {% render 'icon-close-quiz' %}
+           <div class="popup_guided1">
+      <p class="quiz_guided">"Take a guided tour of our website?"</p>
+           
+      <div class="nav-btns main-buttons text-center guided">
+            <a href="#" class="btn button yes text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit color-light-green" id="guided_yes" >Yes</a>
+            <a href="#" class="btn button no text-transform-inherit padding-10px-18px border-radius-37px border-1px bg-light-white letter-spacing-0px color-black-000 line-height-21px font-size-18px font-weight-700 font-family-Neuzeit color-light-green" id="guided_no" >No</a>
+          </div>
+             </div>
+       </div>
+    </div>
+    <!-- 04/10/22 end  -->
+     
+    </section>
+    <script>
+      $(".option-data").not(".option-data:nth-of-type(1)").hide();
+      $(".option-data").not(".option-data:nth-of-type(1)").css('transform','translateX(100px)');
+      $(".quiz-popup").css("display","none");
+      $(".quiz-popup-video").css("display","none");
+      var child = 1;
+      var length = $(".option-data").length - 1;
+      $('#submit').addClass("disabled");
+      $("#prev").addClass("disabled");
+    
+      //   Next Button Click
+    
+      $(".next").click(function () {
+        $(".main-buttons.disabled").removeClass("disabled");
+        $("#progressbar").find("li.active").next("li").addClass("active");
+        //     $(".quiz-popup").css("display","block");
+        $(this).parents(".option-data").find(".multiple-questions .data-1").css("display","block");
+        if($(".current #B-1").prop('checked', 'true')){
+          $(".option-popup.data-3").css("display", "block");
+        }
+        else{
+          $(".video-section-wrapper.option-popup").css("display", "none");
+        }
+      });
+      //   PREV Button Click
+      $(".prev").click(function () {
+        $("#progressbar").find("li.active:nth-of-type(" + child + ")").removeClass("active");
+      });
+      //   Main Button click
+      $(".button").on('click', function () {
+        var id = $(this).attr("id");
+        if (id == "next") {      
+          $("#prev").removeClass("disabled");
+          if (child >= length) {
+            $(this).addClass("disabled");
+            $('#submit').removeClass("disabled");
+          }
+          if (child <= length) {
+            child++;
+          }
+        } else if (id == "prev") {
+          $("#next").removeClass("disabled");
+          $('#submit').addClass("disabled");
+          if (child <= 2) {
+            $(this).addClass("disabled");
+          }
+          if (child > 1) {
+            child--;
+          }
+        }                                        
+        var currentOptionData = $(".option-data:nth-of-type(" + child + ")");
+        currentOptionData.fadeIn();
+        currentOptionData.css('transform','translateX(0)');
+        currentOptionData.prevAll('.option-data').css('transform','translateX(-100px)');
+        currentOptionData.nextAll('.option-data').css('transform','translateX(100px)');
+        currentOptionData.addClass("main-active");
+          if(child == "4"){
+          var ans_3 =  $('.get-value-3').val();                                          
+        currentOptionData.find(".multiple-questions").addClass("sub-active");
+        currentOptionData.find(".multiple-questions").parent().addClass("multiple-main");
+    //currentOptionData.siblings(".main-buttons").addClass("disabled");
+    //     currentOptionData.find(".multiple-questions").parent(".option-data.main-active").siblings(".main-buttons").addClass("disabled");
+                                            if(ans_3 == 'A-3')
+            {
+               $('.multiple-main').find(".multiple-questions .data-1").css("display","block");
+              $('.multiple-main').find(".multiple-questions .data-2").css("display","none");
+    
+            }
+          else if(ans_3 == 'B-3')
+          {
+            $('.multiple-main').find(".multiple-questions .data-1").css("display","none");
+          $('.multiple-main').find(".multiple-questions .data-2").css("display","block");
+          }
+                                            }
+                                               $('.option-data').not(currentOptionData).removeClass("main-active");
+        $('.option-data').not(currentOptionData).find(".multiple-questions").removeClass("sub-active");
+        //$('.option-data').not(currentOptionData).next(".main-buttons").removeClass("disabled");
+        $('.option-data').not(currentOptionData).hide();
+      });
+      //   Hide show multiple question buttons 
+      
+      $(".option-data.multiple-main").siblings(".nav-btns").css("display", "none");
+      
+    // Trigger to previous
+      $('.main-prev').on('click', function () {
+        $('#prev').trigger('click');
+      });
+      
+      //   Multiple Question-1 Button
+      
+      $(".main-next").click(function(){
+        $(".main-buttons.disabled").removeClass("disabled");
+        $('.data-2').css("display", "block");
+        $('.data-2').addClass("active");
+        $('.data2-buttons .button').css("display", "none");
+        $(".main-buttons.disabled").removeClass("disabled");
+        $('.main-buttons').css("display", "block");
+        $('.data1-buttons').css("display", "none");
+      });
+    
+      //    Multiple Question-2 Button
+      $('.data2-buttons .button').click(function(){
+        $('.data2-buttons').css("display", "none");
+        $('.main-buttons').css("display", "block");
+      });
+    
+      //  Add remove class
+      $('.quiz_answer').on('click', function(){
+        $(this).parent(".quiz-option").find('.quiz_answer.current').removeClass('current');
+        $(this).addClass('current');    
+         var ans_1 =  $('.get-value-1').val();
+        var id = $(this)[0].children[0].attributes.id.value;
+        if(id == 'A-2' && ans_1=="B-1"){
+           // $('#A-1-popup').show();  
+            //$('body').addClass('popup_open_body');
+        }
+       else if(id == 'B-2' && ans_1=="B-1"){
+       //    location.href = '/pages/contact-us';
+          $('.quiz_popup_sub').css('display', 'block');
+      $('body').addClass('popup_open_body');
+        }
+        else if(!id =='A-3'){
+          var ans_3 =  $('.get-value-3').val();
+          $('.multiple-main').addClass('main-active').css('transform','translateX(100px)');
+          $('.multiple-main').find(".multiple-questions").addClass("sub-active");
+            if(ans_3 == 'A-3')
+            {
+               $('.multiple-main').find(".multiple-questions .data-1").css("display","block");
+    
+            }
+          else if(ans_3 == 'B-3')
+          {
+          $('.multiple-main').find(".multiple-questions .data-2").css("display","block");
+          }
+    
+        }
+    
+      });
+    
+     
+      //   POPUP on radio button values
+      $(".single-questions .quiz-input").click(function(){
+        var data = $(this).val();
+        $(this).parent().parent().siblings("input[type='hidden']").val(data);
+    
+      });
+    
+      $(".data-1 .quiz-input").click(function(){
+        var data = $(this).val();
+        $(this).parent().parent().siblings("input[type='hidden']").val(data);
+       
+      });
+      $(".data-2 .quiz-input").click(function(){
+        var data = $(this).val();
+        $(this).parent().parent().siblings("input[type='hidden']").val(data);
+      
+    
+      });
+      
+      //   Close POPUP
+      $('.quiz-popup .icon-close').click(function(){
+        $('.quiz-popup').css("display", "none");
+        $('body').removeClass('popup_open_body');
+        window.location.reload();
+      });
+      
+       $('.quiz-popup-video .icon-close').click(function(){
+        $('.quiz-popup-video').css("display", "none");
+        $('body').removeClass('popup_open_body');
+         window.location.reload();
+      });
+       $('.quiz_popup_sub .icon-close').click(function(){
+        $('.quiz-popup').css("display", "none");
+        $('body').removeClass('popup_open_body');
+        window.location.reload();
+      });
+       $('.quiz_popup_sub1 .icon-close').click(function(){
+        $('.quiz-popup').css("display", "none");
+        $('body').removeClass('popup_open_body');
+        window.location.reload();
+      });
+    
+    
+      // 29/08/22 start
+    $('.quiz_popup_sub').css('display', 'none');
+    $('.quiz_popup_no').css('display', 'none');
+    $('.quiz_popup_sub .yes').click(function(){ 
+      location.href = '/pages/contact-us';
+    });
+    $('.quiz_popup_sub .no').click(function(){
+      location.href = 'https://villagecraftandcandle.com/';
+    });
+    $('.quiz_popup_no .close_btn').click(function(){
+      location.href = 'https://villagecraftandcandle.com/';
+    });
+    // 27/09/22
+      $('.quiz_popup_sub1').css('display', 'none');
+    $('.quiz_popup_no1').css('display', 'none');
+     
+     
+     $('#submit').click(function(){
+    //$('.quiz_popup_sub1').css('display', 'block');
+    // $('body').addClass('popup_open_body');
+       $('.quiz_popup_sub1').css('display', 'none');
+     
+      var ans_3 =  $('.get-value-3').val();
+        var id;
+       if(ans_3 == 'A-3')
+       {
+       id= $('.get-value-1-4').val();
+    }
+       else if(ans_3 == 'B-3')
+       {
+          id= $('.get-value-2-4').val();
+        }  
+    
+       var url = $('#'+id+'-popup').attr('href');
+        //alert(url);
+            window.open(url,'_blank');
+        location.reload(true);
+    });
+      $('.quiz_popup_sub1 .no').click(function(){
+      $('.quiz_popup_sub1').css('display', 'none');
+     
+      var ans_3 =  $('.get-value-3').val();
+        var id;
+       if(ans_3 == 'A-3')
+       {
+       id= $('.get-value-1-4').val();
+    }
+       else if(ans_3 == 'B-3')
+       {
+          id= $('.get-value-2-4').val();
+        }  
+    
+       var url = $('#'+id+'-popup').attr('href');
+        //alert(url);
+            window.open(url,'_blank');
+        location.reload(true);
+    });
+    
+      $('.quiz_popup_sub1 .yes').click(function(){
+        
+        location.href = '/pages/contact-us';
+    });
+      $('.quiz_popup_no1 .close_btn').click(function(){
+      location.href = 'https://villagecraftandcandle.com/';
+    });
+    
+    
+     $('#quiz_guided').css('display','none');
+     $('.quiz_answer').on('click', function(){  
+      $(this).parent(".quiz-option").find('.quiz_answer.current').removeClass('current');
+        $(this).addClass('current');    
+         var ans_1 =  $('.get-value-1').val();
+        var id = $(this)[0].children[0].attributes.id.value;
+        if(id == 'A-2' && ans_1=="B-1"){
+            $('#quiz_guided').show();  
+            $('body').addClass('popup_open_body');
+        }
+     });
+     
+     $('.quiz_popup_guided .yes').on('click',function(){
+        $('#quiz_guided').css('display','none');
+        $('#A-1-popup').show();  
+        $('body').addClass('popup_open_body');
+     });
+         
+    $('.quiz_popup_guided .no').on('click',function(){
+        
+       $('#quiz_guided').css('display','none');
+         $('body').removeClass('popup_open_body');
+     });
+       $('.quiz_popup_guided .icon-close').click(function(){
+        $('.popup_guided1').css("display", "none");
+        $('body').removeClass('popup_open_body');
+        window.location.reload();
+      });
+    
+      //07/10
+    
+       $('.quiz_answer').on('click', function(){
+      $(this).parent(".quiz-option").find('.quiz_answer.current').removeClass('current');
+        $(this).addClass('current');    
+         var ans_1 =  $('.get-value-1').val();
+        var id = $(this)[0].children[0].attributes.id.value;
+        if(id == 'A-2' && ans_1=="A-1"){
+            $('#quiz_guided').show();  
+            $('body').addClass('popup_open_body');
+        }
+     });
+     
+     $('.quiz_popup_guided .yes').on('click',function(){
+        $('#quiz_guided').css('display','none');
+        $('#A-1-popup').show();  
+        $('body').addClass('popup_open_body');
+     });
+         
+    $('.quiz_popup_guided .no').on('click',function(){
+        
+       $('#quiz_guided').css('display','none');
+        $('body').removeClass('popup_open_body');
+     });
+       $('.quiz_popup_guided .icon-close').click(function(){
+        $('.popup_guided1').css("display", "none");
+        $('body').removeClass('popup_open_body');
+        window.location.reload();
+      });
+    
+      
+    </script>
+    
+    {% schema %}
+    {
+    "name": "Quiz Data",
+    "settings": [
+    {
+    "type": "video_url",
+    "id": "video_link",
+    "label": "Add video URL:",
+    "accept": [
+    "youtube",
+    "vimeo"
+    ]
+    },
+    {
+      "type": "url",
+      "id": "pdf_link1",
+      "label": "English question1"
+    },
+    {
+      "type": "url",
+      "id": "pdf_link2",
+      "label": "English question2"
+    },
+    {
+      "type": "url",
+      "id": "pdf_link3",
+      "label": "English question3"
+    },
+    {
+      "type": "url",
+      "id": "pdf_link4",
+      "label": "English question4"
+    },
+    {
+      "type": "url",
+      "id": "pdf_link5",
+      "label": "English question5"
+    },
+    {
+      "type": "url",
+      "id": "pdf_link6",
+      "label": "English question6"
+    },
+    {
+      "type": "url",
+      "id": "pdf_link7",
+      "label": "English question7"
+    },
+    {
+      "type": "url",
+      "id": "pdf_fr_link1",
+      "label": "French question1"
+    },
+    {
+      "type": "url",
+      "id": "pdf_fr_link2",
+      "label": "French question2"
+    },
+    {
+      "type": "url",
+      "id": "pdf_fr_link3",
+      "label": "French question3"
+    },
+    {
+      "type": "url",
+      "id": "pdf_fr_link4",
+      "label": "French question4"
+    },
+    {
+      "type": "url",
+      "id": "pdf_fr_link5",
+      "label": "French question5"
+    },
+    {
+      "type": "url",
+      "id": "pdf_fr_link6",
+      "label": "French question6"
+    },
+    {
+      "type": "url",
+      "id": "pdf_fr_link7",
+      "label": "French question7"
+    }
+    ],
+    "blocks": [
+    {
+    "type": "content",
+    "name": "Single Question",
+    "settings": [
+    
+    {
+    "type": "richtext",
+    "id": "question",
+    "label": "Add Question"
+    },       
+    {
+    "type": "header",
+    "content": "Add Options"
+    },
+    {
+    "type": "richtext",
+    "id": "option1",
+    "label": "Option 1:"
+    },
+    {
+    "type": "richtext",
+    "id": "option2",
+    "label": "Option 2:"
+    },
+    {
+    "type": "richtext",
+    "id": "option3",
+    "label": "Option 3:"
+    },
+    {
+    "type": "richtext",
+    "id": "option4",
+    "label": "Option 4:"
+    }      
+    ]
+    },
+    {
+    "type": "data",
+    "name": "Multiple Questions",
+    "settings": [
+    {
+    "type": "header",
+    "content": "Ouestion 1"
+    },
+    
+    {
+    "type": "richtext",
+    "id": "que1",
+    "label": "Add Question 1"
+    },       
+    
+    {
+    "type": "richtext",
+    "id": "opt1-1",
+    "label": "Option 1-1:"
+    },
+    {
+    "type": "richtext",
+    "id": "opt1-2",
+    "label": "Option 1-2:"
+    },
+    {
+    "type": "richtext",
+    "id": "opt1-3",
+    "label": "Option 1-3:"
+    },
+    {
+    "type": "richtext",
+    "id": "opt1-4",
+    "label": "Option 1-4:"
+    },
+    {
+    "type": "header",
+    "content": "Ouestion 2"
+    },
+    
+    {
+    "type": "richtext",
+    "id": "que2",
+    "label": "Add Question 2"
+    },       
+    
+    {
+    "type": "richtext",
+    "id": "opt2-1",
+    "label": "Option 2-1:"
+    },
+    {
+    "type": "richtext",
+    "id": "opt2-2",
+    "label": "Option 2-2:"
+    },
+    {
+    "type": "richtext",
+    "id": "opt2-3",
+    "label": "Option 2-3:"
+    },
+    {
+    "type": "richtext",
+    "id": "opt2-4",
+    "label": "Option 2-4:"
+    }   
+    ]
+    }
+    
+    
+    ],
+    "presets": [
+    {
+    "name": "Quiz",
+    "category": "Quiz by Sections.design",
+    "settings": {},
+    "blocks": [
+    ]
+    }
+    ]
+    }
+    {% endschema %}
+<style>
+  {% comment %} button.text-link.video-control__close-wrapper {display: none;} {% endcomment %}
+.page_quiz .close_btn_video{display: none;}
+.page_quiz .video-section-wrapper iframe {width: 100%;height: 350px;border: none;}
+.page_quiz .data-main{margin-bottom: 40px;}
+.page_quiz a.btn {min-width: auto;min-height: auto;}
+.page_quiz .data-main .btn:focus {background-color:transparent;}
+.page_quiz .popup_guided .icon,.page_quiz .popup_content .icon {width: 20px;height: 20px;vertical-align: middle;fill: currentColor;}
+.nav-btns{display: flex;justify-content: center;}
+.nav-btns a{cursor: pointer;}
+.nav-btns .prev{margin-right: 15px;}
+.disabled {display:none;}
+.main-buttons.disabled {display:none !important;}
+/*progressbar*/
+#progressbar {margin-bottom: 30px;overflow: hidden;counter-reset: step;display: flex;padding:0px;}
+#progressbar li {list-style-type: none;color: #222;text-transform: uppercase;font-size: 9px;width: 25%;float: left;position: relative;}
+#progressbar li:before {content: counter(step);counter-increment: step;width: 20px;line-height: 20px;display: block;font-size: 10px;color:transparent;background: #222;border-radius: 20px;margin: 0 auto 5px auto;z-index: 2;position: relative;}
+/*progressbar connectors*/
+#progressbar li:after {content: '';width: 100%;height: 2px;background: #222;position: absolute;left: -50%;top: 9px;z-index: 1;}
+#progressbar li:first-child:after {content: none;}
+#progressbar li.active:before,  #progressbar li.active:after{background: #DA4453;}
+.option-popup {text-align: center;padding: 25px;}
+.multiple-questions .data-2{display: none;}
+.multiple-questions .data1-buttons{display: none;}
+.sub-active .data1-buttons{display: block;}
+.quiz-label p {margin: 0;font-family: 'Neuzeit Grotesk';font-weight: 300;font-size: 18px !important;line-height: 23px;color: #777;letter-spacing: 0px;}
+.quiz_answer {display: block;width: 100%;cursor: pointer;padding: 16.5px 21px 16.5px 31px;margin-bottom: 25px;text-align: left;border: 2px solid #e4e4e4;position: relative;}
+
+.quiz-input {height: 100%;width: 100%;display: block;position: absolute;left: 0;margin:0;visibility: hidden;right: 0;top: 0;bottom: 0;}
+.quiz-label{width: 100%;cursor:pointer;}
+.quiz_answer.current{border: 2px solid #121212;}
+.data-main .btn:focus{background-color: #121212;}
+.quiz-popup, .quiz-popup-video {position: fixed;top: 0;bottom: 0;left: 0;right: 0;margin: auto;z-index: 111;background-color: #0000004a;overflow: hidden;}
+.video-section-wrapper.option-popup{height: auto;}
+.option-popup{background-color: #fff;}
+.quiz-popup svg.icon-close, .quiz-popup-video svg.icon-close {z-index: 5;cursor: pointer;margin-left: auto;display: table;margin-bottom: 8px;filter: invert(1);}
+.popup_open_body .page-container {position: inherit;transform: none;}
+.popup_content,.popup_guided{position: absolute;left: 0;right: 0;top: 50%;bottom: auto;margin: auto;max-width: 550px;transform: translateY(-50%);visibility: visible !important;}
+.popup_open_body {overflow: hidden;}
+.custom-quiz .video-section-wrapper{display: block;}
+.custom-quiz .video-section-wrapper iframe{width: 100%;height: 350px;}
+.quiz_data_val a {text-decoration: underline;text-transform: capitalize;}
+.quiz_data_val{display: flex;flex-wrap: wrap;}
+.quiz_data_val a{width: 50%;}
+.custom-quiz .video-section-wrapper iframe{border: none;}
+
+.quiz_popup_sub,.quiz_popup_no,.quiz_popup_sub1,.quiz_popup_no1,.quiz_popup_guided{position: fixed;top: 0;bottom: 0;left: 0;right: 0;margin: auto;z-index: 999;background-color: #0000004a;overflow: hidden;}
+.quiz-popup{ z-index: 9999;}
+.quiz_popup_sub .popup_content1,
+.quiz_popup_no .popup_content1,
+.quiz_popup_sub1 .popup_content1,
+.quiz_popup_no1 .popup_content1,
+.quiz_popup_guided  .popup_guided1{background: #fff;padding: 25px;}
+.quiz_popup_sub .nav-btns .yes,
+.quiz_popup_sub1 .nav-btns .yes,
+.quiz_popup_guided .guided .yes{margin-right: 15px;}
+.quiz_popup_sub .popup_content .quiz_popup{color:#777;margin: 0 0 19.44444px;line-height: 23px;}
+.quiz_popup_no .popup_content .quiz_popup,
+.quiz_popup_sub .popup_content .quiz_popup{font-size: 18px !important;}
+.quiz_popup_sub svg.icon-close, .quiz_popup_sub1 svg.icon-close ,
+.quiz_popup_guided svg.icon-close{z-index: 5;cursor: pointer;margin-left: auto;display: table;margin-bottom: 8px;filter: invert(1);}
+.quiz_popup_guided .popup_guided{max-width: 350px;}
+@media(max-width:767px){
+  .popup_content{max-width: 90%;}
+  .option-popup{padding:15px;}
+}
+@media(max-width: 749px){
+  .page_quiz .data-main{margin-bottom: 35px;}
+  #progressbar li.active:before{  z-index: 2;    position: relative;}
+  #progressbar li:after{z-index: 0; }
+  .quiz_answer{padding: 10px 21px 10px 31px;}
+  .custom-quiz{padding-top: 20px;}
+  .quiz_data_val a {width: 50%;align-items: center;text-align: start;}
+  .quiz_popup_no .popup_content .quiz_popup,
+  .quiz_popup_sub .popup_content .quiz_popup,
+  .quiz_popup_sub1 .popup_content .quiz_popup{font-size: 18px !important;line-height: normal;}
+}
+@media(max-width: 480px){
+  .custom-quiz .video-section-wrapper iframe {  height: 250px;}
+  .quiz_data_val a {display: block; text-align: start;width: 100%;}
+  .needsclick.kl-private-reset-css-Xuajs1 { display: block !important; padding-bottom: 7px;}
+  .page_quiz .video-section-wrapper iframe {height: 250px;}
+}
+</style>

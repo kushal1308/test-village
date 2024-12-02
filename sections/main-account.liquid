@@ -1,0 +1,271 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'order.css'  | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+{% render 'breadcrumbs' %}
+<div class="main_page_image">
+  <img src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/Order_History.png?v=1681466833" alt="image" class="eng-lang-banner" height="" width="" />
+  <div class="page-width">
+    <h1 class="main_{{ page.handle }} font-family-Neuzeit color-white text-align-center main-page-title font-weight-400 font-size-48px line-height-62px page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      {{ 'customer.account.title' | t }}
+    </h1>
+  </div>
+</div>
+<div class="customer page-width-order page-width-order-account account section-{{ section.id }}-padding">
+  <div class="text-align-center">
+    {% comment %} <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1> {% endcomment %}
+    <a class="customer__logout font-size-16px font-family-Neuzeit color-dark-black text-decoration-none" href="{{ routes.account_logout_url }}">
+      {{ 'customer.log_out' | t }}
+    </a>
+  </div>
+
+  <div class="m-0px d-flex flex-wrap-wrap">
+    <div class="table_wrapper">
+      <h2 class="order_history text-align text-transform-capitalize">{{ 'customer.orders.title' | t }}</h2>
+
+      {% paginate customer.orders by 20 %}
+        {%- if customer.orders.size > 0 -%}
+          <table role="table" class="order-history">
+            <caption class="visually-hidden">
+              {{ 'customer.orders.title' | t }}
+            </caption>
+            <thead class="thead_customer d-block bg-color-off-white" role="rowgroup">
+              <tr role="row" class="d-flex">
+                <th class="letter-spacing-0px d-flex justify-content-center align-items-center font-weight-700 text-transform-capitalize color-dark-black line-height-1-4-px font-size-16px" id="ColumnOrder" scope="col" role="columnheader">{{ 'customer.orders.order_number' | t }}</th>
+                <th class="letter-spacing-0px d-flex justify-content-center align-items-center font-weight-700 text-transform-capitalize color-dark-black line-height-1-4-px font-size-16px" id="ColumnDate" scope="col" role="columnheader">{{ 'customer.orders.date' | t }}</th>
+                <th class="letter-spacing-0px d-flex justify-content-center align-items-center font-weight-700 text-transform-capitalize color-dark-black line-height-1-4-px font-size-16px" id="ColumnPayment" scope="col" role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
+                <th class="letter-spacing-0px d-flex justify-content-center align-items-center font-weight-700 text-transform-capitalize color-dark-black line-height-1-4-px font-size-16px" id="ColumnFulfillment" scope="col" role="columnheader">
+                  {{ 'customer.orders.fulfillment_status' | t }}
+                </th>
+                <th class="letter-spacing-0px d-flex justify-content-center align-items-center font-weight-700 text-transform-capitalize color-dark-black line-height-1-4-px font-size-16px" id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
+                <th class="letter-spacing-0px d-flex justify-content-center align-items-center font-weight-700 text-transform-capitalize color-dark-black line-height-1-4-px font-size-16px">
+                  Invoice
+                </th>
+              </tr>
+            </thead>
+            <tbody class="d-block" role="rowgroup">
+              {%- for order in customer.orders -%}
+                <tr role="row" class="d-flex">
+                  <td
+                    id="RowOrder"
+                    role="cell"
+                    headers="ColumnOrder"
+                    data-label="{{ 'customer.orders.order_number' | t }}"
+                    class= "d-flex justify-content-center letter-spacing-0px align-items-center"
+                  >
+                    <a
+                      class="customer__id font-weight-700 font-size-18px line-height-21px letter-spacing-0px color-black-000"
+                      href="{{ order.customer_url }}"
+                      aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
+                    >
+                      {{ order.name }}
+                    </a>
+                  </td>
+                  <td class="line-height-1-4-px  d-flex justify-content-center letter-spacing-0px align-items-center color-gray" headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
+                    {{ order.created_at | time_tag: format: 'date' }}
+                  </td>
+                  <td
+                    class="line-height-1-4-px  d-flex justify-content-center letter-spacing-0px align-items-center color-gray"
+                    headers="RowOrder ColumnPayment"
+                    role="cell"
+                    data-label="{{ 'customer.orders.payment_status' | t }}"
+                  >
+                    {{ order.financial_status_label }}
+                  </td>
+                  <td
+                    class="line-height-1-4-px  d-flex justify-content-center letter-spacing-0px align-items-center color-gray"
+                    headers="RowOrder ColumnFulfillment"
+                    role="cell"
+                    data-label="{{ 'customer.orders.fulfillment_status' | t }}"
+                  >
+                    {{ order.fulfillment_status_label }}
+                  </td>
+                  <td class="line-height-1-4-px  d-flex justify-content-center letter-spacing-0px align-items-center color-gray" headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+                    {{ order.total_net_amount | money_with_currency }}
+                  </td>
+                  <td headers="RowOrder ColumnTotal" data-label="Invoice" role="cell" class="d-flex justify-content-center align-items-center">
+                    <a class="download_files font-size-16px line-height-1-4-px color-gray letter-spacing-0px" target="_blank" href="https://village-craft-candle.myshopify.com/apps/download?hash=Wmxuc2QyMDAxMGQ1NnNW&ids={{ order.id }}&template_type=invoice">
+                      Download
+                    </a>
+                  </td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        {%- else -%}
+          <p class="customer_orders">{{ 'customer.orders.none' | t }}</p>
+        {%- endif -%}
+
+        {%- if paginate.pages > 1 -%}
+          {%- if paginate.parts.size > 0 -%}
+            <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+              <ul role="list">
+                {%- if paginate.previous -%}
+                  <li>
+                    <a href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+
+                {%- for part in paginate.parts -%}
+                  <li>
+                    {%- if part.is_link -%}
+                      <a href="{{ part.url }}" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
+                        {{- part.title -}}
+                      </a>
+                    {%- else -%}
+                      {%- if part.title == paginate.current_page -%}
+                        <span aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
+                          {{- part.title -}}
+                        </span>
+                      {%- else -%}
+                        <span>{{ part.title }}</span>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+
+                {%- if paginate.next -%}
+                  <li>
+                    <a href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}">
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+              </ul>
+            </nav>
+          {%- endif -%}
+        {%- endif -%}
+      {% endpaginate %}
+    </div>
+
+    <div class="customer_details">
+      <h2 class="text-align text-transform-capitalize customer_account_h2">{{ 'customer.account.details' | t }}</h2>
+
+      {{ customer.default_address | format_address }}
+      <a href="{{ routes.account_addresses_url }}" class="addresses_btn font-family-Neuzeit Grotesk font-weight-700 font-size-18px line-height-21px letter-spacing-0px border-radius-37px text-transform-capitalize text-decoration-none bg-color-off-white border-1px color-black-000">
+        {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+      </a>
+    </div>
+  </div>
+                          <!-- yfp for your favorite product widget and rvp recently viewed products widget -->
+  <div data-widget-type="yfp" class="dynamatic-upsell-section"></div>
+
+  <script async src="{{ 'dynamatic-yfp-rvp.js' | asset_url}}"></script>
+  {% render 'dyn-your-fav-widget' %}
+  <script>
+    function getproductHandlesFromCookie() {
+        // Get the productIds cookie value
+        const cookie = document.cookie.split('; ').find(row => row.startsWith('productHandles='));
+
+        if (cookie) {
+            // Extract and parse the product IDs array from the cookie
+            const productHandles = JSON.parse(cookie.split('=')[1]);
+            return productHandles;
+        }
+
+        // If no cookie is found, return an empty array
+        return [];
+    }
+
+
+    // Example usage: Retrieving all stored product IDs from the cookie
+    const storedproductHandles = getproductHandlesFromCookie();
+    window.dyn_storedproductHandles = storedproductHandles
+  </script>
+  <!-- section ends -->
+
+  <!-- dynamtic custom widget section recently viewed products -->
+  <div data-widget-type="rvp" class="dynamatic-upsell-section"></div>
+  <style>
+      .img-container {
+        border: none !important;
+    }
+    .dyn-swiper-button-prevrvp-product-carousel, .dyn-swiper-button-nextrvp-product-carousel {
+        --border-offset: none !important;
+        --border-opacity: 0 !important,
+    }
+    .dyn-swiper-button-prevrvp-product-carousel, .dyn-swiper-button-nextrvp-product-carousel:hover {
+        --border-offset: none !important;
+        --border-opacity: 0 !important,
+    }
+    .swiper-slide a{
+    text-decoration: none !important;
+    }
+            .dyn-product-details h3 {
+              color: #777;
+            }
+            .dyn-product-details select {
+              border: 1px solid gray;
+              border-radius: 25px !important;
+              color: black !important;
+            }
+            .dyn-product-details option {
+              color: black !important;
+            }
+            .dyn-add-to-cart{
+              background-color: #ADE1DB  !important;
+              border: none  !important;
+              border-radius: 25px  !important;
+              color: black !important;
+              padding: 10px !important;
+            }
+            .dyn-product-details {
+              display: flex;
+              flex-direction: column;
+            }
+            .dyn-rvp-heading {
+            font-size: 30px;
+              }
+  </style>
+  <!-- dynamatic custom widget setcion ends -->
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-account.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

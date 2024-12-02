@@ -1,0 +1,141 @@
+<style>
+
+  .category {
+    text-align: center;
+}
+.category .seller_title h2 {
+  margin-top: 1px;
+}
+.category .seller .seller_data {
+  padding-top: 12px;
+}
+.category .seller .seller_wrapper_data {
+  padding-top: 8px;
+}
+.category .seller .seller_wrapper {
+  width: 45%;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0 15px;
+  margin-bottom: 25px;
+}
+.category .seller .product_image {
+  display: flex;
+  align-items: start;
+}
+.category .seller .product_data1 {
+  width: 21%;
+}
+.category .seller .product_data {
+  text-align: start;
+  padding: 0 20px;
+  width: 79%;
+}
+.category .seller .product_data p {
+  margin: 0 0 5px 0 !important;
+}
+
+.category p {
+  font-size: 18px;
+}
+.category .seller .product_data p , .category .seller .product_data a{
+  line-height: 23px !important;
+}
+@media(max-width:991px){
+  .category .seller .product_data1 {
+    width: 30%;
+  }
+  .category .seller .seller_wrapper {
+    width: 49%;
+  }
+}
+
+@media(max-width:768px){
+  .category .seller .seller_wrapper {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .category .seller .product_data1 {
+    width: 16%;
+  }
+  .category .seller .product_data p, .category .seller .product_data a {
+    line-height: normal !important;
+}
+}
+@media(max-width:480px){
+  .category .seller .product_data1 {
+    width: 30%;
+  }
+}
+</style>
+
+<div class="seller page-width">
+  <div class="seller_data">
+    <div class="seller_title">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="seller_wrapper_data">
+      {% for block in section.blocks %}
+        {% if block.settings.product_url != blank %}
+          {% assign popular_product = all_products[block.settings.product_url] %}
+          <div class="seller_wrapper">
+            <div class="product_image">
+              <div class="product_data1">
+                <img
+                  src="{{ popular_product.featured_image | img_url:'small' }}"
+                  alt="product"
+                  width=""
+                  height=""
+                  lazyload="lazy"
+                >
+              </div>
+              <div class="product_data">
+                <p class="font-family-Neuzeit color-gray font-weight-300 font-size-18px line-height-23px"><a class="font-family-Neuzeit color-gray font-weight-300 font-size-18px line-height-23px text-decoration-none" href="{{ popular_product.url }}">{{ popular_product.title }}</a> </p>
+                {{ popular_product.price | money }}
+                {% unless popular_product.compare_at_price_max == 0 %}
+                  <s>{{ popular_product.compare_at_price_max | money }}</s>
+                {% endunless %}
+                {{ popular_product.quantity }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Best Seller",
+  "class": "category",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "sellers",
+      "type": "sellers",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product_url",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Best Seller pricing",
+      "category": "seller"
+    }
+  ]
+}
+{% endschema %}

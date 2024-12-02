@@ -1,0 +1,242 @@
+{% style %}
+        .quiz_access .page-width{
+            margin-top:40px
+        }
+        .quiz_access .aq_data {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 30px;
+        }
+        .quiz_access .access{
+            background-color: #7fa9a4;
+            border-radius: 20px;
+            padding: 30px 21px;
+            display: grid;
+            grid-template-columns: 54.5% 45.5%;
+        }
+        .quiz_access .access h3{
+            font-family: Neuzeit Grotesk;
+            font-size: 30px;
+            line-height: 39px;
+            text-transform: capitalize;
+            color: #534742;
+            margin: 0;
+            letter-spacing:0;
+        }
+        .quiz_access .access a.btn {
+            color: #10100e;
+        }
+        .quiz_access .access a.btn{
+            margin: auto auto auto 20px;
+        }
+        .quiz_access .access a.btn:hover {
+            background-color: #fff !important;
+            border: 1px solid black !important;
+        }
+        .quiz_access .quiz {
+            padding: 37px 46px;
+            display: grid;
+            grid-template-columns: 56.5% 43.5%;
+            align-items: center;
+            background-color: #f6f3ee;
+            border-radius: 20px;
+        }
+        .quiz_access .quiz h3 {
+            font-family: Neuzeit Grotesk;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 32px;
+            margin: 0;
+            text-transform: capitalize;
+            color: #10100e;
+            letter-spacing: 0;
+        }
+        .quiz_access .quiz a.btn{margin: auto auto auto 20px;}
+        .aq_data .product_option .grid-uniform {
+            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            background-color: #f5f5f5;
+            padding: 20px;
+            grid-column-gap: 20px;
+           align-items: center;
+        }
+        .aq_data .product_option .grid-uniform .desktop{justify-content: center;}
+
+        @media (max-width:1365px){.quiz_access .access a.btn, .quiz_access .quiz a.btn{padding: 11px 22px;margin: auto 0 auto auto; }}
+        @media (max-width:1199px){.quiz_access .access, .quiz_access .quiz{grid-template-columns: repeat(2, 1fr);justify-content:space-between;}.quiz_access .access a.btn, .quiz_access .quiz a.btn:{padding:10px 22px;margin:auto 0 auto auto;}.quiz_access .access h3 {font-size:24px;line-height:30px} }
+        @media (max-width:989px){.quiz_access .page-width{margin-top:30px;}.quiz_access .aq_data {grid-template-columns: repeat(1, 1fr);grid-column-gap: 0;grid-row-gap: 30px;}.quiz_access .access, .quiz_access .quiz{grid-template-columns: 60% 40%;padding: 30px 21px;}.quiz_access .access h3{line-height:normal;}.quiz_access .quiz h3{font-size:18px;line-height:normal;}}
+        @media (max-width:749px){.quiz_access .page-width{background: #f5f5f5;padding: 0;}.quiz_access .access h3{font-size:20px;}.quiz_access .quiz h3{font-size:16px;}}
+        @media (max-width:480px){.quiz_access .access, .quiz_access .quiz {grid-template-columns: 100%;padding: 15px;grid-row-gap: 15px;}.quiz_access .access h3{font-size:18px;text-align:center;}.quiz_access .access a.btn, .quiz_access .quiz a.btn{margin:auto;}}
+
+
+      /* New background image css start*/
+    .quiz_access .bg_image_quiz{padding: 10px 20px;}
+    .quiz_access .bg_image_quiz h3{max-width: 200px;color:#f6f3ee;}
+    .quiz_access .bg_image_quiz{grid-template-columns: 70% 30%;}
+    .quiz_access .bg_image_quiz a.btn {margin: 0;max-width: max-content;}
+    .quiz_access .bg_image_quiz{background-repeat: no-repeat;background-size: 100% 100%;}
+
+    .quiz_access .bg_image_quiz a.btn{margin-left:auto;}
+    @media(max-width:1199px){
+      .quiz_access .bg_image_quiz {grid-template-columns: 65% 35%;background-size: cover;background-position: center;}
+    }
+    @media(max-width:989px){
+      .quiz_access .bg_image_quiz {grid-template-columns: 73% 27%;}
+      .quiz_access .bg_image_quiz a.btn{margin-left:auto;}
+      .quiz_access .bg_image_quiz {padding: 30px 20px;}
+    }
+      @media(max-width:575px){
+    .quiz_access .bg_image_quiz h3 {
+      max-width: 150px;
+      color: #f6f3ee;
+      text-align: left;
+  }
+        .quiz_access .bg_image_quiz {
+          grid-template-columns: 65% 35%;}}
+      @media(max-width:480px){
+   .aq_data .padding-10px-18px {padding: 5px 14px !important;}
+        .quiz_access .bg_image_quiz {display: flex;flex-direction: column;align-items: flex-start;background-position: 0% 100%;}
+        .quiz_access .bg_image_quiz a.btn {margin-left: 0;}
+         .quiz_access .bg_image_quiz {padding: 10px 20px;}
+      }
+    @media(max-width:375px){.quiz_access .bg_image_quiz {background-position: 22% 100%;}}
+
+      /* New background image css end*/
+{% endstyle %}
+<div class="page-width">
+  <div class="aq_data">
+    {% if customer.has_account and customer.orders_count >= 1 %}
+      {% render 'order_data' %}
+
+    {% elsif customer.has_account and customer.orders_count <= 0 %}
+      <div class="quiz withouto" style="background-color:{{ section.settings.withouto_back_color }}">
+        {% if section.settings.withouto_title != blank %}
+          <h3 class="h3">{{ section.settings.withouto_title }}</h3>
+        {% endif %}
+        {% if section.settings.withouto_button_text != blank %}
+          <a
+            href="{% if section.settings.withouto_button_url != blank %}{{ section.settings.withouto_button_url }}{% else %}#{% endif %}"
+            class="btn text-decoration-none font-family-Neuzeit font-weight-700 font-size-18px line-height-21px color-black-000 letter-spacing-0px bg-color-off-white border-light-black-000  border-1px border-radius-37px text-transform-inherit padding-10px-18px hover_wholesale"
+          >
+            {{- section.settings.withouto_button_text -}}
+          </a>
+        {%- endif %}
+      </div>
+      <!--
+        <div class="access" style="background-color:{{ section.settings.back_color }}"><a href="https://villagecraftandcandle.com/collections/all" class="btn" >BUY NOW</a></div>
+      -->
+
+    {% else %}
+      <div class="access" style="background-color:{{ section.settings.back_color }}">
+        {% if section.settings.title != blank %}
+          <h3 class="h3">{{ section.settings.title }}</h3>
+        {% endif %}
+        {% if section.settings.button_text != blank %}
+          <a
+            href="{% if section.settings.button_url != blank %}{{ section.settings.button_url }}{% else %}#{% endif %}"
+            class="btn text-decoration-none font-family-Neuzeit font-weight-700 font-size-18px line-height-21px color-black letter-spacing-0px bg-color-off-white border-radius-37px border-light-black-000  border-1px text-transform-inherit padding-10px-18px hover_wholesale"
+          >
+            {{- section.settings.button_text -}}
+          </a>
+        {%- endif %}
+      </div>
+    {% endif %}
+    <div
+      class="quiz {% if section.settings.Background_Image != blank %} bg_image_quiz{% endif %}"
+      style="background-color:{{ section.settings.quiz_back_color }}; background-image:url({{ section.settings.Background_Image | image_url }});"
+    >
+      {% if section.settings.quiz_title != blank %}
+        <h3 class="h3">{{ section.settings.quiz_title }}</h3>
+      {% endif %}
+      {% if section.settings.quiz_button_text != blank %}
+        <a
+          href="{% if section.settings.quiz_button_url != blank %}{{ section.settings.quiz_button_url }}{% else %}#{% endif %}"
+          class="btn text-decoration-none font-family-Neuzeit font-weight-700 font-size-18px line-height-21px color-black-000 letter-spacing-0px bg-color-off-white border-light-black-000  border-1px border-radius-37px text-transform-inherit padding-10px-18px hover_wholesale"
+        >
+          {{- section.settings.quiz_button_text -}}
+        </a>
+      {%- endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+"name": "Access Quiz",
+"class": "quiz_access",
+"settings": [
+   {
+      "type": "color",
+      "id": "back_color",
+      "label": "Access Background Color"
+    },
+  {
+      "type": "text",
+      "id": "title",
+      "label": "Access Title"
+    },
+  {
+      "type": "text",
+      "id": "button_text",
+      "label": "Access Button Title"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Access URL"
+    },
+
+
+{
+      "type": "color",
+      "id": "withouto_back_color",
+      "label": "Without order Access Background Color"
+    },
+  {
+      "type": "text",
+      "id": "withouto_title",
+      "label": "Without order Access Title"
+    },
+  {
+      "type": "text",
+      "id": "withouto_button_text",
+      "label": "Without order Access Button Title"
+    },
+    {
+      "type": "url",
+      "id": "withouto_button_url",
+      "label": " Access URL"
+    },
+   {
+      "type": "color",
+      "id": "quiz_back_color",
+      "label": "Quiz Background Color"
+    },
+  {
+    "type": "image_picker",
+    "id": "Background_Image",
+    "label": "Background Image"
+  },
+   {
+      "type": "text",
+      "id": "quiz_title",
+      "label": "Quiz Title"
+    },
+  {
+      "type": "text",
+      "id": "quiz_button_text",
+      "label": "Quiz Button Title"
+    },
+    {
+      "type": "url",
+      "id": "quiz_button_url",
+      "label": "Quiz URL"
+    }
+  ],
+"presets": [
+{
+"name": "Access Quiz",
+"category": "access_quiz"
+}
+]
+}
+{% endschema %}

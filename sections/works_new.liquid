@@ -1,0 +1,82 @@
+{% assign var_co = 0 %}
+<div class="page-width work_new_page m_top">
+<h2 class="text-align-center">{{ section.settings.text }}</h2>
+<p class="text-align-center">{{ section.settings.textarea }}</p>
+<div class="image_workflow d-flex flex-direction-row-reverse">  <img src="{{ section.settings.image | img_url: 'master' }}" height="" width="" alt="image" />
+<ul class="d-flex flex-direction-column justify-content-space-between"> {%  for block in section.blocks %}
+<li class="work_new_process text-align-center" style="background-color:{{ block.settings.bg_color }}">
+<div class="work_new_data">
+    <h4 class="font-family-Neuzeit text-align font-weight-500 font-size-30px line-height-39px text-transform-uppercase color-off-white"><span></span>{{ block.settings.text_name }}</h4>  <p>{{ block.settings.details }}</p> 
+</div>
+</li>  {% endfor %} </ul>
+</div>
+
+{% if section.settings.button_text != blank %} <div class="text-align-center btn_urt">  <a href="{{ section.settings.button_url }}" class="btn font-family-Neuzeit font-weight-700 font-size-18px line-height-21px letter-spacing-0px color-black-000 bg-color-off-white border-light-black-000 border-1px border-radius-37px text-transform-inherit d-inline-block">{{ section.settings.button_text }}</a>  </div> {% endif %} </div> 
+{% schema %}
+{
+"name": "work New",
+"class": "work_new",
+"settings": [
+{
+"type" : "text",
+"id" : "text",
+"label": "Text"
+},
+{
+"type" : "textarea",
+"id": "textarea",
+"label": "Textarea"
+},
+{
+"type" : "image_picker",
+"id": "image",
+"label": "Image"
+},
+{
+"type" : "text",
+"id" : "button_text",
+"label": "Button Text"
+},
+{
+"type" : "url",
+"id" : "button_url",
+"label": "Button url"
+}
+],
+"blocks": [
+{
+"type": "work_new",
+"name": "work_new",
+"settings": [
+{
+"type": "text",
+"label": "Text",
+"id": "text_name"
+},
+{
+"type": "richtext",
+"label": "Textarea",
+"id": "details"
+},
+{
+"type": "color",
+"label": "Background Color",
+"id": "bg_color"
+}
+]
+}
+],
+"presets": [  {
+"name": "work New",
+"category": "work New"
+} ]
+}
+{% endschema %}
+
+<style>
+    .page_wholesale-new .work_new .image_workflow img {border-radius: 20px;}.page_wholesale-new .image_workflow ul{margin: 0;padding: 0;list-style: none;padding-right: 30px;order: 1;counter-reset: item;}.page_wholesale-new .work_new_data h4{margin:0px 0px 10px;}.page_wholesale-new .work_new_data p {color: #fff;margin-bottom: 0;text-align: start;}.page_wholesale-new .work_new .image_workflow .work_new_process {border-radius: 10px;margin-bottom: 20px;}.page_wholesale-new .work_new .image_workflow .work_new_data {padding: 20px;}.page_wholesale-new .work_new .image_workflow .work_new_data h4 span:before {position: relative;content: counters(item, ".") ".";counter-increment: item;}.page_wholesale-new .work_new .image_workflow .work_new_data h4 span {padding-right: 20px;}.page_wholesale-new .work_new .image_workflow .work_new_process:last-child {margin-bottom: 0;}.page_wholesale-new .work_new .btn_urt a {padding: 11px 43.5px;}.page_wholesale-new .work_new .btn_urt {margin-top: 30px;}
+    @media(max-width:1199px){.page_wholesale-new .work_new .image_workflow img {width:50%;}}
+    @media(max-width:989px){.page_wholesale-new .work_new .image_workflow .work_new_data h4 span {padding-right: 5px;}.page_wholesale-new .image_workflow ul {padding-right: 15px;}.page_wholesale-new .work_new_data h4 {margin: 0px 0px 5px;font-size: 22px !important;line-height: normal !important;}}
+    @media(max-width:749px){.page_wholesale-new .work_new_data h4 {font-size: 20px !important;}.page_wholesale-new .image_workflow {flex-direction: column;}.page_wholesale-new .work_new .image_workflow img {width: auto;max-width:100%;display: block;margin: 0 auto 15px;}}
+    @media(max-width:480px){.page_wholesale-new .work_new_data h4 {font-size: 18px !important;}.page_wholesale-new .work_new .btn_urt a{padding: 10px 34px;}.wholesal_faq .tab_drawer_heading {font-size: 16px;line-height: 19px !important;padding: 15px 15px 15px 45px !important;}.wholesal_faq .tab_drawer_heading:after {left: 10px !important;}.custom-village-resource .wholesal_faq .tab_content.active_content {padding: 15px 15px 15px !important;}}
+</style>

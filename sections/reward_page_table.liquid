@@ -1,0 +1,118 @@
+<div class="page-width m_top {{ section.settings.unique_class }}">
+  <div class="reward_all">
+    <div class="heading">
+      <h2 class="font-size-30px font-weight-700 line-height-39px color-white text-transform-capitalize font-family-Neuzeit">
+        {{ section.settings.main_heading }}
+      </h2>
+    </div>
+    <div class="table_data_scroll">
+      <div class="table_data_main">
+        {%- for block in section.blocks -%}
+          <div class="table_details d-flex">
+            <div class="first_imgtext d-flex">
+              <img class="table_img" height="" width="" alt="" src="{{ block.settings.image_svg | image_url }}">
+              <p class="img_text font-size-14px font-weight-300 line-height-19-6px color-black-000 font-family-Neuzeit">
+                {{ block.settings.image_text }}
+              </p>
+            </div>
+            <div class="middle_text">
+              <p class="middle_des font-size-14px font-weight-300 line-height-19-6px color-black-000 font-family-Neuzeit">
+                {{ block.settings.middle_des }}
+              </p>
+            </div>
+            <div class="point_text">
+              <p class="last_points font-size-14px font-weight-700 line-height-19-6px color-light-green font-family-Neuzeit">
+                {{ block.settings.last_points }}
+              </p>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "reward page table",
+  "settings": [
+    {
+    "type": "text",
+    "id": "main_heading",
+    "label": "Enter table heading"
+    },
+    {
+    "type": "text",
+    "id": "unique_class",
+    "label": "Unique Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name":"row_list",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_svg",
+          "label": "add image here"
+        },
+        {
+          "type": "text",
+          "id": "image_text",
+          "label": "add image text here"
+        },
+        {
+          "type": "text",
+          "id": "middle_des",
+          "label": "Middle description"
+        },
+        {
+          "type": "text",
+          "id": "last_points",
+          "label": "Write here about point"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "reward page table"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .reward_earn_points .heading h2{text-align: start;margin: 0 !important;padding: 20px 0 10px 28px;background: #7FA9A4;border-radius: 20px 20px 0px 0px;}
+  .reward_earn_points .reward_all{border-radius: 20px;border: 1px solid #C5C5C5;}
+  .reward_earn_points .table_data_main {padding:10px 30px;}
+  .reward_earn_points .first_imgtext {max-width: 31%;flex-basis: 31%;}
+  .reward_earn_points .middle_text{max-width: 56%;flex-basis: 56%;}
+  .reward_earn_points .point_text {max-width: 13%;flex-basis: 13%;}
+  .reward_earn_points img.table_img {max-width: 25px;flex-basis: 25px;}
+  .reward_earn_points p.img_text {max-width: calc(100% - 25px);flex-basis: calc(100% - 25px);margin:20px 0px 20px 30px;}
+  .reward_earn_points p.middle_des , .reward_earn_points p.last_points {margin:20px 0;}
+
+  @media(max-width:1199px){
+  .reward_earn_points .point_text {max-width: 18%;flex-basis: 18%;}
+  .reward_earn_points .middle_text {max-width: 54%;flex-basis: 54%;}
+  .reward_earn_points .first_imgtext {max-width: 28%;flex-basis: 28%;}
+  }
+
+  @media(max-width:989px){
+  .reward_earn_points .table_data_main {padding: 15px;}
+  .reward_earn_points p.img_text {margin: 10px 0px 10px 15px;}
+  .reward_earn_points p.middle_des, .reward_earn_points p.last_points {margin: 10px 0;}
+  .reward_earn_points .first_imgtext {max-width: 22%;flex-basis: 22%;}
+  .reward_earn_points .middle_text {max-width: 58%;flex-basis: 58%;}
+  .reward_earn_points .point_text {max-width: 20%;flex-basis: 20%;}
+  .reward_earn_points .table_details {justify-content: center;align-items: center;}
+  .reward_earn_points .heading h2{padding: 10px 0 10px 15px;}
+  }
+
+  @media(max-width:749px){
+   .reward_earn_points .table_data_main {width: 720px;}
+   .reward_earn_points .table_data_scroll {display: block;overflow-x: auto;white-space: nowrap;}
+  }
+</style>

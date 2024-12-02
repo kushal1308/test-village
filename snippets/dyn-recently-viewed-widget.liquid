@@ -1,0 +1,48 @@
+<script>
+    window.dyn_pdpProduct = {{ product | json }}
+</script>
+
+<script>
+     // Function to store product ID in a cookie with a limit of 20 products
+     function storeProductId(productHandle) {
+         // Get the existing product IDs from the cookie
+         let productHandles = getproductHandlesFromCookie();
+     
+         // Add the new product ID if it's not already in the list
+         if (!productHandles.includes(productHandle)) {
+             // If we have more than 20 products, remove the oldest one
+             if (productHandles.length >= 20) {
+                productHandles.shift(); // Removes the first (oldest) element in the array
+             }
+             // Add the new product ID to the list
+             productHandles.push(productHandle);
+         }
+     
+         // Store the updated list of product IDs back into the cookie
+         document.cookie = `productHandles=${JSON.stringify(productHandles)}; path=/; max-age=${60 * 60 * 24 * 30}`; // Expire in 30 days
+     }
+     
+     // Function to retrieve product IDs from the cookie
+     function getproductHandlesFromCookie() {
+         // Get the productIds cookie value
+         const cookie = document.cookie.split('; ').find(row => row.startsWith('productHandles='));
+     
+         if (cookie) {
+             // Extract and parse the product IDs array from the cookie
+             const productHandles = JSON.parse(cookie.split('=')[1]);
+             return productHandles;
+         }
+     
+         // If no cookie is found, return an empty array
+         return [];
+     }
+     
+     // Example usage: Storing the current product ID in the cookie
+     const currentproductHandle = dyn_pdpProduct?.handle; // This would be dynamically retrieved from the product data
+     storeProductId(currentproductHandle);
+     
+     // Example usage: Retrieving all stored product IDs from the cookie
+     const storedproductHandles = getproductHandlesFromCookie();
+   window.dyn_storedproductHandles = storedproductHandles
+     console.log("Stored Product IDs:", storedproductHandles);
+</script>

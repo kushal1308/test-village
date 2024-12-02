@@ -1,0 +1,97 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "newsletter_QPcXbU": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_tz7K8p": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to get the latest product updates.",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_EHajii": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_tz7K8p",
+        "email_form_EHajii"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_EtfP8Q": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "new-footer1"
+          }
+        },
+        "link_list_mkqbdm": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Resources",
+            "menu": "new-footer2"
+          }
+        },
+        "link_list_jGaEUa": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Info",
+            "menu": "info-1"
+          }
+        },
+        "text_TB9eDc": {
+          "type": "text",
+          "settings": {
+            "heading": "Reach Out",
+            "subtext": "<p><a href=\"tel:+1-888-292-8871\" title=\"tel:+1-888-292-8871\">+1-888-292-8871<\/a><br\/><a href=\"\/pages\/contact-us\" title=\"Contact\">Contact Us<\/a><\/p>"
+          }
+        },
+        "payament_icon_kwqhjA": {
+          "type": "payament-icon",
+          "settings": {
+            "f_heading": "EXPRESS CHECKOUT",
+            "s_heading": "PAYMENT METHODS"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_EtfP8Q",
+        "link_list_mkqbdm",
+        "link_list_jGaEUa",
+        "text_TB9eDc",
+        "payament_icon_kwqhjA"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "newsletter_QPcXbU",
+    "footer"
+  ]
+}

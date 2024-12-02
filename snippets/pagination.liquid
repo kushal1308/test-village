@@ -1,0 +1,124 @@
+{% comment %}
+  Renders a set of links for paginated results. Must be used within paginate tags.
+
+  Usage:
+  {% paginate results by 2 %}
+    {% render 'pagination', paginate: paginate, anchor: '#yourID' %}
+  {% endpaginate %}
+
+  Accepts:
+  - paginate: {Object}
+  - anchor: {String} (optional) This can be added so that on page reload it takes you to wherever you've placed your anchor tag.
+{% endcomment %}
+
+{{ 'component-pagination.css' | asset_url | stylesheet_tag }}
+
+{%- if paginate.parts.size > 0 -%}
+  <div class="pagination-wrapper">
+    <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+      <ul class="pagination__list list-unstyled" role="list">
+        {% comment %} {%- if paginate.previous -%} {% endcomment %}
+          <li>
+            <a
+              href="{{ paginate.previous.url }}{{ anchor }}"
+              class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce"
+              aria-label="{{ 'general.pagination.previous' | t }}"
+            >
+              {% render 'icon-caret' %}
+            </a>
+          </li>
+        {% comment %} {%- endif -%} {% endcomment %}
+
+        {% comment %} {%- for part in paginate.parts -%}
+          <li>
+            {%- if part.is_link -%}
+              <a
+                href="{{ part.url }}{{ anchor }}"
+                class="pagination__item link"
+                aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+              >
+                {{- part.title -}}
+              </a>
+            {%- else -%}
+              {%- if part.title == paginate.current_page -%}
+                <a
+                  role="link"
+                  aria-disabled="true"
+                  class="pagination__item pagination__item--current light"
+                  aria-current="page"
+                  aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+                >
+                  {{- part.title -}}
+                </a>
+              {%- else -%}
+                <span class="pagination__item">{{ part.title }}</span>
+              {%- endif -%}
+            {%- endif -%}
+          </li>
+        {%- endfor -%} {% endcomment %}
+
+        <li class="pagination__text">Page {{ paginate.current_page }} of {{ paginate.pages }}</li>        
+
+        {% comment %} {%- if paginate.next -%} {% endcomment %}
+          <li>
+            <a
+              href="{{ paginate.next.url }}{{ anchor }}"
+              class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce"
+              aria-label="{{ 'general.pagination.next' | t }}"
+            >
+              {%- render 'icon-caret' -%}
+            </a>
+          </li>
+        {% comment %} {%- endif -%} {% endcomment %}
+      </ul>
+    </nav>
+  </div>
+{%- endif -%}
+<style>
+.pagination__item--next, .pagination__item--prev {
+    color: #000;
+    background: #f6f3ee;
+    border: 1px solid #000;
+    border-radius: 37px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 42px;
+  }   
+  .pagination__item--next:hover, .pagination__item--prev:hover {
+    background: transparent;
+    color: #000;
+    border-color: #000;
+  }
+  .pagination__list li:first-child, .pagination__list li:last-child {
+    flex: 1 0 52px;
+    max-width: 52px;
+  }
+  li.pagination__text {
+    width: max-content;
+    max-width: max-content;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    line-height: normal;
+  }
+  .pagination__list li{
+    border-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+  }
+  .pagination__item--current:after, a.pagination__item:hover:after {
+    height: 0 !important;
+  }
+  .pagination__text {
+    padding: 0 20px;
+  }
+  .pagination__list{
+    align-items: center;
+  }
+  .template-search .pagination__item--next svg.icon.icon-caret.search_page {
+    transform: none;
+}
+.template-search .pagination__item--prev svg.icon.icon-caret.search_page{
+  transform: rotate(180deg);
+}
+</style>

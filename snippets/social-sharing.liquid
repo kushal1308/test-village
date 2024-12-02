@@ -1,0 +1,26 @@
+<ul class="social-sharing_wrapper p-0px m-0px d-flex justify-content-center align-items-center">
+    <li class="social_sharing_li list-style-none">
+      <a 
+        target="_blank"
+        href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}"
+        class="text-transform-inherit border-radius-37px border-light-black-000 border-1px bg-color-off-white letter-spacing-0px color-light-green font-size-18px line-height-21px font-family-Neuzeit font-weight-700 link list-social__link">
+        {%- render 'icon-facebook' -%}
+        <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+      </a>
+    </li>
+    <li class="social_sharing_li list-style-none">
+      <a target="_blank" href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}" class="text-transform-inherit border-radius-37px border-light-black-000 border-1px bg-color-off-white letter-spacing-0px color-light-green font-size-18px line-height-21px font-family-Neuzeit font-weight-700 link list-social__link">
+        {%- render 'icon-twitter' -%}
+        <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+      </a>
+    </li>
+    <li class="social_sharing_li list-style-none">
+      <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ shop.url | append: share_permalink }}&amp;media={{ share_image | img_url: '1024x1024' }}&amp;description={{ share_title | url_param_escape }}" class="text-transform-inherit border-radius-37px border-light-black-000 border-1px bg-color-off-white letter-spacing-0px color-light-green font-size-18px line-height-21px font-family-Neuzeit font-weight-700 link list-social__link">
+        {%- render 'icon-pinterest' -%}
+        <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+      </a>
+    </li>
+  </ul>
+  <style>
+      .template-product .social-sharing_wrapper{padding-top: 28px !important;}.social_sharing_li a svg path {fill: black;}.social_sharing_li a svg {width: 15px;height: 15px;}.social_sharing_li a {margin: 10px 2px;padding: 9px;}.social_sharing_li a:hover,.page_wholesale-new .button:hover {background-color: transparent !important;color: #000 !important;border-color: #000 !important;}
+  </style>

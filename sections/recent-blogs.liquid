@@ -1,0 +1,105 @@
+<div class="custom-recent-blogs">
+  {% assign blog = blogs[section.settings.blog] %}
+  <div class="page-width">
+    {% if blog.articles_count > 0 %}
+      <ul>
+        {% for article in blog.articles limit: section.settings.post_limit %}
+          <li class="custom-blog-{{forloop.index}} {% if forloop.index < 4 %} custom-blocks {% endif %}">
+            <a href="{{ article.url }}" class="color-dark-black font-weight-300 font-size-18px font-family-Neuzeit">
+              <div class="left-data">
+                {% if article.image %}
+                  {% if forloop.index == 2 or forloop.index == 3 %}
+                    {{ article | img_url: '325x239', crop: 'center', scale: 2 | img_tag: '' }}
+                  {% else %}
+                    {{ article | img_url: 'master', scale: 2 | img_tag: '' }}
+                  {% endif %}
+                {% endif %}
+              </div>
+              <div class="right-data">
+                <p class="date-auther">
+                  {% if section.settings.blog_show_author %}
+                    <span>
+                      By <a href="#" class="article-author">{{ article.author }}</a>
+                    </span>
+                  {% endif %}
+                  {% if section.settings.blog_show_date %}
+                    <span> {{ article.published_at | date: ' %B %d, %Y' }} </span>
+                  {% endif %}
+                </p>
+                <h2>{{ article.title }}</h2>
+                <p class="view-all custom-excerpt-content">
+                  {% if article.excerpt.size > 0 %}
+                    {{ article.excerpt }}
+                  {% else %}
+                    {{ article.content | strip_html | truncate: 150 }}
+                  {% endif %}
+                  <a href="{{ article.url }}" aria-label="Read more: {{ article.title }}" class="read-more color-dark-black">
+                    Read more
+                  </a>
+                </p>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <div class="view-all text-center d-flex justify-content-center">
+      {% if section.settings.show_view_all %}
+        <a href="{{ blog.url }}" class="btn custom-transpernt-btn text-decoration-none font-family-Neuzeit font-weight-700 font-size-18px line-height-21px color-black-000 letter-spacing-0px bg-color-off-white border-light-black-000 border-1px border-radius-37px text-transform-inherit p-11px-36px hover_wholesale" aria-label="{{ 'blogs.article.view_all_blogs' }}">
+          More Blog Posts
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+ "name": "Recent Blogs",
+"settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Blog posts"
+    },
+    {
+        "id": "blog",
+        "type": "blog",
+        "label": "Blog"
+    },
+    {
+        "type": "range",
+        "id": "post_limit",
+        "label": "Posts",
+        "min": 3,
+        "max": 12,
+        "step": 1,
+        "default": 3
+    },
+    {
+        "type": "checkbox",
+        "id": "blog_show_author",
+        "label": "Show author",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "blog_show_date",
+        "label": "Show date",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "show_view_all",
+        "label": "Show 'View all' button",
+        "default": false
+    }
+],
+"presets": [
+  {
+    "name": "Recent Blogs"
+  }
+]
+}
+{% endschema %}

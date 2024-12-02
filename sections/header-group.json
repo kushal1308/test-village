@@ -1,0 +1,98 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Free Shipping on domestic orders* over $599. Click here to learn more.",
+            "link": "https:\/\/village-support.gorgias.help\/en-US\/articles\/vship-program-76511",
+            "text_fr": "Livraison gratuite sur les commandes nationales* de plus de 599 $. Cliquez ici pour en savoir plus.",
+            "link_fr": "https:\/\/village-support.gorgias.help\/en-US\/articles\/vship-program-76511"
+          }
+        },
+        "announcement_PW7zBD": {
+          "type": "announcement",
+          "settings": {
+            "text": "Ongoing Labour Disputes affecting product restock and fulfillment, see here >>",
+            "link": "https:\/\/village-support.gorgias.help\/en-US\/canada-post-labour-disruption---november-2024-955072",
+            "text_fr": "Conflits de travail en cours affectant le réapprovisionnement et l'exécution des commandes, voir ici >>",
+            "link_fr": "https:\/\/village-support.gorgias.help\/en-US\/canada-post-labour-disruption---november-2024-955072"
+          }
+        },
+        "announcement_7RQLQU": {
+          "type": "announcement",
+          "settings": {
+            "text": "Black Friday Sale! 🖤 Up to 60% OFF on Select Items >>",
+            "link": "https:\/\/villagecraftandcandle.com\/collections\/black-friday",
+            "text_fr": "Vente du Vendredi Fou ! 🖤 Jusqu'à 60 % de rabais sur une sélection d'articles >>",
+            "link_fr": "https:\/\/villagecraftandcandle.com\/fr\/collections\/black-friday"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement_PW7zBD",
+        "announcement_7RQLQU"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "show_line_separator": false,
+        "show_social": false,
+        "auto_rotate": true,
+        "color_bg": "#7fa9a4",
+        "color_text": "#ffffff",
+        "button_show": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "sub_menu_xMMGnx": {
+          "type": "Sub_menu",
+          "settings": {
+            "sub_menu_name": "CATEGORIES",
+            "sub_menu": "categories"
+          }
+        },
+        "sub_menu_cQYkdR": {
+          "type": "Sub_menu",
+          "settings": {
+            "sub_menu_name": "RESOURCES",
+            "sub_menu": "resources"
+          }
+        }
+      },
+      "block_order": [
+        "sub_menu_xMMGnx",
+        "sub_menu_cQYkdR"
+      ],
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-title-updated-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "always",
+        "show_line_separator": false,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "left",
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

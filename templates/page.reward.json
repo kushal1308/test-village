@@ -1,0 +1,183 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_Lx7DGP": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_FyFgDL": {
+          "type": "heading",
+          "settings": {
+            "heading": "MyVillage Rewards Program",
+            "heading_size": "h1"
+          }
+        },
+        "text_cNVjRb": {
+          "type": "text",
+          "settings": {
+            "text": "Craft More, Earn More : Unlock Exclusive Perks with Every Purchase.",
+            "text_style": "body"
+          }
+        },
+        "buttons_hipzUk": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Sign Up",
+            "button_link_1": "\/account\/register",
+            "button_style_secondary_1": false,
+            "button_label_2": "Sign In",
+            "button_link_2": "\/account\/login",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FyFgDL",
+        "text_cNVjRb",
+        "buttons_hipzUk"
+      ],
+      "settings": {
+        "unique_class": "new_rewardpage",
+        "image": "shopify:\/\/shop_images\/image_1_3057fd29-4f5b-4e6e-9b29-bae0355ab76b.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "html_miB3zL": {
+      "type": "html",
+      "settings": {
+        "html_code": "<div id=\"ssw-page\" class=\"ssw-page ssw-clearfix gw-container\"><\/div>"
+      }
+    },
+    "reward_page_table_6CtUxT": {
+      "type": "reward_page_table",
+      "blocks": {
+        "row_mnHMeh": {
+          "type": "row",
+          "settings": {
+            "image_svg": "shopify:\/\/shop_images\/mdi_cart.svg",
+            "image_text": "Collect V Points",
+            "middle_des": "Earn V Points for great discounts on future purchases.",
+            "last_points": "1 point for every $2.00"
+          }
+        },
+        "row_dfdmP4": {
+          "type": "row",
+          "settings": {
+            "image_svg": "shopify:\/\/shop_images\/tabler_star-filled.svg",
+            "image_text": "Enlighten others",
+            "middle_des": "Post a review and help others know what they can expect.",
+            "last_points": "25 points"
+          }
+        },
+        "row_Lf397q": {
+          "type": "row",
+          "settings": {
+            "image_svg": "shopify:\/\/shop_images\/mingcute_mail-fill.svg",
+            "image_text": "Subscribe",
+            "middle_des": "Join our email list and receive updates and deals in your inbox.",
+            "last_points": "100 points"
+          }
+        },
+        "row_gLdKiH": {
+          "type": "row",
+          "settings": {
+            "image_svg": "shopify:\/\/shop_images\/material-symbols_share.svg",
+            "image_text": "Fan the Flame",
+            "middle_des": "Spread your love for VCC on social media and get points.",
+            "last_points": "100 points"
+          }
+        },
+        "row_EAqceF": {
+          "type": "row",
+          "settings": {
+            "image_svg": "shopify:\/\/shop_images\/entypo_login.svg",
+            "image_text": "Register",
+            "middle_des": "Create a VCC customer account.",
+            "last_points": "100 points"
+          }
+        }
+      },
+      "block_order": [
+        "row_mnHMeh",
+        "row_dfdmP4",
+        "row_Lf397q",
+        "row_gLdKiH",
+        "row_EAqceF"
+      ],
+      "settings": {
+        "main_heading": "Earn Points",
+        "unique_class": "reward_earn_points"
+      }
+    },
+    "image_with_text_zbNbqi": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rNAdxt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Want to Get More from Your Crafting Purchases?",
+            "heading_size": "h1"
+          }
+        },
+        "text_aDfRtz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unlock exclusive benefits and rewards with every purchase at Village Craft & Candle by joining MyVillage Rewards—where your crafting passion pays off!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_BRrtn8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join MyVillage",
+            "button_link": "\/account\/login",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rNAdxt",
+        "text_aDfRtz",
+        "button_BRrtn8"
+      ],
+      "settings": {
+        "customclass": "reward_program",
+        "image": "shopify:\/\/shop_images\/Special_Deal_for_You_Girl.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_Lx7DGP",
+    "html_miB3zL",
+    "reward_page_table_6CtUxT",
+    "image_with_text_zbNbqi"
+  ]
+}

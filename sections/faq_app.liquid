@@ -1,0 +1,151 @@
+<div class="faq_app_main m_top">
+    {{ section.settings.faq_app }}
+  </div>
+  
+  {% schema %}
+    {
+      "name": "faq_app",
+      "settings": [
+        {
+    "type": "html",
+    "id": "faq_app",
+    "label": "Custom HTML Code"
+        }
+      ],
+      "presets": [
+          {
+          "name": "faq app"
+          }
+                ]
+    }
+  {% endschema %}
+  
+  {% javascript %}
+    
+    (function ([A, ...u]) {
+      // Check if the gorgiasHelpCenter object already exists
+      if (window.gorgiasHelpCenter) return;
+      
+      // Set the gorgiasHelpCenter object
+      window.gorgiasHelpCenter = A;
+  
+      // Function to adjust viewport for iPhone
+      function _() {
+          if (!/iPhone/.test(navigator.userAgent)) return;
+          let e = document.querySelector("meta[name=viewport]");
+          e || ((e = document.createElement("meta")).setAttribute("name", "viewport"), document.head.appendChild(e));
+          e.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no");
+      }
+  
+      // Function to mark performance
+      function T(e) {
+          let { performance: o } = window;
+          if (!o || typeof o.mark != "function") {
+              console.error("Performance API is not available");
+              return;
+          }
+          o.mark(e);
+      }
+  
+      // Function to create iframe
+      function d(e, o, E, l) {
+          T(e.MARKERS.IFRAME_START);
+          let n = [];
+          E.forEach((t) => {
+              let r = t.hasAttribute(e.DATA_ATTRIBUTES.FULL_WIDTH_EMBEDMENT),
+                  i = t;
+              for (; r && i && i.tagName !== "BODY"; ) {
+                  i.style.maxWidth = "100vw";
+                  i = i.parentElement;
+              }
+              let a = document.createElement("iframe"),
+                  c = t.getAttribute(e.DATA_ATTRIBUTES.HELP_CENTER_UID),
+                  S = o.searchParams.get("hcUrl") || "";
+              a.src = `${l}/embed/help-centers/${c}?path=${S}`;
+              a.height = "100%";
+              a.width = "100%";
+              a.setAttribute("frameborder", "0");
+              a.setAttribute("scrolling", "no");
+              a.id = c || "";
+              t.appendChild(a);
+              n.push(a);
+          });
+          T(e.MARKERS.IFRAME_END);
+          let s = {
+              [e.MESSAGE_TYPES.CONTACT_FORM_LOADED]: (t) => {
+                  var r;
+                  (r = t.source) == null || r.postMessage(
+                      { type: e.MESSAGE_TYPES.PARENT_URL, parentUrl: window.location.href },
+                      { targetOrigin: "*" }
+                  );
+              },
+              [e.MESSAGE_TYPES.ADJUST_IFRAME_HEIGHT]: (t) => {
+                  let r = n.find((a) => a.contentWindow === t.source);
+                  if (!r) return;
+                  let i = t.data.height;
+                  r.setAttribute("height", i);
+                  r.setAttribute("style", `height: ${i}px;`);
+              },
+              [e.MESSAGE_TYPES.ROUTE_CHANGE]: (t) => {
+                  o.searchParams.set("hcUrl", t.data.url);
+                  window.history.replaceState(null, "", o.href);
+              },
+              [e.MESSAGE_TYPES.SCROLL_TO_TOP]: () => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+              },
+          };
+          window.addEventListener("message", (t) => {
+              let { type: r } = t.data,
+                  i = s[r];
+              i && i(t);
+          });
+      }
+  
+      // Function to render help center iframe
+      function h(e, o, E, l) {
+          let { DATA_ATTRIBUTES: { HELP_CENTER_UID: n }, HELP_CENTERS_PER_PAGE_LIMIT: s } = e,
+              t = Array.from(document.querySelectorAll(`[${n}]`)).filter((r) => !!r.getAttribute(n)).slice(0, s);
+          E.buildHelpCenterIframe(e, o, t, l);
+      }
+  
+      // Function to enable smooth scrolling
+      function m() {
+          document.documentElement.style.scrollBehavior = "smooth";
+      }
+  
+      // Define an object with build function
+      const g = {
+          buildHelpCenterIframe: d,
+      };
+  
+      // Get current URL
+      const R = new URL(window.location.href);
+  
+      // Initialize
+      m();
+      _();
+      h(A, R, g, ...u);
+  })([
+      {
+          HELP_CENTERS_PER_PAGE_LIMIT: 2,
+          DATA_ATTRIBUTES: {
+              HELP_CENTER_UID: "data-gorgias-help-center-uid",
+              FULL_WIDTH_EMBEDMENT: "data-gorgias-embedment-full-width",
+          },
+          MESSAGE_TYPES: {
+              CONTACT_FORM_LOADED: "gorgias-contact-form-loaded",
+              ADJUST_IFRAME_HEIGHT: "gorgias-adjust-iframe-height",
+              ROUTE_CHANGE: "gorgias-adjust-parent-url",
+              SCROLL_TO_TOP: "gorgias-scroll-to-top",
+              PARENT_URL: "gorgias-parent-url",
+          },
+          MARKERS: {
+              IFRAME_START: "gorgias-help-center-iframe-start",
+              IFRAME_END: "gorgias-help-center-iframe-end",
+          },
+      },
+      "https://help-center.gorgias.help"
+  ]);
+  
+    {% endjavascript %}
+    

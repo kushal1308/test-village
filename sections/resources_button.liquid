@@ -1,0 +1,48 @@
+<section class="resource">
+  <div class="page-width">
+    <div class="resource_button1 d-flex justify-content-center">
+      {% for block in section.blocks %}
+        {% if block.settings.title != blank %}
+          <div class="resources_button custom-transpernt-btn   bg-color-off-white border-light-black-000 border-1px border-radius-37px  p-11px-36px hover_wholesale">
+            <a href="{{ block.settings.url }}" class="btn font-family-Neuzeit font-weight-700 font-size-18px line-height-21px color-black-000 letter-spacing-0px text-transform-inherit text-decoration-none">{{ block.settings.title }} </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Resources Button",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Resources button"
+    }
+  ]
+}
+{% endschema %}

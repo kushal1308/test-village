@@ -1,0 +1,75 @@
+<div class="page-width bulk_page m_top">
+    {% if section.settings.text %}<h2 class="text-center">{{ section.settings.text }}</h3>{% endif %}
+    <div class="image_text_data">
+    {% if section.settings.Image %}<img src="{{ section.settings.Image | img_url: 'master' }}" height="" width="" alt="img" />{% endif %}
+    {% if section.settings.detaiuls_data %}<div class="main_data">{{ section.settings.detaiuls_data }}</div>{% endif %}
+    </div>
+    {% if section.settings.texyarea %}<div class="text_val">{{ section.settings.texyarea }}</div>{% endif %}
+    </div>
+    {% schema %}
+      {
+        "name": "Buy Bulk",
+        "class": "bulk_buy",
+        "settings": [
+          {
+            "type" : "text",
+            "id" : "text",
+            "label": "Text"
+          },
+          {
+            "type" : "image_picker",
+            "id" : "Image",
+            "label": "Image"
+          },
+          {
+            "type" : "richtext",
+            "id": "textarea",
+            "label": "Textarea"
+          },
+          {
+            "type" : "richtext",
+            "id" : "detaiuls_data",
+            "label": "Deatails Data"
+          }
+        ],
+        "presets": [
+              {
+                "name": "Buy Bulk",
+                "category": "Buy Bulk"
+            }
+        ]
+      }
+    {% endschema %}
+    
+    {% stylesheet %}
+    {% endstylesheet %}
+    
+    {% javascript %}
+    {% endjavascript %}
+
+    <style>
+      .page_wholesale-new .bulk_buy .image_text_data img {
+        float: left;
+        max-width: 60%;
+        margin: 0 26px 23px 0;
+        border-radius: 20px;
+      }
+      .page_wholesale-new .bulk_buy .image_text_data ul {
+        padding-left: 16px;
+        margin: 0 0 19.44444px;
+      }
+      .page_wholesale-new .bulk_buy .image_text_data li {
+        list-style: disc;
+        line-height: 26px;
+        color: #000;
+      }
+      @media(max-width:749px){
+        .page_wholesale-new .bulk_buy .image_text_data img {
+            float: none;
+            max-width: 100%;
+            line-height: 0;
+            margin: 0 auto 15px;
+            display: block;
+        }
+      }
+    </style>

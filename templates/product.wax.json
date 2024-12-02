@@ -1,0 +1,243 @@
+{
+  "sections": {
+    "main": {
+      "type": "wax",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "sezzle_widget_widget_block_NaYkiF": {
+          "type": "shopify:\/\/apps\/sezzle-widget\/blocks\/widget-block\/f3a53793-e118-4764-a86b-a79bfedb0d5f",
+          "settings": {
+            "heading": "Sezzle Widget",
+            "font_size": 15,
+            "font_family": "inherit"
+          }
+        },
+        "growave_loyalty_wishlist_block_product_review_avg_profile_cFxaTe": {
+          "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.product.reviewAvgProfile\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "dynamatic_personalized_upsells_dynamatics_E4dYtW": {
+          "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
+          "settings": {
+            "zone_id": "ZID0325-VIL32681731922567-PRODUCTPAGE",
+            "custom_css": "",
+            "event_triggerer": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description_Ln7JaL": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab_dUhc8e": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "INSTRUCTIONS",
+            "fr_heading": "INSTRUCTIONS",
+            "icon": "none",
+            "content": "",
+            "content_fr": "",
+            "instructions": "{{ product.metafields.custom.en_instructions | metafield_tag }}",
+            "instructions_fr": "{{ product.metafields.custom.fr_instructions | metafield_tag }}",
+            "link_documentation_name_sds": "SDS",
+            "link_documentation": "",
+            "link_documentation_fr": "",
+            "link_documentation_name_ifra": "IFRA",
+            "link_documentation_IFRA": "",
+            "link_documentation_fr_IFRA": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Mgn6rU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "MORE INFORMATION",
+            "fr_heading": "PLUS D'INFORMATION",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.product_highlight | metafield_tag }}",
+            "content_fr": "{{ product.metafields.custom.product_highlight_french | metafield_tag }}",
+            "instructions": "",
+            "instructions_fr": "",
+            "link_documentation_name_sds": "SDS",
+            "link_documentation": "",
+            "link_documentation_fr": "",
+            "link_documentation_name_ifra": "IFRA",
+            "link_documentation_IFRA": "",
+            "link_documentation_fr_IFRA": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_tVcpVg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "SDS DOCUMENTATION",
+            "fr_heading": "",
+            "icon": "none",
+            "content": "",
+            "content_fr": "",
+            "instructions": "",
+            "instructions_fr": "",
+            "link_documentation_name_sds": "SDS",
+            "link_documentation": "{{ product.metafields.custom.safety_information_sds_.value }}",
+            "link_documentation_fr": "{{ product.metafields.custom.safety_information_sds_fr_.value }}",
+            "link_documentation_name_ifra": "",
+            "link_documentation_IFRA": "",
+            "link_documentation_fr_IFRA": "",
+            "page": ""
+          }
+        },
+        "collapsible_tab_cWkajL": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "FREQUENTLY BOUGHT TOGETHER",
+            "fr_heading": "PRODUITS FRÉQUEMMENT ACHETÉS ENSEMBLE",
+            "icon": "none",
+            "content": "",
+            "content_fr": "",
+            "instructions": "",
+            "instructions_fr": "",
+            "link_documentation_name_sds": "SDS",
+            "link_documentation": "",
+            "link_documentation_fr": "",
+            "link_documentation_name_ifra": "IFRA",
+            "link_documentation_IFRA": "",
+            "link_documentation_fr_IFRA": "",
+            "page": ""
+          }
+        },
+        "dynamatic_personalized_upsells_dynamatics_9jj8gf": {
+          "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
+          "settings": {
+            "zone_id": "ZID0325-VIL47601731424282-WEBPAGE",
+            "custom_css": "",
+            "event_triggerer": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "sezzle_widget_widget_block_NaYkiF",
+        "growave_loyalty_wishlist_block_product_review_avg_profile_cFxaTe",
+        "variant_picker",
+        "quantity_selector",
+        "dynamatic_personalized_upsells_dynamatics_E4dYtW",
+        "buy_buttons",
+        "description_Ln7JaL",
+        "collapsible_tab_dUhc8e",
+        "collapsible_tab_Mgn6rU",
+        "collapsible_tab_tVcpVg",
+        "collapsible_tab_cWkajL",
+        "dynamatic_personalized_upsells_dynamatics_9jj8gf"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "1711597373953171fe": {
+      "type": "apps",
+      "blocks": {
+        "growave_loyalty_wishlist_block_product_review_widget_9H7xGk": {
+          "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.product.reviewWidget\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "growave_loyalty_wishlist_block_product_review_widget_9H7xGk"
+      ],
+      "settings": {
+        "include_margins": true,
+        "include_B2B": true
+      }
+    },
+    "1713765496c69fea83": {
+      "type": "apps",
+      "blocks": {
+        "dynamatic_personalized_upsells_dynamatics_3Le3W3": {
+          "type": "shopify:\/\/apps\/dynamatic-personalized-upsells\/blocks\/dynamatics\/2d829c71-4e5c-4e51-8c3d-03c05ca003b3",
+          "settings": {
+            "zone_id": "ZID0325-VIL25121731415847-WEBPAGE",
+            "custom_css": "",
+            "event_triggerer": ""
+          }
+        }
+      },
+      "block_order": [
+        "dynamatic_personalized_upsells_dynamatics_3Le3W3"
+      ],
+      "settings": {
+        "include_margins": true,
+        "include_B2B": false
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "Show_app_section": true,
+        "heading": "YOU MAY ALSO LIKE",
+        "heading_size": "h2",
+        "products_to_show": 9,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "collection_btn_KPPA79": {
+      "type": "collectionBtn",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "1711597373953171fe",
+    "1713765496c69fea83",
+    "related-products",
+    "collection_btn_KPPA79"
+  ]
+}

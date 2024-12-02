@@ -1,0 +1,36 @@
+<section class="custom-search">
+  <div class="page-width">
+    <div class="custom-form">
+      {% if section.settings.heading != blank %}
+        <h2>{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="search-form">
+        <form action="/search" method="get" role="search" id="search_form">
+          <div class="search-group">
+            <i id="search-icon" class="fas fa-search"></i>
+            <input type="search" name="q" placeholder="Search" class="search-bar__input font-size-16px font-family-Neuzeit color-dark-black font-weight-300">
+            <input type="hidden" name="type" value="article">
+            <button class="search-bar__submit">{%  render 'search-icon' %} </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Custom Search",
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Add heading"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom search"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,428 @@
+<div class="page-width wholesale_page m_top">
+    <div id="collection" class="wholesale_select max-width-100 d-flex text-transform-capitalize justify-content-center align-items-center">
+    {% for block in section.blocks %}<div value="{{ block.settings.text_name }}" onclick="update(event)" class="img_select cursor-pointer bg-color-off-white border-radius-50px {% if forloop.index==1 %} active {% endif %}">
+    {% if block.settings.text_name %}<div value="{{ block.settings.text_name }}" class="title_hed font-family-Neuzeit color-black line-height-23-4px font-size-18px text-transform-uppercase font-weight-700">{{ block.settings.text_name }}</div>{% endif %}</div>{% endfor %}</div>
+    <span id="text1" class="span" data-title="{{  block.settings.text_name }}"></span>  
+    {% for block in section.blocks  %}
+    <div class="wholesale_candle {% if forloop.index==1 %} active {% endif %}" data-title="{{ block.settings.text_name }}" >
+     {% if block.settings.image_Dropdown %}
+    <div class="section-header text-center main_page_image">
+    <img src="{{ block.settings.image_Dropdown |img_url: 'medium' }}"  alt="image" class="eng-lang-banner" height="" width="" />
+    {% if block.settings.img_tex %} <h3 class="text-transform-uppercase page_title max-width-100 color-white font-weight-700 text-align-center font-family-Neuzeit page-width line-height-39px font-size-30px">{{ block.settings.img_tex }}</h3>{% endif %}
+    </div> {% endif %}  
+    {% if request.locale.iso_code =='en'%}
+    {% if block.settings.image_english != blank %}<img src = "{{  block.settings.image_english.src |img_url: 'master' }}" alt="image" height="" width="" >{% endif %}
+    {% else %}
+    {% if block.settings.image_french != blank %}<img src = "{{  block.settings.image_french.src | img_url: 'master' }}" alt="image" height="" width="" >{% endif %}
+    {% endif %}
+    {% if block.settings.richtext_1 != blank and block.settings.richtext_2 != blank and block.settings.richtext_3 != blank and block.settings.richtext_4 != blank and block.settings.richtext_5 != blank %}
+    <div class="whole_table_val border-1px border-light-grey border-radius-20px">
+    <ul class="table_colu table_colu_desk d-flex bg-color-off-white list-style-none p-0px m-0px"> 
+        <li class="font-size-18px min_height_li border-light-grey font-weight-700 color-black text-transform-uppercase border-1px-bottom border-1px-right text-align-center d-flex align-items-center justify-content-center">{% if request.locale.iso_code == 'fr' %} PRODUIT {% else %}PRODUCT {% endif %}</li>
+        <li class="font-size-18px min_height_li border-light-grey font-weight-700 color-black text-transform-uppercase border-1px-bottom border-1px-right text-align-center d-flex align-items-center justify-content-center">{% if request.locale.iso_code == 'fr' %} {% if block.settings.text_name contains 'lids' or block.settings.text_name contains 'wicks' %}  UNITÉS  {% else %}  #DE CAISSES {% endif %}{% else %} {% if block.settings.text_name contains 'lids' or block.settings.text_name contains 'wicks' %}  UNITS  {% else %}  # OF CASES{% endif %}{% endif %}</li>
+        <li class="font-size-18px min_height_li border-light-grey font-weight-700 color-black text-transform-uppercase border-1px-bottom border-1px-right text-align-center d-flex align-items-center justify-content-center">{% if request.locale.iso_code == 'fr' %} DÉTAIL {% else %}RETAIL{% endif %}</li>
+        <li class="font-size-18px min_height_li border-light-grey font-weight-700 color-black text-transform-uppercase border-1px-bottom border-1px-right text-align-center d-flex align-items-center justify-content-center">{% if request.locale.iso_code == 'fr' %} RABAIS {% else %}DISCOUNT{% endif %}</li>
+        <li class="font-size-18px min_height_li border-light-grey font-weight-700 color-black text-transform-uppercase border-1px-bottom border-1px-right text-align-center d-flex align-items-center justify-content-center">{% if request.locale.iso_code == 'fr' %} PRIX NET {% else %}NET PRICE{% endif %}</li></ul>   
+
+    <div class="wholesale_table_blo d-flex">
+    {% for i in (1..5) %}
+    {% assign who_table = 'richtext_' | append: i %}
+    {% assign products = block.settings[who_table]  | split: "#" %}
+    <ul class="whole_table_colu border-light-grey border-1px-right text-align-center p-0px m-0px list-style-none {{ block.settings.text_name }}">{% for product in products %}
+        <li class="col text-transform-uppercase font-weight-700 font-size-18px line-height-23-4px font-family-Neuzeit color-gray border-1px-bottom border-light-grey d-flex align-items-center justify-content-center">
+            <span>{{ product }}</span>
+        </li>
+    {% endfor %}
+    </ul>
+    {% endfor %} 
+    </div> 
+    </div> 
+    {% endif %}
+    {% if block.settings.textarea != blank  %}<div class="scent_product border-radius-20px border-1px border-light-grey">
+        <div class="wholesale_textare bg-color-off-white border-light-grey border-1px-bottom text-align-center font-size-18px line-height-23-4px color-black font-weight-700 text-transform-uppercase d-flex align-items-center justify-content-center">
+            {{ block.settings.text_cont }}
+        </div>
+        <p class="collection_product font-size-18px line-height-23-4px font-family-Neuzeit m-0px color-gray d-flex align-items-center justify-content-center font-weight-700">{{ block.settings.textarea }}</p></div>{% endif %}
+    {% if block.settings.collection != blank  %}
+    <div class="collection_product"> {% for collection in collections[block.settings.collection].products  %}
+    <div class="collection_title d-inline-block"><a href="{{ collection.url }}" target="_blank" class="product-card__title font-family-Neuzeit font-size-18px line-height-23-4px p-0px font-weight-700 color-black text-transform-uppercase">{{ collection.title }}</a></div>
+    {% endfor %} </div>
+    {% else %}
+    <div class="collection_product">
+    {% for i in (1..4) %}
+    {%  assign collection_name = 'collection_' | append: i %}
+    {%  assign text_name = 'text_' | append: i %}   
+    {% assign var_pro = block.settings[collection_name]  %}
+    {% assign text_value = block.settings[text_name] %}
+    <div class="collection_title d-inline-block">
+    {% if text_value != blank %}
+        <a href="{{ var_pro.url }}/scent" target="_blank" class="product-card__title font-family-Neuzeit font-size-18px line-height-23-4px p-0px font-weight-700 color-black text-transform-uppercase"> {{ text_value | replace: '-', ' ' }}</a>{% else %}
+        <a href="{{ var_pro.url }}/scent" target="_blank" class="product-card__title font-family-Neuzeit font-size-18px line-height-23-4px p-0px font-weight-700 color-black text-transform-uppercase"> {{ var_pro | replace: '-', ' ' }}</a>{% endif %}
+    </div> {% endfor %} </div> {% endif %} </div> {% endfor %}   </div>
+    {% schema %}
+      {
+    "name": "WholeSale Candle Table",
+    "class": "wholeSale_candle_table",
+    "settings": [{
+    "type" : "header",
+    "content": "Wholesale Table"
+    }],
+    "blocks": [
+    {
+    "type": "WholeSale",
+    "name": "WholeSale",
+    "settings": [
+    {
+    "type": "text",
+    "label": "Title",
+    "id": "text_name"
+    },
+    {
+    "type": "image_picker",
+    "label": "Dropdown Image",
+    "id": "image_Dropdown"
+    },
+    {
+    "type": "text",
+    "label": "Image Text",
+    "id": "img_tex"
+    },
+    {
+    "type": "image_picker",
+    "label": "Image For English",
+    "id": "image_english"
+    },
+    {
+    "type": "image_picker",
+    "label": "Image For French",
+    "id": "image_french"
+    },
+    {
+    "type": "text",
+    "label": "Heading ",
+    "id": "text_cont"
+    },
+    {
+    "type": "textarea",
+    "label": "Textarea",
+    "id": "textarea"
+    },
+    {
+    "type": "richtext",
+    "label": "PRODUCT",
+    "id": "richtext_1"
+    }, 
+    {
+    "type": "richtext",
+    "label": "# OF CASES",
+    "id": "richtext_2"
+    },
+    {
+    "type": "richtext",
+    "label": "RETAIL",
+    "id": "richtext_3"
+    },
+    {
+    "type": "richtext",
+    "label": "DISCOUNT",
+    "id": "richtext_4"
+    },
+    {
+    "type": "richtext",
+    "label": "NET PRICE",
+    "id": "richtext_5"
+    },
+    {
+    "type": "collection",
+    "label": "Collection",
+    "id": "collection"
+    },
+    {
+    "type": "text",
+    "label": "Title1",
+    "id": "text_1"
+    },
+    {
+    "type": "collection",
+    "label": "Collection1",
+    "id": "collection_1"
+    },
+    {
+    "type": "text",
+    "label": "Title2",
+    "id": "text_2"
+    },
+    {
+    "type": "collection",
+    "label": "Collection2",
+    "id": "collection_2"
+    },
+    {
+    "type": "text",
+    "label": "Title3",
+    "id": "text_3"
+    },
+    {
+    "type": "collection",
+    "label": "Collection3",
+    "id": "collection_3"
+    },
+    {
+    "type": "text",
+    "label": "Title4",
+    "id": "text_4"
+    },
+    {
+    "type": "collection",
+    "label": "Collection4",
+    "id": "collection_4"
+    }
+    ]
+    }
+    ],
+    "presets": [
+    {
+    "name": "WholeSale Candle Table",
+    "category": "WholeSale Candle Table"
+    }
+    ]
+    }
+    {% endschema %}
+    {% stylesheet %}
+    {% endstylesheet %}
+    {% javascript %}
+    {% endjavascript %}
+    <script>
+        const update = (e) => {
+            let tabValue = e.target.getAttribute('value')
+            let doc = document.getElementsByClassName('img_select');
+            let content = document.getElementsByClassName('wholesale_candle');
+            for(let i = 0;  i < doc.length; i++){
+                if(doc[i].getAttribute('value') === tabValue){
+                    doc[i].classList.add("active");                    
+                }else{
+                    doc[i].classList.remove("active");
+                }
+            }
+            for(let j = 0;  j < content.length; j++){
+                if(content[j].getAttribute('data-title') === tabValue){
+                    content[j].classList.add("active");                    
+                }else{
+                    content[j].classList.remove("active");
+                }
+            }
+
+        }
+    </script>
+    <style>
+        .wholesale_page ul.table_colu.table_colu_desk {
+            border-radius: 20px 20px 0 0;
+        }
+        .wholesale_page .min_height_li {
+            min-height: 80px;
+            flex-basis: 25.84%;
+        }
+        .wholesale_page li.col {
+            min-height: 80px;
+            padding: 15px;
+        }
+        .wholesale_page li.col:last-child {
+            border:none !important;
+        }
+        .wholesale_page .wholesale_table_blo ul:nth-child(1), .wholesale_page ul.table_colu li:nth-child(1) {
+            flex-basis: 25.84%;
+        }
+        .wholesale_page ul.table_colu li, .wholesale_page .wholesale_table_blo ul {
+            flex-basis: 18.6%;
+        }
+        .wholesale_page li.col span p {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .wholesale_page li.col span {
+            line-height: normal !important;
+        }
+        .wholesale_page li.col span a {
+            color: #777777;
+            text-decoration: none;
+        }
+        .wholesale_page .wholesale_table_blo ul:last-child, .wholesale_page ul.table_colu li:last-child {
+            border-right: none !important;
+        }
+        .wholesale_page .img_select {
+            margin: 0 10px;
+            padding: 11px 26px;
+        }
+        .wholesale_page .wholesale_select {
+            margin: 0 auto 40px;
+        }
+        .wholesale_page img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        .wholesale_page h3.page_title.page-width {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .wholesale_page .main_page_image {
+            position: relative;
+            line-height: 0;
+            margin-bottom: 40px;
+        }
+        .wholesale_page .wholesale_select .img_select.active {
+            background: #7fa9a4 !important;
+        }
+        .wholesale_page .wholesale_select .img_select.active .title_hed {
+            color: #fff !important;
+        }
+        .wholesale_page .wholesale_candle {
+            display:none;
+        }
+        .wholesale_page .wholesale_candle.active {
+            display:block;
+        }
+        .wholesale_page .wholesale_candle .wholesale_textare {
+            border-radius: 20px 20px 0 0;
+            padding: 15px;
+            min-height: 80px;
+        }
+        .wholesale_page .wholesale_candle p.collection_product {
+            padding: 15px;
+            min-height: 80px;
+        }
+        .wholesale_page .wholesale_candle .collection_title {
+            padding: 10px;   
+        }
+        .wholesale_page .wholesale_candle .collection_product {
+            margin: 30px auto -10px;
+        }
+        .wholesale_page .wholesale_candle[data-title=scents] img{
+            margin-bottom: 20px;
+        }
+        .wholesale_page .product-card__title {
+            font-size:16px !important;
+            line-height:normal !important;
+        }
+        .wholesale_page .wholesale_candle .collection_product {
+            margin: 15px auto -5px;
+        }
+        .wholesale_page li.col span p:empty {
+            display: none;
+        }
+        @media (max-width: 991px){
+            .wholesale_page .wholesale_table_blo ul:nth-child(1), .wholesale_page ul.table_colu li:nth-child(1) {
+                flex-basis: 28%;
+            }
+            .wholesale_page .whole_table_val ul li {
+                padding: 4px;
+                min-height: 75px;
+            }
+            .wholesale_page .whole_table_val ul li {
+                font-size: 16px !important;
+                line-height: normal !important;
+            }
+        }
+        @media (max-width: 989px){
+            .wholesale_page .wholesale_select {
+                margin: 0 auto 30px;
+            }
+            .wholesale_page .main_page_image {
+                margin-bottom: 30px;
+            }
+        }
+        @media (max-width: 749px){
+            .wholesale_page .whole_table_val ul li {
+                font-size: 14px !important;
+            }
+            .wholesale_page .img_select {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            .wholesale_page .wholesale_select {
+                margin: 0 auto 15px;
+            }
+            .wholesale_page .img_select {
+                margin: 0 5px;
+                padding:10px;
+                border-radius: 20px;
+            }
+            .wholesale_page .title_hed {
+                font-size: 14px !important;
+            }
+        }
+        @media (max-width: 576px){
+            .wholesale_page .wholesale_table_blo ul:nth-child(1) {
+                max-width: 200px;
+                min-width: 200px;
+                position: sticky;
+                left: 0;
+                z-index: 0;
+                background: #fff;
+                border-bottom-left-radius: 20px;
+            }
+            .wholesale_page .wholesale_table_blo ul {
+                min-width: 85px;
+                max-width: 85px;
+            }
+            .wholesale_table_blo.d-flex {
+                border-radius: 20px 20px 0 0;
+                display: -webkit-box !important;
+                overflow: auto;
+                position: relative;
+            }
+            .wholesale_page ul.table_colu.table_colu_desk {
+                display:none !important;
+            }
+            .wholesale_page .wholesale_table_blo ul:nth-child(2) li:first-child:before {
+                content: "# OF CASES";
+            }
+            .wholesale_page .wholesale_table_blo ul li:first-child:before {
+                display: flex;
+                border-bottom: 1px solid #C5C5C5;
+                background: #f6f3ee;
+                padding: 5px;
+                min-height: 56px;
+                align-items: center;
+                justify-content: center;
+            }
+            .wholesale_page .wholesale_table_blo ul li:first-child {
+                display: block !important;
+                padding: 0;
+            }
+            .wholesale_page .wholesale_table_blo ul:nth-child(1) li:first-child:before {
+                content: "Product";
+                border-top-left-radius: 20px;
+            }
+            .wholesale_page .wholesale_table_blo ul:nth-child(3) li:first-child:before {
+                content: "RETAIL";
+            }
+            .wholesale_page .wholesale_table_blo ul:nth-child(4) li:first-child:before {
+                content: "DISCOUNT";
+            }
+            .wholesale_page .wholesale_table_blo ul:nth-child(5) li:first-child:before {
+                content: "NET PRICE";
+                border-top-right-radius: 20px;
+            }
+            .wholesale_page .wholesale_table_blo ul li {
+                min-height: 70px;
+            }
+            .wholesale_page li.col span p {
+                padding: 10px;
+                min-height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        @media (max-width: 375px){
+            .wholesale_page .img_select {
+                margin: 0 3px;
+                padding: 8px;
+            }
+        }
+    </style>

@@ -1,0 +1,71 @@
+{% comment %} <div class="rebuy_section">
+    {{ section.settings.heading }}
+    {{ section.settings.button_title }}
+    {{ section.settings.button_url }}
+    {{ section.settings.app_code }}
+    <div class="arr__new_val"></div>
+    <div data-rebuy-id="76969" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+    </div>
+{% schema %}
+{
+    "name": "Rebuy_section",
+
+ "settings":
+ [
+{
+   "type": "text",
+   "id": "heading",
+   "label": "Heading"
+},
+{
+    "type": "text",
+    "id":"button_title",
+    "label": "Button Title"
+},
+{
+    "type": "url",
+    "id":"button_url",
+    "label": "URL"
+},
+{
+    "type": "html",
+    "id":"app_code",
+    "label": "App Code"
+}
+],
+"presets": [
+    {
+      "name": "Rebuy_section"
+    }
+  ]
+}
+{% endschema %} {% endcomment %}
+
+<div class="page-width">
+    <div class="arr__new_val"></div>
+   <div data-rebuy-id="76969" data-rebuy-shopify-product-ids="{{ product.id }}"></div>
+    {% if section.settings.button_text %} <div class="view_more_new" >  <a href="{{ section.settings.button_url }}" class="btn" >{{ section.settings.button_text }}</a></div>{% endif %}
+    </div>
+    {% schema %}
+    {
+    "name": "Rebuy app",
+    "class": "new_viewva newarr_option",
+    "settings": [ 
+    {
+    "type": "text",
+    "id": "button_text",
+    "label": "Button Title"
+    },
+    {
+    "type": "url",
+    "id": "button_url",
+    "label": "URL"
+    }
+    ],
+    "presets": [
+    {
+    "name": "Rebuy app"
+    }
+    ]
+    }
+    {% endschema %}

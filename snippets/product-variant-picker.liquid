@@ -1,0 +1,247 @@
+{% comment %}
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  - update_url: {Boolean} whether or not to update url when changing variants. If false, the url isn't updated. Default: true (optional).
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+{%- unless product.has_only_default_variant -%}
+  <variant-selects
+    id="variant-selects-{{ section.id }}"
+    class="no-js-hidden add_wholesale_btn {% for option in product.options_with_values %}{{option.name | downcase}}{% endfor %} "
+    data-section="{{ section.id }}"
+    data-url="{{ product.url }}"
+    {% if update_url == false %}
+      data-update-url="false"
+    {% endif %}
+    {{ block.shopify_attributes }}
+  >
+    {%- for option in product.options_with_values -%}
+      {%- liquid
+        assign swatch_count = option.values | map: 'swatch' | compact | size
+        assign picker_type = block.settings.picker_type
+
+        if swatch_count > 0 and block.settings.swatch_shape != 'none'
+          if block.settings.picker_type == 'dropdown'
+            assign picker_type = 'swatch_dropdown'
+          else
+            assign picker_type = 'swatch'
+          endif
+        endif
+      -%}
+      {%- if picker_type == 'swatch' -%}
+        <fieldset class="js product-form__input product-form__input--swatch">
+          <legend class="form__label m-0px p-0px font-weight-300 text-transform-capitalize color-black font-size-20px font-family-Neuzeit">
+            {{ option.name }}:
+            <span data-selected-swatch-value="{{ option.name }}">
+              {{- option.selected_value -}}
+            </span>
+          </legend>
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+        </fieldset>
+
+      {% else %}
+        {%- if option.name == 'Color' or option.name == 'Couleur' -%}
+          <fieldset class="js product-form__input product-form__input--pill">
+            <legend class="form__label m-0px p-0px font-weight-300 text-transform-capitalize color-black font-size-20px font-family-Neuzeit">
+              Choose Color:
+              <span class="choose_color font-weight-300 text-transform-capitalize color-black font-size-20px font-family-Neuzeit">
+                {{- option.selected_value -}}
+              </span>
+            </legend>
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: picker_type
+            %}
+          </fieldset>
+        {%- else -%}
+          <div class="product-form__input product-form__input--dropdown">
+            <label class="quantity__label form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+              {{ option.name }}
+            </label>
+            <div class="select select_product_detail">
+              {%- if picker_type == 'swatch_dropdown' -%}
+                <span
+                  data-selected-dropdown-swatch="options[{{ option.name | escape }}]"
+                  class="dropdown-swatch"
+                >
+                  {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+                </span>
+              {%- endif -%}
+              <select
+                id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                class="select__select select_option_product_detail min-width-170px background-position-right-10px-center max-width-100 background-repeat-no-repeat margin-0px-auto line-height-1-2-px p-0px font-family-Neuzeit font-size-16px text-align-center font-weight-300 color-dark-black border-1px border-black cursor-pointer bg-black border-radius-30px min-height-48px"
+                name="options[{{ option.name | escape }}]"
+                form="{{ product_form_id }}"
+              >
+                {% render 'product-variant-options',
+                  product: product,
+                  option: option,
+                  block: block,
+                  picker_type: picker_type
+                %}
+              </select>
+              {% render 'icon-caret' %}
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    <script type="application/json">
+      {{ product.variants | json }}
+    </script>
+  </variant-selects>
+{%- endunless -%}
+
+<select class="selected_variant_price">
+  {% for variant in product.variants %}
+    <option data_price="{{ variant.price | money | strip_html }}">{{ variant.title }}</option>
+  {% endfor %}
+</select>
+
+<noscript class="product-form__noscript-wrapper-{{ section.id }}">
+  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+    <label class="quantity__label form__label" for="Variants-{{ section.id }}">
+      {{- 'products.product.product_variants' | t -}}
+    </label>
+    <div class="select select_product_detail">
+      <select
+        name="id"
+        id="Variants-{{ section.id }}"
+        class="select__select select_option_product_detail min-width-170px background-position-right-10px-center max-width-100 background-repeat-no-repeat margin-0px-auto line-height-1-2-px p-0px font-family-Neuzeit font-size-16px text-align-center font-weight-300 color-dark-black border-1px border-black cursor-pointer bg-black border-radius-30px min-height-48px"
+        form="{{ product_form_id }}"
+      >
+        {%- for variant in product.variants -%}
+          <option
+            {% if variant == product.selected_or_first_available_variant %}
+              selected="selected"
+            {% endif %}
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+            value="{{ variant.id }}"
+          >
+            {%- liquid
+              echo variant.title
+              echo variant.price | money | strip_html | prepend: ' - '
+              if variant.available == false
+                echo 'products.product.sold_out' | t | prepend: ' - '
+              endif
+              if variant.quantity_rule.increment > 1
+                echo 'products.product.quantity.multiples_of' | t: quantity: variant.quantity_rule.increment | prepend: ' - '
+              endif
+              if variant.quantity_rule.min > 1
+                echo 'products.product.quantity.minimum_of' | t: quantity: variant.quantity_rule.min | prepend: ' - '
+              endif
+              if variant.quantity_rule.max != null
+                echo 'products.product.quantity.maximum_of' | t: quantity: variant.quantity_rule.max | prepend: ' - '
+              endif
+              # TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter
+              # theme-check-disable
+              assign cart_quantity = cart | item_count_for_variant: variant.id
+              # theme-check-enable
+              if cart_quantity > 0
+                echo 'products.product.quantity.in_cart_html' | t: quantity: cart_quantity | prepend: ' - '
+              endif
+            -%}
+          </option>
+        {%- endfor -%}
+      </select>
+      {% render 'icon-caret' %}
+    </div>
+  </div>
+</noscript>
+<style>
+  .template-product fieldset {
+    border: none;
+    margin: 0 0 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .template-product .option_blocks {
+    position: relative;
+    display: inline;
+    {% comment %} padding-right: 13px; {% endcomment %}
+    margin:0 8px;
+    margin-top: 10px;
+  }
+  .template-product .single-option-selector-product-template[type=radio] {
+    height: 30px;
+    width: 30px;
+    margin-top: 0;
+    z-index: 1;
+    clip: inherit;
+    cursor: pointer;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    min-height: 44px;
+    border: 1px solid #121212;
+    background-color: #0000;
+    color: #121212;
+    max-width: 100%;
+    line-height: 1.2;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: 'Neuzeit Grotesk';
+    font-style: normal;
+    font-weight: 300;
+  }
+  .template-product .product-form input {
+    min-height: 44px;
+  }
+  .template-product .option_blocks p.col_color_name {
+    position: absolute;
+    width: 50px;
+    left: -8px;
+    margin: 7px 0px 0px 0px;
+    font-size: 11px;
+    line-height: normal;
+    border-radius: 0 0 7px 7px;
+    text-align:center;
+    color:#000;
+  }
+  .single-option-selector-product-template[type=radio]:checked+.variant_color_ops label .checkmark {
+    display: block;
+    position: relative;
+    top: 6px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    right: 0;
+    margin: 0 auto;
+  }
+  .single-option-selector-product-template[type=radio]:checked+.variant_color_ops label .checkmark:after {
+    content: "";
+    left: 4px;
+    top: 0;
+    width: 8px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+  }
+  .template-product .single-option-selector-product-template[type=radio]:checked+.variant_color_ops {
+    border: 2px solid #7FA9A4;
+    border-radius: 50%;
+    padding: 2px;
+  }
+
+  .template-product .product-detail-page .variant_picker_detail .option_blocks input[type="radio"]:checked ~ .variant_color_ops .col_color_name {left: -5px;}
+</style>

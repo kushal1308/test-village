@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "particular-variant-collection",
+      "settings": {
+        "products_per_page": 40,
+        "columns_desktop": 4,
+        "menu_collection": "categories",
+        "collection_head": "CATEGORIES",
+        "price_option": "0.00-10.00--UNDER  $10                                               ||10.00-20.00--$10 - $20       ||20.00-30.00--$20 - $30    ||30.00-50.00--$30 - $50",
+        "notes_option": "Fruit,Floral,Gourmand,Woody,Herbal,Fresh\/Green,Spicy,Musk",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "enable_filtering": false,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ]
+}

@@ -1,0 +1,151 @@
+<style>
+    .waiting_list_page {
+     position: relative;
+      height: 40vw;
+  }
+    .waiting_list_page img{
+    height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+   .waiting_list_page .klaviyo-form-XB46Uz form {
+      background-color: transparent !important;
+  }
+    .waiting_list_form {
+     position: absolute;
+     left: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+    .waiting_list_form p {
+      font-family: 'Neuzeit Grotesk';
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #534742;
+      text-transform: inherit;
+      margin-bottom:20px;
+      letter-spacing:1px;
+      margin-top:0 !important;
+  }
+    .waiting_list_form h5 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 22px;
+      font-family: 'Neuzeit Grotesk';
+      letter-spacing:1px;
+      margin:0;
+  }
+   
+    .waiting_list_page .waiting_list_form h2 , .waiting_list_page .waiting_list_form p{color:#fff;}
+    .waiting_list_page h2 {margin:15px 0 !important;letter-spacing: 3px;font-weight: 400; text-align:start;}
+   .waiting_list_form button {
+      position: absolute !important;
+      right: 5px !important;
+      font-size: 0px !important;
+     background-image: url(https://cdn.shopify.com/s/files/1/0282/8425/6353/files/waiting_page_new.svg?v=1712639778) !important;
+      background-color: transparent !important;
+      background-size: 40px !important;
+      background-repeat: no-repeat !important;
+      bottom: 0 !important;
+      padding-right: 30px !important;
+  }
+    .waiting_list_form input[type="email"] {
+      position: relative!important;
+      padding-right: 60px !important;
+  }
+    .page_waiting-list .waiting_list_mobile{display:none !important;}
+  .waiting_list_form input[type="email"]{ background-color: #fff !important;color:#808080 !important;font-family: 'Neuzeit Grotesk'!important;}
+    .waiting_list_form input[type="email"]::placeholder{color: #808080 !important;font-family: 'Neuzeit Grotesk'!important;opacity: 0.6;}
+  
+    @media(max-width:1199px){
+      .waiting_list_form{left:30px !important;}
+    }
+  
+    @media(max-width:989px){
+      .waiting_list_form {max-width: 350px;}
+      .waiting_list_form h5 , .waiting_list_page h2 , .waiting_list_page .waiting_list_form p{margin-bottom:10px;}
+      .waiting_list_page h2{margin:10px 0 !important;}
+    }
+  
+    @media(max-width:749px){
+      .page_waiting-list .waiting_list_mobile{display:block !important;}
+      .page_waiting-list .waiting_list_desktop{display:none !important;}
+      .page_waiting-list img.waiting_list_mobile {height: auto;}
+      .waiting_list_page .klaviyo-form-XB46Uz form {background-color: transparent !important;margin: 0 auto !important;float: none !important;}
+      .waiting_list_page {height: auto;}
+      .waiting_list_form {
+      max-width: 100%;
+      text-align: center !important;
+      position: relative;
+      background: linear-gradient(90deg, rgba(65,87,105,1) 0%, rgba(176,198,213,1) 100%);
+      left: 0px !important;
+      right: 0;
+      padding: 20px;
+      top: 0 !important;
+      transform: none;
+      margin-top: -1px;
+  }
+  .waiting_list_page h2{text-align:center;}
+    }
+  
+    @media(max-width:480px){
+      .waiting_list_form  .needsclick.kl-private-reset-css-Xuajs1{padding-bottom: 0 !important;}
+      .waiting_list_form h5 {font-size: 18px;}
+      .waiting_list_page .waiting_list_form h2{font-size: 22px;}
+      .waiting_list_form p{font-size: 14px;line-height: 20px;}
+    }
+    
+  </style>
+  <!-- style="background-image: url({{ section.settings.custom_bg_image |img_url: 'master' }});background-size: cover;background-repeat: no-repeat;" -->
+  <div class="waiting_list_page" >
+    <img class="waiting_list_desktop" src="{{ section.settings.custom_bg_image |img_url: 'master' }}" alt="" width="" height="" />
+    <img class="waiting_list_mobile" src="{{ section.settings.custom_bg_image_mobile |img_url: 'master' }}" alt="" width="" height="" />
+    <div class="waiting_list_form">
+      <div>
+        <h5>{{ section.settings.custom_sub_caption }}</h5>
+        {{ section.settings.custom_heading }}
+        <p>{{ section.settings.custom_sub_heading }}</p>
+      </div>
+        <div class="klaviyo-form-XB46Uz"></div>
+    </div>
+  </div>
+  
+  {% schema %}
+  {
+    "name": "custom_image_with_text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "custom_sub_caption",
+        "label": "custom sub caption"
+      },
+      {
+        "type": "richtext",
+        "id": "custom_heading",
+        "label": "custom heading"
+      },
+      {
+        "type": "text",
+        "id": "custom_sub_heading",
+        "label": "custom sub heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "custom_bg_image",
+        "label": "custom background image"
+      },
+      {
+        "type": "image_picker",
+        "id": "custom_bg_image_mobile",
+        "label": "custom background image mobile"
+      }    
+    ],
+    "presets": [
+      {
+        "name": "custom_image_with_text"      
+      }
+    ]
+  }
+  {% endschema %}
+  

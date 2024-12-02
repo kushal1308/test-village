@@ -1,0 +1,145 @@
+{% if template contains 'wholesale' %}<div class="custom-village-resource">{% endif %}
+<section class="faq">
+<div class="page-width {% if template contains 'wholesale' %} wholesal_faq  m_top {% endif %}">
+{% if page.title != blank %} <h2 class="faq-title text-align-center">{{section.settings.title}}</h2> {%endif%}
+{% if section.settings.textarea != blank %} <p class="faq-textarea text-align-center">{{ section.settings.textarea  }}</p> {% endif %}
+{% for block in section.blocks %}
+<div class="faq-blocks">
+{% if block.settings.heading_title != blank%}<h2 class="faq-sub-title">{{block.settings.heading_title}}</h2>{%endif%}
+{% if block.settings.heading_demo != blank or block.settings.description_demo != blank %}
+<h3 class="font-family-Neuzeit text-transform-uppercase tab_drawer_heading cursor-pointer font-weight-700 line-height-21px color-white bg-color-olive-green border-radius-20px {% if forloop.index == 1 %}d_active{% endif %}" rel="tab{{forloop.index}}">{{ block.settings.heading_demo }}</h3> 
+<div id="tab{{forloop.index}}" class="tab_content {% if forloop.index == 1 %}active_content{% endif %}"> {{ block.settings.description_demo }} </div>
+{% endif %}  </div>  {% endfor %}
+{% unless template contains 'wholesale'%} 
+<div class="view-all text-align-center">
+<a href="{{ section.settings.url }}" class="btn custom-transpernt-btn" aria-label="{{ 'blogs.article.view_all_blogs' }}">  <ly-as-587190>VIEW MORE FAQS</ly-as-587190> </a>
+</div>    {% endunless %}   </div> </section>
+{% if template contains 'wholesale' %}</div>{% endif %}
+{% schema %}
+{
+    "name": "FAQ",
+"settings": [ {
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "textarea",
+"id": "textarea",
+"label": "Textarea"
+},
+{
+"type": "url",
+"id": "url",
+"label": "Faq Url"
+}
+],
+"blocks": [
+{
+"type": "button",
+"name": "Add Your FAQ's",
+"settings": [  {
+"id": "heading_demo",
+"type": "text",
+"label": "Add Your Heading"
+},
+{
+"id": "description_demo",
+"type": "html",
+"label": "Add Description"
+}
+]
+},
+{
+"type": "button1",
+"name": "Add Your Tittle",
+"settings": [  {
+"id": "heading_title",
+"type": "text",
+"label": "Add Your Heading"
+}
+]
+}
+],
+"presets": [
+{
+"name": { "en": "Faqs" },
+"category": {
+"cs": "Faq",
+"da": "Faq",
+"de": "Faq",
+"en": "Faq",
+"es": "Faq",
+"fi": "Faq",
+"fr": "Faq",
+"it": "Faq"
+},
+"settings": {}
+}
+]
+}
+{% endschema %}
+<style>
+    .wholesal_faq .tab_drawer_heading {
+        padding: 20px 20px 20px 68px;
+        position: relative;
+    }
+    .wholesal_faq .tab_drawer_heading:after {
+        background-image: url(https://cdn.shopify.com/s/files/1/0282/8425/6353/files/Vector_11.svg?v=1684237356);
+        border: none;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        left: 25px;
+    }
+    .tab_drawer_heading:after {
+        content: "";
+        position: absolute;
+        left: 12px;
+        background-image: url(https://cdn.shopify.com/s/files/1/0282/8425/6353/files/Vector_11.svg?v=1684237356);
+        background-position: 100% 100%;
+        background-size: 12px;
+        background-position: 4px;
+        background-repeat: no-repeat;
+        height: 22px;
+        width: 22px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        top: 12px;
+    }
+    .wholesal_faq .tab_drawer_heading.d_active {
+        color: #7fa9a4 !important;
+        background: #f6f3ee !important;
+        border-radius: 20px 20px 0 0 !important;
+        margin:0px;
+    }
+    .wholesal_faq .tab_drawer_heading.d_active:after {
+        background-image: url(https://cdn.shopify.com/s/files/1/0282/8425/6353/files/Vector_12.svg?v=1684237572);
+        background-size: inherit;
+    }
+    .custom-village-resource .wholesal_faq .tab_content.active_content {
+        border: 1px solid #F6F3EE;
+        border-radius: 0 0 20px 20px;
+        padding: 15px 30px 20px;
+    }
+    .page_wholesale-new .custom-village-resource .faq p {
+        margin-bottom: 25px;
+    }
+    .page_wholesale-new .custom-village-resource .faq p:last-child{
+        margin-bottom: 0px;
+    }
+    @media(max-width:989px){
+        .page_wholesale-new .custom-village-resource .faq p {
+            margin-bottom: 15px;
+        }
+    }
+</style>
+<script>
+    var allPanels = $('.tab_content').hide();
+    $(".active_content").show();
+    $('.tab_drawer_heading').click(function () {
+        if ($(this).hasClass('d_active')) {  $(".tab_drawer_heading").removeClass("d_active"); $('.tab_content').removeClass('active_content'); allPanels.slideUp(); $(this).next().slideUp(); $(this).next().addClass('active_content'); $('.faq_content').removeClass('active_shadow');  }
+        else {  $(".tab_drawer_heading").removeClass("d_active"); $('.tab_content').removeClass('active_content'); $(this).addClass("d_active"); allPanels.slideUp(); $(this).next().slideDown(); $(this).next().addClass('active_content'); $(this).parent().addClass('active_shadow');  }
+        return false;
+    });
+</script>

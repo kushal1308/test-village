@@ -1,0 +1,133 @@
+{%- style -%}
+.product_option .mobile {
+    display: none;
+}
+.product_option .grid-uniform {
+    display: grid;
+    grid-template-columns: 22.1% 17.7% 17.7% 17.7% 17.7%;
+    grid-column-gap: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    align-items: center;
+    border-radius: 20px;
+}
+.product_option .grid-uniform .card {
+    text-align: center;
+}
+a {
+    color: #121212;
+    text-decoration: none;
+}
+.product_option .image_height {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+.product_option .image_height img {
+    aspect-ratio: 1 / 1;
+}
+.product_option .image_height img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.product_option h3.card__name.h4 {
+    -webkit-line-clamp: 1;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    color: #777;
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: Neuzeit Grotesk;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+@media (max-width: 1365px){.product_option .grid-uniform {grid-template-columns: repeat(5, 1fr); grid-column-gap: 15px;}}
+@media (max-width: 989px){
+    .pop_new {
+    background: #f5f5f5;
+    padding: 20px 0;
+}
+.btn{
+    font-size:16px;
+    line-height: normal;
+}
+.product_option .mobile {
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+.product_option .desktop {
+    display: none !important;
+}
+.product_option .grid-uniform{background-color: transparent; padding: 15px;grid-template-columns: repeat(4, 1fr);}}
+@media (max-width:749px){
+    .pop_new {
+    padding: 15px 0;
+    background: transparent;
+}
+.product_option .page-width {
+    background: #f5f5f5;
+}
+.product_option .grid-uniform {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    padding: 15px 0;
+}
+}
+{% endstyle %}
+
+<div class="page-width m_top">
+    <div class="pop_new">
+    {% assign number_of_products = 3 %}
+    {% assign number_of_products_to_fetch = number_of_products | plus: 1 %}
+    {% if section.settings.title %}<h2 class="h2 first_product mobile">{{ section.settings.title }}</h2>{% endif %}
+    <div class="grid-uniform">  
+    <div class="card critical-clear desktop"> {% if section.settings.title %}<h2 class="h2 first_product desktop">{{ section.settings.title }}</h2>{% endif %} {% if section.settings.button_text %}   <a href="{{ section.settings.button_url }}" class="text-decoration-none font-family-Neuzeit font-weight-700 font-size-18px line-height-21px color-black-000 letter-spacing-0px bg-color-off-white border-light-black-000  border-1px border-radius-37px text-transform-inherit margin-0px-auto p-11px-36px btn desktop hover_wholesale" >{{ section.settings.button_text }}</a>{% endif %} </div>
+    {% comment %}{% assign popular_product = collections['all'].products | sort: 'best-selling' %}{% endcomment %}
+    {% assign popular_product = collections['best-selling-test'].products  %}
+    {% for product in popular_product limit: number_of_products_to_fetch %}   
+    <div class="card critical-clear" id="Card-{{ product.id }}" data-animate>
+    <a href="{{ product.url | within: collection }}" class="text-decoration-none card__wrapper{% if section.settings.show_spacing %} card__wrapper--padding{% endif %} text-center"> <div class="image_height">
+      <img src="{{ product.featured_image | img_url: 'master'}}" alt="img" width="" height="" loading="lazy" class="lazyload"/></div> <h3 class="card__name h4">{{ product.title }}</h3> </a>
+    </div>
+    {% endfor %}
+    </div>
+    {% if section.settings.button_text %} <div class="mobile" >  <a href="{{ section.settings.button_url }}" class="btn text-decoration-none font-family-Neuzeit font-weight-700 font-size-18px line-height-21px color-black-000 d-inline-block letter-spacing-0px bg-color-off-white border-radius-37px border-light-black-000  border-1px text-transform-inherit p-11px-36px" >{{ section.settings.button_text }}</a></div>{% endif %}
+    </div>
+    </div>
+    {% schema %}
+    {
+    "name": "Popular Product",
+    "class": "popular_product product_option",
+    "settings": [ 
+    {
+    "type": "text",
+    "id": "title",
+    "label": "Heading",
+    "default": "Popular Product"
+    },
+    {
+    "type": "text",
+    "id": "button_text",
+    "label": "Button Title"
+    },
+    {
+    "type": "url",
+    "id": "button_url",
+    "label": "URL"
+    }
+    ],
+    "presets": [
+    {
+    "name": "Popular Product",
+    "category": "popular_product"
+    }
+    ]
+    }
+    {% endschema %}

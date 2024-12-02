@@ -1,0 +1,51 @@
+<style type="text/css">
+  .btn_404{
+    min-width: auto;
+    min-height: auto;
+  }
+  .btn_404:hover svg path{
+    fill: #000;
+  }
+  .btn_404 svg{
+    padding-right: 7px;
+    transform: rotate(180deg);
+  }
+  .template-404_wrapper {
+    padding: 125px 40px 165px !important;
+  }
+  .template-404 .title + * {
+    margin-top: 1rem;
+  }
+  .title_404 {
+    margin:0 0 17.5px 0 ;
+  }
+  @media screen and (max-width: 989px) {
+    .template-404_wrapper {
+      padding: 20px 15px 40px !important;
+    }
+  }
+  @media screen and (max-width: 749px) {
+    .btn_404 {
+      padding: 5px 12px !important;
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .template-404 .title + * {
+      margin-top: 2rem;
+    }
+  }
+</style>
+{% render 'breadcrumbs' %}
+<div class="template-404 template-404_wrapper page-width page-margin center">
+  <h1 class="title_404 title font-family-Neuzeit font-size-43px font-weight-200 line-height-1-2-px">{{ 'templates.404.title' | t }}</h1>
+  <p class="p_404 letter-spacing-0px">
+    {% if request.locale.iso_code == 'fr' %}Cette page n'est pas disponible.{% else %}The page you requested does not exist.{% endif %}
+  </p>
+  <a href="{{ routes.all_products_collection_url }}" class="button padding-10px-18px align-items-baseline btn_404 font-family-Neuzeit Grotesk font-weight-700 font-size-18px line-height-21px color-black-000 letter-spacing-0px bg-color-off-white border-1px border-light-black-000 border-radius-37px text-transform-inherit">
+    {{'general.continue_shopping' | t}}
+    <svg height="9" aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 20 8">
+      <path d="M4.814 7.555C3.95 6.61 3.2 5.893 2.568 5.4 1.937 4.91 1.341 4.544.781 4.303v-.44a9.933 9.933 0 0 0 1.875-1.196c.606-.485 1.328-1.196 2.168-2.134h.752c-.612 1.309-1.253 2.315-1.924 3.018H19.23v.986H3.652c.495.632.84 1.1 1.036 1.406.195.306.485.843.869 1.612h-.743z" fill="#7fa9a4" fill-rule="evenodd">
+      </path>
+    </svg>
+  </a>
+</div>

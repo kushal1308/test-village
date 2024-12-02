@@ -1,0 +1,219 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_eJygeF": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_VKgQMi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Thank You For Your Order!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VKgQMi"
+      ],
+      "settings": {
+        "unique_class": "order_wrapper",
+        "image": "shopify:\/\/shop_images\/Banner_10.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_with_text_k6FmNP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_je94z8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Resources",
+            "heading_size": "h1"
+          }
+        },
+        "text_LrBYA3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Making candles on your own can be an exciting yet complicated task. When it comes to DIY-ing candles, you'll likely get caught up in the endless variety of scents, vibrant colors, and types of candles.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_RxpL9H": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read more",
+            "button_link": "shopify:\/\/pages\/village-candle-making-resources",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_je94z8",
+        "text_LrBYA3",
+        "button_RxpL9H"
+      ],
+      "settings": {
+        "customclass": "",
+        "image": "shopify:\/\/shop_images\/Image_53.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "youtube_video_9emaJT": {
+      "type": "youtube_video",
+      "blocks": {
+        "youtube_nN4MJB": {
+          "type": "youtube",
+          "settings": {
+            "youtube_video": "https:\/\/youtu.be\/ombOSRogBas?si=1zPCBkpwKlD27LfF",
+            "image": "shopify:\/\/shop_images\/maxresdefault_1.png",
+            "image_icon": "shopify:\/\/shop_images\/image_4.png"
+          }
+        },
+        "youtube_mtGwMe": {
+          "type": "youtube",
+          "settings": {
+            "youtube_video": "https:\/\/youtu.be\/YWqm1DOBGRg?si=g5J18eGb9hRs_SdW",
+            "image": "shopify:\/\/shop_images\/maxresdefault_1_1.png",
+            "image_icon": "shopify:\/\/shop_images\/image_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "youtube_nN4MJB",
+        "youtube_mtGwMe"
+      ],
+      "settings": {}
+    },
+    "image_banner_fzWpGG": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_hHiTrb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join Our Candle Making Community",
+            "heading_size": "h1"
+          }
+        },
+        "text_tr7n4m": {
+          "type": "text",
+          "settings": {
+            "text": "Discover the warmth of our Candle Making Community, a vibrant space where crafters and creators like you come together to share ideas, techniques, and inspiration. Whether you're a seasoned artisan or just starting, here you'll find a supportive network passionate about all things candle making.",
+            "text_style": "body"
+          }
+        },
+        "buttons_38Pa9X": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join now",
+            "button_link_1": "\/",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hHiTrb",
+        "text_tr7n4m",
+        "buttons_38Pa9X"
+      ],
+      "settings": {
+        "unique_class": "",
+        "image": "shopify:\/\/shop_images\/Mask_group_20.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_with_text_Qdkr8Y": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rhJGdr": {
+          "type": "heading",
+          "settings": {
+            "heading": "JOIN OUR LOYALTY PROGRAM",
+            "heading_size": "h1"
+          }
+        },
+        "text_kW7bLg": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>MyVillage Rewards Program<\/h3><p>Earn V Points for your purchases and grow your candle-making community!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_xiQNCJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join Now & Collect Points",
+            "button_link": "shopify:\/\/pages\/reward",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rhJGdr",
+        "text_kW7bLg",
+        "button_xiQNCJ"
+      ],
+      "settings": {
+        "customclass": "loyalty_program",
+        "image": "shopify:\/\/shop_images\/Special_Deal_for_You_Girl.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_eJygeF",
+    "image_with_text_k6FmNP",
+    "youtube_video_9emaJT",
+    "image_banner_fzWpGG",
+    "image_with_text_Qdkr8Y"
+  ]
+}

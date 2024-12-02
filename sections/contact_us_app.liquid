@@ -1,0 +1,152 @@
+<div class="custom_html_main m_top" id="contact_us_app_wholesale">
+    {{ section.settings.custom_html }}
+  </div>
+  
+  {% schema %}
+    {
+      "name": "contact_us_app",
+      "settings": [
+        {
+    "type": "html",
+    "id": "custom_html",
+    "label": "Custom HTML Code"
+        }
+      ],
+      "presets": [
+          {
+          "name": "contact us app"
+          }
+                ]
+    }
+  {% endschema %}
+  
+  {% javascript %}
+    (function ([s, ...u]) {
+      // Check if the Gorgias contact form already exists
+      if (window.gorgiasContactForm) return;
+  
+      // Set the Gorgias contact form
+      window.gorgiasContactForm = s;
+  
+      // Function to adjust viewport for iPhone
+      function E() {
+          if (!/iPhone/.test(navigator.userAgent)) return;
+          let t = document.querySelector("meta[name=viewport]");
+          t || ((t = document.createElement("meta")).setAttribute("name", "viewport"), document.head.appendChild(t));
+          t.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no");
+      }
+  
+      // Function to mark performance
+      function T(t) {
+          let { performance: e } = window;
+          if (!e || typeof e.mark != "function") {
+              console.error("Performance API is not available");
+              return;
+          }
+          e.mark(t);
+      }
+  
+      // Function to generate iframe URL
+      function l(t, e, i, c) {
+          let n = `${c}/embed/forms/${t}`;
+          return m(t, e, i) && (n += "?new_design=true"), n;
+      }
+  
+      // Function to create iframe
+      function d(t, e, i, c) {
+          let n = t.getAttribute(e.DATA_ATTRIBUTES.CONTACT_FORM_UID);
+          if (!n) return null;
+          let A = "gorgias.assigned-number",
+              r = localStorage.getItem(A);
+          g(n, r, c) && localStorage.setItem(A, Math.floor(100 * Math.random()).toString());
+          let a = l(n, r, c, i),
+              o = document.createElement("iframe");
+          return (
+              (o.src = a),
+              (o.height = "100%"),
+              (o.width = "100%"),
+              o.setAttribute("frameborder", "0"),
+              o.setAttribute("scrolling", "no"),
+              o.setAttribute(e.DATA_ATTRIBUTES.IFRAME, ""),
+              t.appendChild(o),
+              o
+          );
+      }
+  
+      // Function to check if the form should be shown
+      function g(t, e, i) {
+          return !e && i.includes(t);
+      }
+  
+      // Function to check if the form should use the new design
+      function m(t, e, i) {
+          return i.includes(t) && e && parseInt(e) % 2 == 1;
+      }
+  
+      // Function to handle iframe messages
+      function _(t, e, i, c) {
+          T(t.MARKERS.IFRAME_START);
+          let n = [];
+          e.forEach((r) => {
+              let a = d(r, t, i, c);
+              a && n.push(a);
+          });
+          T(t.MARKERS.IFRAME_END);
+          let A = {
+              [t.MESSAGE_TYPES.CONTACT_FORM_LOADED]: (r) => {
+                  var a;
+                  (a = r.source) == null || a.postMessage(
+                      { type: t.MESSAGE_TYPES.PARENT_URL, parentUrl: window.location.href },
+                      { targetOrigin: "*" }
+                  );
+              },
+              [t.MESSAGE_TYPES.ADJUST_IFRAME_HEIGHT]: (r) => {
+                  let a = n.find((o) => o.contentWindow === r.source);
+                  a && a.setAttribute("height", r.data.height);
+              },
+          };
+          window.addEventListener("message", (r) => {
+              let { type: a } = r.data,
+                  o = A[a];
+              o && o(r);
+          });
+      }
+  
+      // Function to render contact form iframe
+      function f(t, e, i, c) {
+          let { CONTACT_FORM_UID: n } = t.DATA_ATTRIBUTES,
+              A = Array.from(document.querySelectorAll(`[${n}]`)).filter((r) => !!r.getAttribute(n)).slice(0, t.CONTACT_FORMS_PER_PAGE_LIMIT);
+          e.renderContactFormIframe(t, A, i, c);
+      }
+  
+      // Define an object with render function
+      const R = {
+          renderContactFormIframe: _,
+      };
+  
+      // Initialize
+      E();
+      f(s, R, ...u);
+  })([
+      {
+          CONTACT_FORMS_PER_PAGE_LIMIT: 10,
+          PARENT_CONTAINER_SELECTOR: '[data-gorgias-contact-form="container"]',
+          DATA_ATTRIBUTES: {
+              IFRAME: "data-gorgias-iframe-contact-form",
+              CONTACT_FORM_UID: "data-gorgias-contact-form-uid",
+          },
+          MESSAGE_TYPES: {
+              CONTACT_FORM_LOADED: "gorgias-contact-form-loaded",
+              ADJUST_IFRAME_HEIGHT: "gorgias-adjust-iframe-height",
+              PARENT_URL: "gorgias-parent-url",
+          },
+          MARKERS: {
+              IFRAME_START: "gorgias-contact-form-iframe-start",
+              IFRAME_END: "gorgias-contact-form-iframe-end",
+          },
+      },
+      "https://contact.gorgias.help",
+      ["wvd8enxt", "6kjd4p3y"],
+  ]);
+  
+    {% endjavascript %}

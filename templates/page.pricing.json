@@ -1,0 +1,158 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_WXrnaz": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_p8UjH4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Candle Making Bulk Pricing",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_p8UjH4"
+      ],
+      "settings": {
+        "unique_class": "",
+        "image": "shopify:\/\/shop_images\/Copy_of_Mobile_Website_Banner_-_MyVillage_1_cedacb15-0f02-4a9f-85fb-f0f955bad66d.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "collection_list_Dw99VU": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_hcYnHt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "autumn-catalogue"
+          }
+        },
+        "featured_collection_ytDj7t": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "autumn-and-fall-fragrances"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_hcYnHt",
+        "featured_collection_ytDj7t"
+      ],
+      "settings": {
+        "custom_class": "pricing_featured",
+        "title": "Featured Categories",
+        "heading_size": "h1",
+        "description": "Quality, choice, availability, tested, undiluted. Includes fragrance oils, essential oils and essential oil blends. Manufactured for us, and many unique fragrances not found anywhere else.",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "newsletter_x98pYC": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_VDGpf8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Updates on wholesale deals",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_tYbLPf": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_VDGpf8",
+        "email_form_tYbLPf"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "best_seller_PceBJK": {
+      "type": "best_seller",
+      "blocks": {
+        "sellers_jnXAGG": {
+          "type": "sellers",
+          "settings": {
+            "product_url": "5oz-measuring-cup"
+          }
+        },
+        "sellers_mNtAjw": {
+          "type": "sellers",
+          "settings": {
+            "product_url": "all-summer-long-fragrance-oil"
+          }
+        },
+        "sellers_NiKV9c": {
+          "type": "sellers",
+          "settings": {
+            "product_url": "apples-evergreen-fragrance-oil"
+          }
+        },
+        "sellers_jFLKDG": {
+          "type": "sellers",
+          "settings": {
+            "product_url": "apple-blossom-fragrance-oil"
+          }
+        },
+        "sellers_qeGpiU": {
+          "type": "sellers",
+          "settings": {
+            "product_url": "arctic-bitterberry-fragrance-oil"
+          }
+        }
+      },
+      "block_order": [
+        "sellers_jnXAGG",
+        "sellers_mNtAjw",
+        "sellers_NiKV9c",
+        "sellers_jFLKDG",
+        "sellers_qeGpiU"
+      ],
+      "settings": {
+        "title": "Best Sellers"
+      }
+    },
+    "pricing_contact_qFwntR": {
+      "type": "pricing_contact",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_WXrnaz",
+    "collection_list_Dw99VU",
+    "newsletter_x98pYC",
+    "best_seller_PceBJK",
+    "pricing_contact_qFwntR"
+  ]
+}

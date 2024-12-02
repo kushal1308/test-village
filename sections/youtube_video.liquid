@@ -1,0 +1,137 @@
+<div class="page-width">
+  <div class="video_secrtion_cus">
+    {% for block in section.blocks %}
+      <div class="you_vim">
+        <div class="video_tab_btn">
+          <img src="{{ block.settings.image_icon | image_url : width: 58 }}" width="" height="" loading="lazy" alt="image" >
+        </div>
+        <div class="image_main">
+          <img src="{{ block.settings.image | image_url : width: 570 }}" width="" height="" loading="lazy" alt="image" >
+        </div>
+        {%- if block.settings.youtube_video.type == 'youtube' -%}
+          <iframe
+            src="https://www.youtube.com/embed/{{ block.settings.youtube_video.id }}?enablejsapi=1&autoplay=1"
+            class="js-youtube"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            title="{{ block.settings.description | escape }}"
+          ></iframe>
+        {%- else -%}
+          <iframe
+            src="https://player.vimeo.com/video/{{ block.settings.youtube_video.id }}?autoplay=1"
+            class="js-vimeo"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            title="{{ block.settings.description | escape }}"
+          ></iframe>
+        {%- endif -%}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="iframe-pop-up" style="display: none;">
+  <div class="ifram_pop">
+    <h3 id="close-if" class="close-if">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="16" fill="white"></circle>
+        <path d="M23 10.7301L21.2699 9L16 14.2699L10.7301 9L9 10.7301L14.2699 16L9 21.2699L10.7301 23L16 17.7301L21.2699 23L23 21.2699L17.7301 16L23 10.7301Z" fill="black"></path>
+      </svg>
+    </h3>
+    <div class="main-video-if"></div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Youtube section",
+  "class": "video_custom_sec",
+  "settings": [
+    {
+      "type": "header",
+      "content": "My settings"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "youtube",
+      "name": "youtube",
+      "settings": [
+        {
+          "type": "video_url",
+          "id": "youtube_video",
+          "label": "youtube_video",
+          "accept": ["youtube", "vimeo"]
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "Image Icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Youtube"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.video_custom_sec .video_secrtion_cus{display: grid;grid-auto-flow: column;margin: 0 -15px;}
+.video_custom_sec .you_vim iframe{ display: none;}
+.video_custom_sec .you_vim {position: relative;padding: 0 15px;}
+.video_custom_sec .you_vim .video_tab_btn {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);cursor: pointer;}
+.video_custom_sec .you_vim .image_main{border-radius: 20px;position: relative;z-index: -1;line-height: 0;}
+.video_custom_sec .you_vim .image_main img{ border-radius: 20px; }
+.video_custom_sec .you_vim .image_main:after {content: '';position: absolute;background-color: rgba(0,0,0,0.5);top: 0;bottom: 0;right: 0;left: 0;border-radius: 20px;}
+.iframe-pop-up {position: fixed;z-index: 11;background: rgba(0,0,0,.3);width: 100%;height: auto;top: 0;bottom: 0;}
+.iframe-pop-up .ifram_pop{position: fixed;left: 50%;top: 50%;width: 60.95%;height: 34.33vw;transform: translate(-50%,-50%);z-index: 1;}
+.iframe-pop-up .close-if{width: fit-content;cursor: pointer;line-height: 0;position: absolute;padding: 0;margin: 0 0 0 auto;right: 10px;top: 10px;}
+.iframe-pop-up  .main-video-if{width: 100%;height: 100%;}
+.iframe-pop-up  iframe{display: block!important;height: 100%;width: 100%;border: none;}
+.video_custom_sec .page-width{ margin: 50px auto 100px;}
+body.pop-up-overflow-hide {overflow: hidden;}
+
+@media(max-width:1199px){
+.video_custom_sec .page-width {margin: 50px auto 60px;}
+.iframe-pop-up .ifram_pop {width: 92%;height: 51.8vw;}
+}
+@media(max-width:989px){
+.video_custom_sec .page-width {margin: 50px auto ;}
+}
+@media(max-width:749px){
+.video_custom_sec .page-width {margin: 30px auto ;}
+.video_custom_sec .you_vim .image_main{z-index: 0;}
+.video_custom_sec .you_vim .video_tab_btn{ z-index: 1;line-height: 0;}
+.video_custom_sec .you_vim{padding: 0 7.5px;}
+.video_custom_sec .video_secrtion_cus{margin: 0 -7.5px;}
+}
+@media(max-width:576px){
+.video_custom_sec .video_secrtion_cus {margin: 0;grid-auto-flow: row;}
+.video_custom_sec .you_vim {padding: 0;margin: 15px 0 0;}
+.video_custom_sec .you_vim:first-of-type {margin:  0;}
+}
+{% endstylesheet %}
+
+{% javascript %}
+
+$(".video_tab_btn").on('click',function(ev){
+  $(".iframe-pop-up").show();
+ $(".iframe-pop-up .main-video-if").html($(this).parent().find("iframe").clone()); 
+ ev.preventDefault();
+  $("body").addClass("pop-up-overflow-hide");
+});
+
+  $("#close-if").on('click',function(){
+     $(".iframe-pop-up .main-video-if").html("");    
+     $(".iframe-pop-up").hide();
+     $("body").removeClass("pop-up-overflow-hide");
+  });
+{% endjavascript %}

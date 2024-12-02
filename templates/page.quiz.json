@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "quiz_data_a9ghwn": {
+      "type": "quiz-data",
+      "blocks": {
+        "content_qUaEx9": {
+          "type": "content",
+          "settings": {
+            "question": "<p>Are you new to candle making?<\/p>",
+            "option1": "<p>Yes<\/p>",
+            "option2": "<p>No<\/p>",
+            "option3": "",
+            "option4": ""
+          }
+        },
+        "content_QhJHVE": {
+          "type": "content",
+          "settings": {
+            "question": "<p>Is this your first time visiting our website?<\/p>",
+            "option1": "<p>Yes<\/p>",
+            "option2": "<p>No<\/p>",
+            "option3": "",
+            "option4": ""
+          }
+        },
+        "content_pqJrHa": {
+          "type": "content",
+          "settings": {
+            "question": "<p>What type of candles would you like to make?<\/p>",
+            "option1": "<p>Container candles. Candles that are made by pouring wax into a container that it will remain in while it is being burned (ie jar candles). Waxes meant for container candles are generally softer with a lower melting point.<\/p>",
+            "option2": "<p>Free-standing candles. A candle that will be made by pouring wax into a mould and then removed for burning (ie pillar candles). Waxes meant for free-standing candles are harder waxes with higher melting points.<\/p>",
+            "option3": "",
+            "option4": ""
+          }
+        },
+        "data_9XLz6q": {
+          "type": "data",
+          "settings": {
+            "que1": "<p>What type of wax would you like to use for your container candle?<\/p>",
+            "opt1-1": "<p>Soy wax. A vegetable wax that is made from the oil of soybeans. It is all natural, renewable and sustainable making it a very popular wax to use.<\/p>",
+            "opt1-2": "<p>Paraffin wax. A white odourless substance that is a natural by-product of the petroleum refining process. It offers superior scent and colour retention unmatched by any other wax.<\/p>",
+            "opt1-3": "<p>Coconut wax. A colorless and odorless wax made from cold-pressed coconut meat or coconut oil mixed with a small amount of soy wax in order to make it more solid.<\/p>",
+            "opt1-4": "",
+            "que2": "<p>What type of wax would you like to use for your free-standing candle?<\/p>",
+            "opt2-1": "<p>Soy wax. A vegetable wax that is made from the oil of soybeans. It is all natural, renewable and sustainable making it a very popular wax to use.<\/p>",
+            "opt2-2": "<p>Paraffin wax. A white odourless substance that is a natural by-product of the petroleum refining process. It offers superior scent and colour retention unmatched by any other wax.<\/p>",
+            "opt2-3": "<p>Beeswax wax. A hard and sticky wax secreted by bees to make honeycombs. It comes in natural yellow or bleached white.<\/p>",
+            "opt2-4": "<p>Palm wax. A natural plant wax that is made from the tropical palm plant that comes in granular form. It will make very hard candles with a sparky frosted finish when not mixed with other waxes.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_qUaEx9",
+        "content_QhJHVE",
+        "content_pqJrHa",
+        "data_9XLz6q"
+      ],
+      "settings": {
+        "video_link": "https:\/\/www.youtube.com\/watch?v=TXDqrTKTgbs",
+        "pdf_link1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/3.pdf?v=1665118655",
+        "pdf_link2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/4.pdf?v=1665118794",
+        "pdf_link3": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/5.pdf?v=1665118829",
+        "pdf_link4": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/6.pdf?v=1665118845",
+        "pdf_link5": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/7.pdf?v=1665118851",
+        "pdf_link6": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/8.pdf?v=1665118858",
+        "pdf_link7": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/9.pdf?v=1665118862",
+        "pdf_fr_link1": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/FR_3.pdf?v=1665718013",
+        "pdf_fr_link2": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/FR_4.pdf?v=1665718013",
+        "pdf_fr_link3": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/FR_5.pdf?v=1665718013",
+        "pdf_fr_link4": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/FR_6.pdf?v=1665718014",
+        "pdf_fr_link5": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/FR_7.pdf?v=1665718013",
+        "pdf_fr_link6": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/FR_8.pdf?v=1665718014",
+        "pdf_fr_link7": "https:\/\/cdn.shopify.com\/s\/files\/1\/0282\/8425\/6353\/files\/FR_9.pdf?v=1665718013"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "quiz_data_a9ghwn"
+  ]
+}

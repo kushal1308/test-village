@@ -1,0 +1,156 @@
+<div class="quickPage--Search">
+    <div class="search_select">
+    <div class="search">
+    <script src="{{ 'quick-predictive.js' | asset_url }}" defer="defer"></script>
+    <quick-page-search id="quickPage--Search">
+    <form action="{{ routes.search_url }}" method="get" role="search">
+    <div class="search_res_val">
+    <input id="search" class="border-none font-size-16px font-family-Neuzeit font-weight-300 letter-spacing-0px" type="search"  name="q"  value="{{ search.terms | escape }}"  role="combobox"  aria-expanded="false" aria-owns="predictive-search-results"  aria-controls="predictive-search-results" aria-haspopup="listbox"  aria-autocomplete="list"  placeholder = "Search for anything" />
+    <button class="order_search_icon border-none bg-transparent" type="submit" data-search-form-submit="">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.35" cy="7.7275" r="6.6" stroke="#121212" stroke-width="1.5"></circle><line x1="12.2903" y1="12.3422" x2="18.9053" y2="18.9572" stroke="#121212" stroke-width="1.5"></line></svg>
+    <span class="icon__fallback-text">Submit</span>
+    </button>
+    </div>
+    <input name="options[prefix]" type="hidden" value="last">  
+    <div id="predictive-search" tabindex="-1"></div>
+    </form>
+    </quick-page-search>
+    {%- if predictive_search.performed -%}
+    <div id="predictive-search">
+    {%- if predictive_search.resources.products.size > 0 -%}
+    <h3 id="predictive-search-products" class="predictive_search_products_quick_order"> Products </h3>
+    <ul role="listbox" aria-labelledby="predictive-search-products">
+    {%- for product in predictive_search.resources.products -%} <li role="option"> <a href="{{ product.url }}"> {{ product | image_url: width: 50 | image_tag }} <span>{{ product.title }}</span> </a> </li> {%- endfor -%}
+    </ul>
+    {%- endif -%}
+    </div>
+    {%- endif -%}
+    </div>  
+    <div class="selct_drop">
+    <div class="select-container">
+    <div class="select"> <input type="text" class="select__category m-0px" id="input" placeholder="Select category" data_hand = 'all' data_val_ti = 'all' onfocus="this.blur();"> </div>
+     <div class="option-container">
+     {%- for link in linklists['collection'].links  -%}
+     <div class="option man_nav"><a class="color-black font-weight-700" data-href="{{ link.url }}" data-handle="{{ link.url | split: '/' | last }}" data-title="{{ link.title }}" > {{ link.title }} </a></div>
+     {% for childlink in link.links %} <div class="option child_nav font-weight-300"><a class="color-black" data-href="{{ childlink.url }}" data-handle="{{ childlink.url | split: '/' | last }}" data-title="{{ childlink.title }}"> {{ childlink.title }} </a></div> {% endfor %}
+     {% endfor %}
+     </div>  </div> </div> </div>
+    <div class="product_table">
+    {%- paginate collections['all'].products by 10000  -%}
+    <table data_count = "">
+    <thead class="bg-light-gray"><tr><th class="color-black border-none text-align">Product Details</th><th class="color-black border-none text-align">Price</th> <th class="color-black border-none text-align">Size</th> <th class="color-black border-none text-align">Type</th> <th class="color-black border-none text-align">Color</th> <th class="color-black border-none text-align">Qty.</th> </tr> </thead>  
+    <tbody id="Huratips-Loop" class="pro_val ">
+    {% for product in  collections['all'].products   %}
+    {%- assign variants_available_arr = product.variants | map: 'available' -%}
+    {%- assign variants_option1_arr = product.variants | map: 'option1' -%}
+    {%- assign variants_option2_arr = product.variants | map: 'option2' -%}
+    {%- assign variants_option3_arr = product.variants | map: 'option3' -%}
+    <tr class="product_order  {% unless product.available %} disable {% endunless %}"  data_collection="{% for collection in product.collections %}  {{ collection.title }}{% endfor %}" product_id="{{ product.id }}" product_count="" variant_id="{{ product.selected_or_first_available_variant.id }}"  data-product-handle="{{product.handle}}"  product_vati_price = "{{ product.selected_or_first_available_variant.price | money | strip_html }}"  >
+    <td class="border-none"><div class="order_img_produ">{{ product.featured_image | img_url: '150x150' | img_tag }} </div> <p class="product_tilte letter-spacing-0px align-items-center font-weight-700 font-size-16px line-height-21px color-gray font-family-Neuzeit">{{ product.title }} </p> <input type="hidden" value="{% for collection in product.collections %}{{ collection.handle }}{% unless forloop.last %},{% endunless %}{% endfor %}" class="product_collections"/> </td>
+     {% assign variant_price = product.selected_or_first_available_variant.price %}
+    {% assign variant_compare_at_price = product.selected_or_first_available_variant.compare_at_price %}  
+    <td class="order_price_val_cu border-none" single-price="{{ variant_price | money_without_currency | strip_html | replace: ',', '' }}" >
+    <p class="display-flex flex-direction-row align-items-center"> {% if variant_compare_at_price > variant_price %} <span class="price font-weight-700 font-size-16px font-family-Neuzeit line-height-21px align-items-center text-transform-uppercase color-black">{{ variant_price | money }}</span> <span class="compare-at-price"><s>{{ variant_compare_at_price | money }}</s></span> {% else %} <span class="price font-weight-700 font-size-16px font-family-Neuzeit line-height-21px align-items-center text-transform-uppercase color-black">{{ variant_price | money }}</span> {% endif %} </p>
+    </td>
+    <td class="variant_size_td variant_td1 border-none">
+    {% for option in product.options_with_values %}  
+    {% if option.name == 'Size' %} 
+    {% for variant in product.variants %}<input type="hidden"  value="{{ variant.id }}" data-price="{{ variant.price }}" data-compare-at-price = "{{ variant.compare_at_price }}"  data-option= "{{ variant.title }}" class="hidden_val_it"  /> {% endfor %}
+    <select id="" class="variant-select font-weight-700 color-black font-family-Neuzeit font-size-18px line-height-23px border-none"  data_product = {{ product.id }}> 
+    {%- for value in option.values -%}
+    {%- assign option_disabled = true -%}
+    {% for option1_name in variants_option1_arr %}
+    {% case option.position %}
+    {% when 1 %}{% if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0] == true %}{%- assign option_disabled = false -%}{% endif %}
+    {% when 2 %}{% if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0] == true %}{%- assign option_disabled = false -%}{% endif %}
+    {% when 3 %}{% if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0] == true %}{%- assign option_disabled = false -%}{% endif %}
+    {% endcase %}
+    {% endfor %}    
+    <option value="{{ value }}"  {% if option.selected_value == value %} selected="selected"{% endif %}  {% if option_disabled %}class="disabled"{% endif %} {% if forloop.last %} class="last_child" {% endif %} > {{ value }} </option> {% endfor %} </select> 
+     <br> {% assign var_size =  option.values | size  %}
+    {% if var_size > 1 %}<a class="add_val color-light-green font-size-16px line-height-21px font-family-Neuzeit font-weight-300 text-decoration-underline all_but_click">Add New</a>{% endif %} {% else %} <p class="empty_para_cl"> - </p> {% endif %}
+    {% endfor %}
+    </td>       
+    <td class="variant_type_td variant_td1 border-none">
+    {% for option in product.options_with_values %}  
+    {% if option.name == 'Type' %} 
+    {% for variant in product.variants %} <input type="hidden"  value="{{ variant.id }}" data-price="{{ variant.price }}" data-compare-at-price = "{{ variant.compare_at_price }}"  data-option= "{{ variant.title }}" class="hidden_val_it"  /> {% endfor %}    
+    <select id="" class="variant-select font-weight-700 color-black font-family-Neuzeit font-size-18px line-height-23px border-none"  data_product = {{ product.id }}> 
+    {%- for value in option.values -%} 
+    {%- assign option_disabled = true -%}
+    {% for option1_name in variants_option1_arr %}
+    {% case option.position %}
+    {% when 1 %}{% if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0] == true %}{%- assign option_disabled = false -%}{% endif %}
+    {% when 2 %}{% if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0] == true %}{%- assign option_disabled = false -%}{% endif %}
+    {% when 3 %}{% if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0] == true %}{%- assign option_disabled = false -%}{% endif %}
+    {% endcase %}
+    {% endfor %}  
+    <option value="{{ value }}"  {% if option.selected_value == value %} selected="selected"{% endif %}  {% if option_disabled %}class="disabled"{% endif %} {% if forloop.last %} class="last_child" {% endif %}> {{ value }} </option> {% endfor %} </select>
+    <br> {% assign var_size =  option.values | size  %}
+    {% if var_size > 1 %}<a class="add_val color-light-green font-size-16px line-height-21px font-family-Neuzeit font-weight-300 text-decoration-underline all_but_click">Add New</a>{% endif %} {% else %} <p class="empty_para_cl"> - </p> {% endif %}
+    {% endfor %}
+    </td>
+    <td class="variant_type_color variant_td1 border-none">
+    {% for option in product.options_with_values %}  
+    {% if option.name == 'Color' or option.name == 'Couleur' %} 
+    {% for variant in product.variants %} <input type="hidden"  value="{{ variant.id }}" data-price="{{ variant.price }}" data-compare-at-price = "{{ variant.compare_at_price }}"  data-option= "{{ variant.title }}" class="hidden_val_it"  /> {% endfor %}    
+    <select id="" class="variant-select font-weight-700 color-black font-family-Neuzeit font-size-18px line-height-23px border-none"  data_product = {{ product.id }}>  {%- for value in option.values -%}
+    {%- assign option_disabled = true -%}
+    {% for option1_name in variants_option1_arr %}
+    {% case option.position %}
+    {% when 1 %}{% if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0] == true %}{%- assign option_disabled = false -%}{% endif %}
+    {% when 2 %}{% if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0] == true %}{%- assign option_disabled = false -%}{% endif %}
+    {% when 3 %}{% if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0] == true %}{%- assign option_disabled = false -%}{% endif %}
+    {% endcase %}
+    {% endfor %}  
+    <option value="{{ value }}"  {% if option.selected_value == value %} selected="selected"{% endif %}  {% if option_disabled %}class="disabled"{% endif %} {% if forloop.last %} class="last_child" {% endif %}> {{ value }} </option> {% endfor %} </select>
+    <br> {% assign var_size =  option.values | size  %}
+    {% if var_size > 1 %}<a class="add_val color-light-green font-size-16px line-height-21px font-family-Neuzeit font-weight-300 text-decoration-underline all_but_click border-none">Add New</a>{% endif %} {% else %} <p class="empty_para_cl"> - </p> {% endif %}
+    {% endfor %}
+    </td>
+    <td class="quantity_btn_ma border-none">
+    <div class="qtydiv_b qtydiv_e">
+    <label for="Quantity" class="quantity-selector hidden"><ly-as-538758>Quantity</ly-as-538758></label>
+    <div class="qtyboxm">
+    <span class="btnqty1 qtyminusa all_but_remove font-size-16px"><svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1H12" stroke="#10100E" stroke-width="2"/></svg></span>
+    <input type="text" id="quantity" name="quantity" value="0" min="0" class="quantity-selector quantity-input font-weight-700 color-black" readonly="" data-quantity-input>
+    <span class="btnqty1 qtyplusa color-light-green font-size-16px line-height-21px font-family-Neuzeit font-weight-300 text-decoration-underline all_but_click font-size-16px"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6H12" stroke="#10100E" stroke-width="2"/><path d="M6 0L6 12" stroke="#10100E" stroke-width="2"/></svg></span>
+    </div>  <span class="product_count"></span>  </div>  </td>  </tr>  
+    {% endfor %}
+    </tbody>
+    </table>
+    <div id="Huratips-Pagination" class="pagination_load_btn page-width">{% if paginate.next %}<a href="{{ paginate.next.url }}" class="btn">Show More</a>{% endif %}</div>
+    {%  endpaginate %}     
+    </div>
+    </div>
+    <div class="product_order_bottom">
+    <div class="page-width d-flex justify-content-space-between align-items-center">
+    <div class="number_product">
+    <p class="color-black">Total <span class="total_count_val_data1" style="color:blue">0</span> Products</p>
+    </div>
+    <div class="product_count_total justify-content-end display-flex">
+    <p class="total_price_number font-family-Neuzeit font-weight-700 font-size-24px text-transform-uppercase color-black"></p>
+    <form method="post" action="/cart/add" class="var_add_bundle">
+    <div class="form_bottom_val"></div>
+    <input type="submit" value="Add to cart" class="disabled cursor-pointer btn_add_to_card font-size-18px line-height-23px font-family-Neuzeit bg-light-white border-light-black border-1px border-radius-37px font-weight-700 color-black">
+    </form>
+    </div> </div> </div>    
+    {% schema %}
+     {
+    "name": "Quick Order",
+    "class":"quick_order",
+    "tag": "section",
+    "settings": [],
+    "presets": [
+    {			
+    "name": "Quick Order",
+    "category": "Quick Order"  
+    }
+    ]
+    }
+    {% endschema %}
+    {% stylesheet %}
+    {% endstylesheet %}
+    {{ 'quick_order.js' | asset_url | script_tag }}
+    {% javascript %}
+    {% endjavascript %}

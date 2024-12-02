@@ -1,0 +1,50 @@
+{% if customer.b2b? == true %}
+{% if section.settings.include_B2B  %}
+<div class="{% if section.settings.include_margins %}page-width {% if request.page_type == 'customers/account' %}  {% else %} m_top {% endif %}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  {%- for block in section.blocks -%}
+    {% render block %}
+  {%- endfor -%}
+</div>
+{% endif %}
+
+{% else %}
+
+<div class="{% if section.settings.include_margins %}page-width {% if request.page_type == 'customers/account' %}  {% else %} m_top {% endif %}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  {%- for block in section.blocks -%}
+    {% render block %}
+  {%- endfor -%}
+</div>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:sections.apps.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "include_margins",
+      "default": true,
+      "label": "t:sections.apps.settings.include_margins.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "include_B2B",
+      "default": false,
+      "label": "include B2B"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.apps.presets.name"
+    }
+  ]
+}
+{% endschema %}

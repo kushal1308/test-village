@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "reward_link": "shopify:\/\/pages\/reward",
+        "reward_text": "Redeem V Points",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "home_icon_with_text_icon_1": "shopify:\/\/shop_images\/Quality_Products.jpg",
+        "icon_with_text_icon_heading_1": "Quality Products",
+        "home_icon_with_text_icon_2": "shopify:\/\/shop_images\/Fast_Shipping.jpg",
+        "icon_with_text_icon_heading_2": "Fast Shipping",
+        "home_icon_with_text_icon_3": "shopify:\/\/shop_images\/Satisfaction_Guaranteed.jpg",
+        "icon_with_text_icon_heading_3": "Satisfaction Guaranteed"
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-footer"
+  ]
+}

@@ -1,0 +1,21 @@
+<div class="product_option">
+    <div class="product_login">
+    <div class="pop_new">
+    {% assign number_of_products = 1 %}
+    {% assign number_of_products_to_fetch = number_of_products | plus: 1 %}
+    <h2 class="h2 first_product mobile">order</h2>
+    <div class="grid-uniform">  
+    <div class="card critical-clear desktop"> <h2 class="h2 first_product desktop">order</h2> <a href="{{ routes.account_url }}" class="btn desktop text-decoration-none font-family-Neuzeit font-weight-700 font-size-18px line-height-21px color-black-000 letter-spacing-0px bg-color-off-white border-light-black-000  border-1px border-radius-37px text-transform-inherit p-11px-36px" >View Order</a> </div>
+    {% for order in customer.orders limit: number_of_products_to_fetch %}
+    {% for line_item in order.line_items  %}
+    <div class="card critical-clear" id="Card-{{ order.id }}" data-animate>
+    <a href="{{ line_item.url | within: collection }}" class="card__wrapper{% if section.settings.show_spacing %} card__wrapper--padding{% endif %} text-center"> <div class="image_height"><img src="{{ line_item.featured_image | img_url: 'master'}}" height="" width="" alt="image" /></div> <h3 class="card__name h4">{{ line_item.title }}</h3> </a>
+    </div>
+    {% endfor %}
+    {% endfor %}
+    </div>
+    <div class="mobile"> <a href="{{ routes.account_url }}" class="btn mobile text-decoration-none font-family-Neuzeit font-weight-700 font-size-18px line-height-21px color-black-000 letter-spacing-0px bg-color-off-white border-light-black-000  border-1px border-radius-37px text-transform-inherit p-11px-36px" >View Order</a> </div>
+    </div>
+    </div>
+    </div>
+    

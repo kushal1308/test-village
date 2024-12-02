@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_image_with_text_klaviyo_GKn68W": {
+      "type": "custom_image_with_text_klaviyo",
+      "settings": {
+        "custom_sub_caption": "Coming Soon!",
+        "custom_heading": "<h2>Diffusers & Sprays<\/h2>",
+        "custom_sub_heading": "Expand your product line and watch your profits skyrocket!",
+        "custom_bg_image": "shopify:\/\/shop_images\/DIFFUSERS_SPRAYS_2_1.png",
+        "custom_bg_image_mobile": "shopify:\/\/shop_images\/DIFFUSERS_SPRAYS_2_1_1_1.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_image_with_text_klaviyo_GKn68W"
+  ]
+}

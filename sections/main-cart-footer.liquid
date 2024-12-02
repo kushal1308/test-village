@@ -1,0 +1,436 @@
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .template-cart .icon_wrapper .cart_icons h6 {
+    font-size:17px;
+    word-wrap: break-word;
+    margin: 15px auto 5px;
+    max-width: 90px;
+    color:#121212;
+  }
+  .template-cart .cart__blocks {
+    width: 100%;
+    margin: 0 auto !important;
+    text-align: right;
+  }
+  .template-cart .cart__ctas {
+    justify-content: end;
+    align-items: center;
+  }
+  .template-cart .cart__dynamic-checkout-buttons {
+    margin: 0 0 0 auto !important;
+  }
+  .template-cart .icon_wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 33.33%;
+    flex-basis: 33.33%;
+  }
+  
+  .template-cart section.cart_icon_with_text:last-child() {
+    margin-right:0px;
+  }
+ 
+  .template-cart .tax-note {
+    font-family:"Neuzeit Grotesk";
+    font-size:14px;
+    font-style:normal;
+    font-weight:300;
+    line-height:19.6px;
+    color: #121212;
+    padding: 10px 0 20px;
+    margin: 0;
+  }
+  .cart__ctas button {
+    width: auto;
+    padding: 10px 15px;
+    max-width: inherit;
+    min-height: auto;
+    min-width: auto;
+  }
+  .cart__ctas .cart__checkout-button, .cart__ctas .btn_reward{
+    line-height: 21px;
+    color: #000;
+    letter-spacing: 0;
+    background: #f6f3ee;
+    border: 1px solid #000;
+    border-radius: 37px;
+    padding: 10px 15px;
+    margin-top:0 !important;
+    min-height: auto;
+    width: auto;
+    max-height: none;
+    min-width: max-content;
+    height: min-content;
+  }
+  .cart__ctas .btn_reward:hover {
+    background: #fff;
+  }
+  .cart__dynamic-checkout-buttons .shopify-cleanslate ul{
+    flex-direction: row !important;
+    gap:10px;
+    margin-top: 1rem !important;
+  }
+  .cart__dynamic-checkout-buttons .shopify-cleanslate ul li{
+    width:33.33%;
+  }
+  .cart__footer .cart_icon_with_text{
+    max-width: max-content;
+    margin-left: auto;
+    margin-top: 0;
+    column-gap: 20px;
+  }
+  @media screen and (max-width: 989px) {
+    .template-cart .title-wrapper-with-link {
+      align-items: center !important;
+    }
+  }
+  @media screen and (max-width: 749px) {
+    .template-cart .totals__total-value{
+      margin-left: 8px !important;
+    }
+    .template-cart .cart__footer .cart_icon_with_text {
+      max-width: 100%;
+      margin:0 auto !important;
+      justify-content: center !important;
+      column-gap: 40px;
+    }
+    .template-cart .icon_wrapper .cart_icons h6 {
+      max-width: 100%;
+      font-size: .9375em;
+      margin: 15px auto 17px;
+    }
+    .template-cart .cart__dynamic-checkout-buttons .shopify-cleanslate ul {
+      flex-direction: column !important;
+      max-width: 320px;
+      margin: 15px auto 0px !important;
+      gap: 0px;
+    }
+    .cart__ctas .btn_reward {
+      margin-bottom: 10px;
+    }
+    .template-cart .cart__dynamic-checkout-buttons .shopify-cleanslate ul li {
+      width: 100%;
+    }
+    .template-cart .cart__ctas .cart__checkout-button,.template-cart .cart__ctas .btn_reward {
+      width:100%;
+    }
+    .template-cart .cart__ctas {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .template-cart .icon_wrapper {
+      width: fit-content;
+      max-width: fit-content;
+      flex-basis: fit-content;
+    }
+    .template-cart .cart__blocks{
+      text-align: center;
+    }
+    .template-cart .cart__dynamic-checkout-buttons {
+      margin:0 auto !important;
+    }
+    .template-cart .cart-items thead tr {
+      display: inherit;
+      margin: 0px !important;
+      border-bottom: none;
+    }
+    .template-cart .cart-item {
+      display: inherit;
+    }
+    .template-cart .cart-items th {
+      border-bottom: none;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .template-cart .cart__footer .cart_icon_with_text{
+      column-gap: 20px;
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div
+  class="gradient color-{{ section.settings.color_scheme }}{% if cart == empty %} is-empty{% endif %}"
+  id="main-cart-footer"
+  data-id="{{ section.id }}"
+>
+  <div class="page-width">
+    <div class="cart__footer isolate section-{{ section.id }}-padding">
+      {%- if settings.show_cart_note -%}
+        <cart-note class="cart__note field">
+          <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+          <textarea
+            class="text-area field__input"
+            name="note"
+            form="cart"
+            id="Cart-note"
+            placeholder="{{ 'sections.cart.note' | t }}"
+          >{{ cart.note }}</textarea>
+        </cart-note>
+      {%- endif -%}
+
+      <div class="cart__blocks">
+        {% for block in section.blocks %}
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              {% render block %}
+            {%- when 'subtotal' -%}
+              <div class="js-contents" {{ block.shopify_attributes }}>
+                <div>
+                  {%- if cart.cart_level_discount_applications.size > 0 -%}
+                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      {%- for discount in cart.cart_level_discount_applications -%}
+                        <li class="discounts__discount discounts__discount--position">
+                          {%- render 'icon-discount' -%}
+                          {{ discount.title }}
+                          (-{{ discount.total_allocated_amount | money }})
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                </div>
+
+                <div class="totals">
+                  <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
+                  <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
+                </div>
+
+                <small class="tax-note caption-large rte">
+                  {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                    {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                  {%- elsif cart.taxes_included -%}
+                    {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+                  {%- elsif shop.shipping_policy.body != blank -%}
+                    {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                  {%- else -%}
+                    {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+                  {%- endif -%}
+                </small>
+              </div>
+
+              {%- if section.settings.icon_with_text_icon_heading_1 != blank -%}
+                <section class="d-flex justify-content-end cart_icon_with_text">                
+                    <div class="icon_wrapper">
+                      <div class="cart_icons">
+                        {% if section.settings.home_icon_with_text_icon_1 != blank %}
+                          <div class="cat_img">
+                            <img
+                              src="{{section.settings.home_icon_with_text_icon_1 | img_url: '80x80'}}"
+                              height=""
+                              width=""
+                              alt="img"
+                            >
+                          </div>
+                          <h6 class="font-family-Neuzeit font-weight-200">
+                            {{ section.settings.icon_with_text_icon_heading_1 }}
+                          </h6>
+                        {% endif %}
+                      </div>
+                    </div>                
+                    <div class="icon_wrapper">
+                      <div class="cart_icons">
+                        {% if section.settings.home_icon_with_text_icon_2 != blank %}
+                          <div class="cat_img">
+                            <img
+                              src="{{section.settings.home_icon_with_text_icon_2 | img_url: '80x80'}}"
+                              height=""
+                              width=""
+                              alt="img"
+                            >
+                          </div>
+                          <h6 class="font-family-Neuzeit font-weight-200">
+                            {{ section.settings.icon_with_text_icon_heading_2 }}
+                          </h6>
+                        {% endif %}
+                      </div>
+                    </div>               
+                    <div class="icon_wrapper">
+                      <div class="cart_icons">
+                        {% if section.settings.home_icon_with_text_icon_3 != blank %}
+                          <div class="cat_img">
+                            <img
+                              src="{{section.settings.home_icon_with_text_icon_3 | img_url: '80x80'}}"
+                              height=""
+                              width=""
+                              alt="img"
+                            >
+                          </div>
+                          <h6 class="font-family-Neuzeit font-weight-200">
+                            {{ section.settings.icon_with_text_icon_heading_3 }}
+                          </h6>
+                        {% endif %}
+                      </div>
+                    </div>
+               
+                </section>
+              {% endif %}
+
+            {%- else -%}
+              <div class="cart__ctas" {{ block.shopify_attributes }}>
+                <a
+                  href="{{ section.settings.reward_link }}"
+                  class="btn btn_reward button font-family-Neuzeit font-weight-700 font-size-18px "
+                  ><ly-as-587188>{{ section.settings.reward_text }}</ly-as-587188></a
+                >
+                <noscript>
+                  <button type="submit" class="cart__update-button button button--secondary" form="cart">
+                    {{ 'sections.cart.update' | t }}
+                  </button>
+                </noscript>
+                <button
+                  type="submit"
+                  id="checkout"
+                  class="cart__checkout-button button font-family-Neuzeit font-weight-700 font-size-18px text-transform-inherit"
+                  name="checkout"
+                  {% if cart == empty %}
+                    disabled
+                  {% endif %}
+                  form="cart"
+                >
+                  {{ 'sections.cart.checkout' | t }}
+                </button>
+              </div>
+
+              {%- if additional_checkout_buttons -%}
+                <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+                  {{ content_for_additional_checkout_buttons }}
+                </div>
+              {%- endif -%}
+          {%- endcase -%}
+        {% endfor %}
+
+        <div id="cart-errors"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function isIE() {
+      const ua = window.navigator.userAgent;
+      const msie = ua.indexOf('MSIE ');
+      const trident = ua.indexOf('Trident/');
+
+      return msie > 0 || trident > 0;
+    }
+
+    if (!isIE()) return;
+    const cartSubmitInput = document.createElement('input');
+    cartSubmitInput.setAttribute('name', 'checkout');
+    cartSubmitInput.setAttribute('type', 'hidden');
+    document.querySelector('#cart').appendChild(cartSubmitInput);
+    document.querySelector('#checkout').addEventListener('click', function (event) {
+      document.querySelector('#cart').submit();
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-cart-footer.name",
+  "class": "cart__footer-wrapper",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "url",
+      "id": "reward_link",
+      "label": "Add the Button URL"
+    },
+    {
+      "type": "text",
+      "id": "reward_text",
+      "label": "Add the Button Text"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 40
+    },
+    {
+      "type": "image_picker",
+      "id": "home_icon_with_text_icon_1",
+      "label": "Chooce Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "icon_with_text_icon_heading_1",
+      "label": "Enter section icon heading here 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "home_icon_with_text_icon_2",
+      "label": "Chooce Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "icon_with_text_icon_heading_2",
+      "label": "Enter section icon heading here 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "home_icon_with_text_icon_3",
+      "label": "Chooce Icon 3"
+    },
+    {
+      "type": "text",
+      "id": "icon_with_text_icon_heading_3",
+      "label": "Enter section icon heading here 3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subtotal",
+      "name": "t:sections.main-cart-footer.blocks.subtotal.name",
+      "limit": 1
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.main-cart-footer.blocks.buttons.name",
+      "limit": 1
+    },
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

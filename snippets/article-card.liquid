@@ -1,0 +1,195 @@
+{% comment %}
+  Renders an article card for a given blog with settings to either show the image or not.
+
+  Accepts:
+  - blog: {Object} Blog object
+  - article: {Object} Article object
+  - media_aspect_ratio: {String} The setting changes the aspect ratio of the article image, if shown
+  - media_height: {String} The setting changes the height of the article image. Overrides media_aspect_ratio.
+  - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
+  - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
+  - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
+  - show_badge: {String} The setting either show the blog badge or not.
+  - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+
+  Usage:
+  {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
+{% endcomment %}
+
+{%- if article and article != empty -%}
+  {%- liquid
+    assign ratio = 1
+    if media_aspect_ratio != null
+      assign ratio = media_aspect_ratio
+    endif
+  -%}
+  <div class="article-card-wrapper card-wrapper underline-links-hover">
+    {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
+    <div
+      class="
+        card article-card
+        card--{{ settings.blog_card_style }}
+        {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
+        {% if article.image and show_image %} card--media{% else %} card--text{% endif %}
+        {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
+        {% if settings.blog_card_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %}
+      "
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
+      <div
+        class="card__inner {% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}{% if article.image and show_image or settings.blog_card_style == 'standard' %} ratio{% endif %}"
+        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+      >
+        {%- if show_image == true and article.image -%}
+          <div class="article-card__image-wrapper card__media">
+            <div
+              class="article-card__image media media--hover-effect {% if request.page_type == 'blog' %} border-radius-20px {% else %} border-radius-30px {% endif %}"
+              {% if section.settings.media_height == 'adapt' %}
+                style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
+              {% endif %}
+            >
+              {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+              <img
+                srcset="
+                  {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {{ article.image.src | image_url }} {{ article.image.src.width }}w
+                "
+                src="{{ article.image.src | image_url: width: 533 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ article.image.src.alt | escape }}"
+                class="motion-reduce border-radius-30px"
+                {% unless lazy_load == false %}
+                  loading="lazy"
+                {% endunless %}
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+              >
+              {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+            </div>
+          </div>
+        {%- endif -%}
+        <div class="card__content">
+          <div class="card__information">
+            <h3 class="text-align card__heading color-black text-overflow-ellipsis overflow-hidden display-webkit-box webkit-line-clamp-2 webkit-box-orient-vertical">
+              <a href="{{ article.url }}" class="full-unstyled-link color-black font-family-Neuzeit line-height-26px font-weight-500 font-size-20px">
+                {{ article.title | truncate: 50 | escape }}
+              </a>
+            </h3>
+            <div class="article-card__info caption-with-letter-spacing h5">
+              {%- if show_date -%}
+                <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+              {%- endif -%}
+              {%- if show_author -%}
+                <span>{{ article.author }}</span>
+              {%- endif -%}
+            </div>
+            {%- if show_excerpt -%}
+              {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                <span class='d-flex align-items-center hover_image_readmore'>
+                <p class="article-card__excerpt rte-width color-black p-r-10px font-family-Neuzeit font-size-16px font-weight-300 line-height-20-7px">
+                  {% comment %} {%- if article.excerpt.size > 0 -%}
+                    {{ article.excerpt | strip_html | truncatewords: 30 }}
+                  {%- else -%}
+                    {{ article.content | strip_html | truncatewords: 30 }}
+                  {%- endif -%} {% endcomment %}
+                  {% if request.locale.iso_code == 'fr' %}
+                    En savoir plus
+                  {% else %}  
+                    Read more
+                  {% endif %}
+                </p>
+                <img class="cursor-pointer hover_image_black" src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/Line_1_13333d37-e406-4c30-a4fe-1640fca0743c.png?v=1710940329" height="" width="" alt="image" />
+                <img class="cursor-pointer hover_image_light_green" src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/Line_1_1.png?v=1679558417" height="" width="" alt="image" />
+                </span>
+              {%- endif -%}
+              <div class="article-card__footer">
+                {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                  <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+          {%- if show_badge -%}
+            <div class="card__badge {{ settings.badge_position }}">
+              <span class="badge color-{{ settings.color_schemes | first }}">{{ 'blogs.article.blog' | t }}</span>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="text-align card__heading color-black">
+            {% if request.page_type == 'blog' or  request.page_type == 'article' %}
+            <a href="{{ article.url }}" class="text-transform-uppercase full-unstyled-link color-gray-dark font-family-Neuzeit font-weight-200 font-size-20px line-height-1-2-px">
+              {{ article.title }}
+            </a>
+            {% elsif  request.page_type == 'search' %}
+            <a href="{{ article.url }}" class="full-unstyled-link search_blog">
+              {{ article.title | truncate: 50 | escape }}
+            </a>
+            {% else %}
+            <a href="{{ article.url }}" class="text-transform-uppercase full-unstyled-link text-overflow-ellipsis overflow-hidden display-webkit-box webkit-line-clamp-2 webkit-box-orient-vertical color-gray-dark font-family-Neuzeit font-weight-200 font-size-20px line-height-1-2-px">
+              {{ article.title | truncate: 50 | escape }}
+            </a>
+          {% endif %}
+          </h3>
+          <div class="article-card__info text-transform-capitalize caption-with-letter-spacing h5 font-family-Neuzeit font-size-16px font-weight-300 line-height-22-4px color-gray">
+
+             {% if request.page_type == 'search' %}
+              <span class="circle-divide line-height-22-4px font-weight-300 font-size-16px font-family-Neuzeit color-dark-black">{{ article.published_at | time_tag: format: 'date' }}</span>  &#8212;              
+              <span  class="blog_details line-height-22-4px font-weight-300 font-size-16px font-family-Neuzeit color-dark-black">{{ article.content | strip_html | truncate: 200 }}</span>
+
+              {% else %}
+            {%- if show_date -%}
+              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+            {%- endif -%}
+            {%- if show_author -%}
+              <span>{{ article.author }}</span>
+            {%- endif -%}
+             {% endif %}
+
+          </div>
+          {%- if show_excerpt and request.page_type == 'index' -%}
+            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+              <span class='d-flex align-items-center hover_image_readmore'>
+              <p class="article-card__excerpt rte-width color-black p-r-10px font-family-Neuzeit font-size-16px font-weight-300 line-height-20-7px">
+                {% comment %} {%- if article.excerpt.size > 0 -%}
+                  {{ article.excerpt | strip_html | truncatewords: 30 }}
+                {%- else -%}
+                  {{ article.content | strip_html | truncatewords: 30 }}
+                {%- endif -%} {% endcomment %}
+                {% if request.locale.iso_code == 'fr' %}
+                  En savoir plus
+                {% else %}  
+                  Read more
+                {% endif %}
+              </p>
+              <img class="cursor-pointer hover_image_black"src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/Line_1_13333d37-e406-4c30-a4fe-1640fca0743c.png?v=1710940329" height="" width="" alt="image" />
+              <img class="cursor-pointer hover_image_light_green" src="https://cdn.shopify.com/s/files/1/0282/8425/6353/files/Line_1_1.png?v=1679558417" height="" width="" alt="image" />
+              </span>
+            {%- endif -%}
+            <div class="article-card__footer">
+              {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+        {%- if show_badge -%}
+          <div class="card__badge {{ settings.badge_position }}">
+            <span class="badge color-{{ settings.color_schemes | first }}">{{ 'blogs.article.blog' | t }}</span>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+<style>
+  .article-card__image.media.media--hover-effect.border-radius-20px {background:transparent;background-color:transparent;}
+</style>
